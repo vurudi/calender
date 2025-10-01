@@ -1,0 +1,739 @@
+
+
+
+
+:root{
+    /*
+    * Theme colours.
+    */
+    --ciaColourThemeMainColor: #373a3f; /* Theme master colour */
+    --ciaColourThemeMainColor_RGB: 55,58,63;
+
+    /*
+    * Theme images.
+    * Note: these css variables might be used by teams in custom functions
+    */
+    --ciaThemeBackgroundUrl: url('/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/background.jpg?ts=-1811665815');
+    --ciaThemeBannerBackgroundUrl: url('/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/background-banner.jpg?ts=-1811665815');
+    --ciaThemeLogonBackgroundUrl: url('/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/logon-background.jpg?ts=-1811665815');
+    --ciaThemeLargeLogoImageUrl: url('/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/logo-large-v2.svg?ts=-1811665815');
+
+    /**************************************************************/
+    /* START - colours generated based on the theme master colour */
+
+    --ciaColourThemeMain1: #77868c;
+    --ciaColourThemeMain2: #bbc3c6;
+    --ciaColourThemeMain3: #d6dbdd;
+    --ciaColourThemeMain4: #ebedee;
+    --ciaColourThemeMain5: #f2f3f4;
+
+    --ciaColourThemeDark1: #000000;
+    --ciaColourThemeDark2: #373a3f;
+    --ciaColourThemeDark3: #656970;
+
+    /*
+    * Workplace and global header colours
+    */
+    --ciaColourThemeGlobalHeaderBg: rgb(118, 35, 47);
+    --ciaColourThemeGlobalHeaderText: #ffffff;
+
+    /*
+    * Workplace and global footer colours
+    */
+    --ciaColourThemeGlobalFooterBg: #fff;
+    --ciaColourThemeGlobalFooterFg: #000;
+
+    /* END - colours generated based on the theme master colour */
+    /**************************************************************/
+
+    /*
+    * Primary action colours.
+    * PrimaryAction is editable, the PrimaryActionBorder and PrimaryActionBorderHover are generated based on PrimaryAction
+    */
+    --ciaColourThemePrimaryAction: rgb(128, 34, 95);
+    --ciaColourThemePrimaryActionBorder: #581741;
+    --ciaColourThemePrimaryActionBorderHover: #2f0d23;
+
+    /*
+    * Theme highlight colours.
+    *        Highlight2 = GetColourShade(Highlight1, col.l + 0.1, true, true);
+    *        Highlight3 = GetColourShade(Highlight1, col.l + 0.5, true, true)
+    */
+    --ciaColourThemeHighlight1: rgb(166, 25, 46);
+
+    /*
+    * Convert the colours from HEX to RGB so we can apply CSS opacity when using css rgb() function
+    */
+    --ciaColourThemeHighlight2_RGB: 210,32,58;
+    --ciaColourThemeHighlight3_RGB: 247,199,206;
+
+    /*
+    * Environment Colours
+    */
+    --ciaColourEnvironment: ;
+    --ciaColourEnvironmentText: ;
+}
+
+
+
+/*** Background image and logo ***/
+/*
+body,
+.themeBgImage{
+    background-color: transparent;
+    background-image:url('/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/background.jpg?ts=-1811665815');
+}
+*/
+
+.themeBgBannerImage{
+    background-image:var(--ciaThemeBannerBackgroundUrl);
+}
+
+.logonBg {
+   background-image:var(--ciaThemeLogonBackgroundUrl);
+}
+
+.themedLargeLogo{
+    background-image:var(--ciaThemeLargeLogoImageUrl);
+}
+
+
+
+/*--Workplace--*/
+
+.shellBG,
+#popupTileContainer, #popupTileContainerWrapper .tile.more:after, #popupTileContainerWrapper .tile.folder:after,
+.workplace > .navigation .icon,
+#VideosPopup > button, .btnClose,
+.selectionSummary.academic .summaryCounter .summaryCount {
+    background-color: rgb(118, 35, 47);
+}
+
+.shellFGAlt{
+    color:rgb(118, 35, 47);
+}
+
+.shellFG,
+.shellFG.p1, .shellFG.p1.p2,
+.shellFGHvr:hover, .shellFGHvr.p1:hover, .shellFGHvr.p1.p2:hover,
+
+a.shellFG:hover, .onDark .galleryHeader a, #GlobalHeader .loggedUser,
+#GlobalHeader .bannerMiddle h1,
+#popupTileContainer > header > #PopupHeader, #popupTileContainer > header:before, #popupTileContainer button.close .icon16:before,
+.workplace > .navigation .icon, .modalLayout .header h3,
+#VideosPopup > button .icon16, .btnClose .icon16 {
+    color: #ffffff;
+}
+
+.shellBCol,
+#ShowMinorTiles .pointerArrowB .bg, .funcGrpTab .pointerArrowB .bg,
+.selectionSummary.academic .summaryCountContainer:before, .selectionSummary.academic .summaryCounter .summaryCountEnd
+ {
+    border-color: rgb(118, 35, 47);
+}
+
+.workplaceBg
+{
+    background-color: transparent;
+}
+
+.workplaceTileBG
+{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.workplaceFolderTileBg
+{
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+.workplaceBgGrad {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, transparent 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, transparent 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.workplaceRoles h1, .dashboard.tile h4, .workplaceRoles > .recycleBin {
+    color: #ffffff;
+    text-shadow: 0 0 3px none;
+}
+
+.workplaceRoles > .recycleBin.on{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+.tile > h4 {
+    text-shadow: 0 0 3px none;
+}
+
+.tileFG,
+#ShowMinorTiles a {
+    color: #ffffff;
+}
+
+.home > .recycleBin.on {
+    color: #ffffff;
+}
+
+.home.role.interact:before{
+	background: rgba(0, 0, 0, 0.5);
+	background: -webkit-radial-gradient(bottom left, rgba(0, 0, 0, 0.5) 50%,rgba(0, 0, 0, 0.1) 100%);
+	background: radial-gradient(at bottom left, rgba(0, 0, 0, 0.5) 50%,rgba(0, 0, 0, 0.1) 100%);
+}
+
+.workplaceRoles h1, .workplace .tile h4{
+	text-shadow: 0 0 3px none;
+}
+
+
+
+
+/*--Link Colour--*/
+
+.linkCol,
+a, button.linkStyle, .showPanelButton,
+.tabbedControl.cardViewChildren .tabHandle > .editorLabel,
+.hoverViewContainer .closeImageView span,
+.thumbnailItem.ecmDocView .buttonGroup span
+{
+    color: rgb(166, 25, 46);
+}
+
+a:hover, .linkCol:hover, button.linkStyle:hover, .showPanelButton:hover {
+    color: #4d0c15;
+}
+
+/*--Alerts--*/
+
+.notificationCount, .alertStatus {
+	background-color: rgb(198, 0, 126);
+}
+
+
+/*--Highlight Dark Color--*/
+
+.hDrkCol, .hDrkColHvr:hover,
+.hDrkColWithButtonHover.buttonOnHover,
+.hDrkColWithButtonHover.buttonOnHover:hover,
+button.hDrkCol.highlight,
+.fltrItem.active > label > span, .fltrItem.active > .fltrItemTtl{
+	color: rgb(166, 25, 46);
+}
+
+.selectionSummary .summaryCounter {
+    border-color: rgb(128, 34, 95);
+    color: rgb(128, 34, 95);
+}
+
+.hDrkColImp{
+    color:rgb(166, 25, 46) !important;
+}
+
+.primaryActionBorder,
+.stackedStyle > .checkBoxControl.editable.active,
+.stackedStyle > .textBoxControl.editable.active,
+.standardStyle > .textBoxControl.editable.active > .tbcEditorField > .tbcInputContainer,
+.panel .colourPickerWrapper.themeColour,
+.searchWrapper.focused,
+.nlsfocused .naturalLanguageSearchInputWrapper,
+.nlsCriteriaValueContainer .nlsOperator.comboBoxControl .editorField select:focus,
+#InboxResultSetSearchInput:focus,
+.stackedContainer > .controlContainer.active,
+.viewSelectorControl .editMode .inputViewName:focus,
+#popupTileContainer > header input.editGroupTitle:focus,
+#GoBack:focus, #GoToWorkplace:focus, #ShowFlow:focus, #GlobalHeader .viewSelectorControl > button:focus, #GlobalHeader .userNavigation > button:focus, #ScreenResize:focus, #T1UniHelp:focus, #flow #CloseFlow:focus
+{
+    border-color: #581741;
+}
+
+     .easy *:focus, .focus, input:focus, button:focus, select:focus, [tabindex="0"]:focus  {
+     outline-color: #581741;
+     outline-style: dotted;
+     outline-width: 1px;}
+
+
+.tabHandle_LinkedTab.selected > .summary > .summaryHeading, .editablePanel > .header,
+.dynamicLayout .thumbnailItem.selected .headingField, .hierarchyViewNodeContainer.selected .headingField,
+.worklistItem.selected .worklistItemLabelHeading, .worklistItem.selected > .worklistItemInnerContainer:before, .formTitleControlRightHeading,
+/*.useSelectedMarker.selected:before,*/ .selected > .useSelectedMarker:before, .useSelectedMarker.selected:after, .selected > .useSelectedMarker:after,
+.inboxItem.selected > .inboxItemInnerContainer > .inboxItemDetailView > .inboxItemHeadingLine > .inboxItemHeading,
+#WorksheetForm > .mainContent > #HeaderContainer > #FormTitleContainer > #FormTitleControl > .formTitleControlLeftColumn > .formTitleControlHeadingContainer .formTitleControlHeading,
+.calendarViewer .thumbnailItem.selected .mainSection .editorField span
+{
+	color:rgb(166, 25, 46);
+}
+
+/*--Highlight Dark Border Color--*/
+
+.hDrkBCol, .hghltBColSelected.selected,
+button.flatStyle.highlight.hDrkBCol,
+.rdpActionsMenu.menuContainerH .dropDownControlContainer.selected > .dropdownControl > button,
+.relatedDataPortlet .slick-cell.editable.active,
+.tabHandle_LinkedTab.horiz.selected,
+.tabHandle_LinkedTab.vert.selected,
+.calendarViewer .thumbnailItem.selected .itemWrapper, .calendarContainer > .content > .dayRow > .day.selectedDate,
+.calendarContainer > .content > .monthRow > .month.selectedDate, .calendarContainer > .content > .yearRow > .year.selectedDate,
+.expressionBuilderPopup .tabbedControl.horizontal > .tabHandlesContainer > .tabHandle.selected
+{
+	border-color: rgb(166, 25, 46);
+}
+
+/*--Highlight Light Colour--*/
+
+.hLCol, .hLColHvr:hover {
+	color:#fceed8;
+}
+
+/*--Highlight Light Pointer Colour--*/
+
+.hLPointerCol {
+	border-color:#fceed8;
+}
+
+/*--HighlightLight Background Colour--*/
+
+.hBGCol, .hBGColHvr:hover,
+.hBGColWithButtonHover.buttonOnHover,
+.hBGColWithButtonHover.buttonOnHover:hover,
+.stackedContainer > .boxCheckbox.controlContainer.checkBoxControl.checked,
+.hierarchyViewNodeContainer.selected,
+.calendarContainer > .content > .dayRow > .day.selectedDate,
+.calendarViewer.week .calendarContainer .selectedDate, .calendarViewer.week .calendarContainer .selectedWeekDay,
+.calendarContainer > .content > .monthRow > .month.selectedDate, .calendarContainer > .content > .yearRow > .year.selectedDate {
+	background-color:#f7c7ce;
+}
+
+.horizontal .thumbnailItem.selected > .itemWrapper,
+.compact .thumbnailItem.selected > .itemWrapper,
+.contact .thumbnailItem.selected > .itemWrapper,
+.hierarchicalListContents .hierarchicalListItem.selected,
+.inboxItem.selected,
+.calendarViewer .thumbnailItem.selected .itemWrapper
+{
+	background-color: #f7c7ce;
+}
+.ganttChartViewer .gantt_task_row.gantt_selected .gantt_task_cell,
+.ganttChartViewer .gantt_grid_data .gantt_row.gantt_selected,
+.ganttChartViewer .gantt_grid_data .gantt_row.odd.gantt_selected,
+.ganttChartViewer .gantt_grid_data .gantt_row:hover,
+.ganttChartViewer .gantt_grid_data .gantt_row.odd:hover{
+	background-color: #f7c7ce;
+}
+
+.hSelBGCol, .reports .newReport, .galleryHeader a.selected {
+	background-color: #d2203a;
+
+	border-color: rgb(166, 25, 46);
+}
+
+/*--Highlight Border Color--*/
+
+.hBCol, .hBColHvr:hover,
+div.worklistItem.hBCol
+{
+	border-color:#d2203a;
+}
+
+/*--Grid colours--*/
+/*--Grid Border Colors--*/
+
+.itemChooser .itemsList, .itemChooser .itemHeader, .valueSelector .dataTableContainer .horizLayout, .gridActionBar
+ {
+    border-color: #d6dbdd;
+}
+
+.gridContainer .dataTableContainer  th, .rowActionPanel thead th {
+	border-top: solid 1px #bbc3c6;
+	border-bottom: solid 1px #bbc3c6;
+	border-right: solid 1px #bbc3c6;
+}
+
+.rowActionPanel thead th:last-child {
+	border-right: solid 1px #bbc3c6;
+}
+
+.rowActionPanel thead th:first-child {
+	border-left: solid 1px #bbc3c6;
+}
+
+.rowActionPanel thead th {
+	border-color: #bbc3c6;
+}
+
+.actionsPane .extraActions .dropDown > * {
+	border-bottom-color: #d6dbdd;
+}
+
+.rowActionPanel tbody tr:nth-child(odd),
+.dataTableContainer.left tbody tr:nth-child(odd),
+.dataTableContainer.right tbody tr:nth-child(odd),
+.dataTableContainer.centre tbody tr:nth-child(4n+1),
+.dataTableContainer.centre tbody tr:nth-child(4n+2)
+{
+	background-color: #f2f3f4;
+}
+
+.gridContainer.readonly.zebraLayout .slick-row.isDataRow.odd, .gridContainer.editable .slick-cell, .gridContainer .slick-row.isDataRow.isLockedRow, .gridContainer .slick-row.isDataRow.isLockedRow .gridColumnEditable,
+.editableGrid.editable > .editableGridTable > .editableGridTableBody > .editableGridTableRow > .editableGridDataCell.readonly {
+    background-color:#f2f3f4;
+}
+
+.relatedDataPortlet .gridContainer.editable .slick-cell.active, .relatedDataPortlet .gridContainer.editable .slickGridContainer .slick-row .slick-cell.active:first-child, .relatedDataPortlet .gridContainer.editable .slickGridContainer .slick-row .slick-cell.active:last-child  {
+	border-color: rgb(166, 25, 46);
+}
+
+.gridContainer .slick-row.isDataRow .gridColumnEditable .gridCellReadOnly {
+    background-color:#f2f3f4;
+}
+
+th {
+	color: #000000;
+}
+
+#GridAction td:last-child
+{
+	border-color: #d6dbdd;
+}
+
+.relatedDataPortlet .editable .slick-cell.active {
+	border-color: rgb(166, 25, 46);
+}
+
+/*--- Gradient colours */
+.mainBGCol4GradTB{
+	background:#ebedee;
+	background: linear-gradient(to bottom, #ebedee, #ebedee, rgba(255, 255, 255, 0.5));
+}
+
+
+/*--Custom scrollbar colours--*/
+
+
+* {
+	scrollbar-base-color: #d6dbdd;
+	scrollbar-arrow-color: #656970;
+	scrollbar-track-color: #f2f3f4;
+	scrollbar-shadow-color: #d6dbdd;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-3dlight-color: #f2f3f4;
+	scrollbar-darkshadow-color: #bbc3c6;
+}
+
+
+/*--Slidebar--*/
+
+.slideBar {
+	background-color: #d6dbdd;
+	border-color: #bbc3c6;
+}
+
+.slideBar .scroller {
+	border-color:#bbc3c6;
+	background-color: #f9f9fa;
+	box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.slideBar .indexTip {
+	background-color:#f2f3f4;
+	border:solid 1px #bbc3c6;
+}
+
+.slideBar .scroller:hover {
+	box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.slideBar .pointer {
+	background-color:#d6dbdd;
+}
+
+.slideBar .pointer:hover {
+	background-color: #bbc3c6;
+}
+
+/*--Heading colours--*/
+
+.heading, h1, h2, h3, h4, h5,
+#popupTileContainer > header div,
+#popupTileContainer > header input.editGroupTitle,
+.worklistItemLabelHeading,
+.headCol, button.headCol, button.headCol:hover, .linkBar .droppedDown .handle.linkCol
+ {
+	color: #000000;
+	font-family:'OSans', Arial, Sans-Serif;
+}
+
+
+/* TextBoxControl colours */
+.engagingStyle > .textBoxControl.editable.active > .tbcEditorLabel {
+	color: rgb(128, 34, 95);
+}
+
+.engagingStyle > .textBoxControl.editable > .tbcEditorField:after {
+	border-color: rgb(128, 34, 95);
+}
+
+
+/* RadioButtonControl colours */
+.radioButtonControl.rbcStandardType.editable > .rbcEditorField > .rbcItem:focus > .rbcItemInput:before,
+.engagingStyle > .radioButtonControl.rbcStandardType.editable > .rbcEditorField > .rbcItem:focus > .rbcItemInput:before,
+.engagingStyle > .radioButtonControl.rbcStandardType.editable > .rbcEditorField > .rbcItem.checked > .rbcItemInput:before {
+ 	border-color: rgb(128, 34, 95);
+ }
+
+.engagingStyle > .radioButtonControl.rbcStandardType.editable > .rbcEditorField > .rbcItem.checked > .rbcItemInput:after {
+ 	background-color: rgb(128, 34, 95);
+ }
+
+/* CheckBoxControl colours */
+.engagingStyle > .checkBoxControl.editable.checked > .cbcEditorField:before {
+	border-color: rgb(128, 34, 95);
+	color: rgb(128, 34, 95);
+}
+
+.engagingStyle > .checkBoxControl.editable.active > .cbcEditorField:before {
+ 	border-color: rgb(128, 34, 95);
+}
+
+/*--Button colours--*/
+
+.buttonOnHover:hover, .chooser.droppedDown button.handle.buttonOnHover, button.highlight, a.buttonStyle, a.buttonOnHover:hover, a.current.buttonStyle, #ContextualKeysParent.shown #ContextualKeysButton
+{
+	color: #000000;
+	background-color: #ebedee;
+}
+
+
+.icon16.toggleView, .inputClearButton,
+.dropdownPanelListItem > a, .dropdownPanelListItem > a:hover, .dropdownPanelListItem > label {
+    color:#000000;
+}
+
+.nlsfocused + button.searchBtn, button.searchBtn:focus {
+    color: rgb(128, 34, 95);
+}
+
+button.searchBtn:hover, button.searchBtn:focus {
+background-color: rgb(128, 34, 95);
+color:#fff;
+}
+
+
+.hDrkBGCol, .hDrkBGColHvr:hover,
+.role.tile:after,
+.chooser.droppedDown button.handle.primary, .chooser.droppedDown button.handle.primary.buttonOnHover, .primary.buttonOnHover:hover, .viewItem .makeDefault.isDefault .icon16 {
+	background-color: rgb(166, 25, 46);
+}
+
+.buttonOnHover:hover, a.buttonOnHover:hover, button.highlight, a.buttonStyle,
+.dp.menubar.active,
+.relatedDataPortlet .buttonGroup,
+button[disabled]:hover {
+	border-color: #bbc3c6;
+}
+
+button.highlight, a.highlight, button.highlight:hover, button:hover, .buttonOnHover:hover, a.buttonStyle:hover, a.current.buttonStyle, a.buttonOnHover:hover, /*.listItemChooser .content button.selected,*/ .activeCalendar .picker, .chooser.droppedDown button.handle, .activeSelector .recordSelectorBtn, #ContextualKeysParent.shown #ContextualKeysButton,
+.userNavigation.chooser.droppedDown button.handle.buttonOnHover {
+	border-color: #656970;
+}
+
+button.primary:hover, .chooser.droppedDown button.handle.primary, a.buttonStyle.primary:hover {
+	border-color: #2f0d23;
+}
+
+#linksToFunctionsContainer > ul > li.linkToFunction a:hover, #linksToFunctionsSelector button.handle:hover, #linksToFunctionsSelector.droppedDown button.handle,
+#SearchValue_BuilderButtonDiv button:hover, .droppedDown #SearchValue_BuilderButtonDiv button  {
+	border-color: #77868c;
+}
+
+.flatStyle:hover, button.flatStyle.highlight {
+	border-color: #bbc3c6;
+}
+
+.header.dragging {
+	background-color:#f7c7ce;
+}
+
+button.ticked .tick, .activeTick {
+	background-color:rgb(198, 0, 126);
+}
+
+/* Enterprise Search*/
+.enqSearchIcon.primary , .enqSearchV2:hover .enqSearchIcon{
+    color:rgb(128, 34, 95)
+}
+
+.entSearchItem .itemEnqContainer .itemLabel{
+    color:rgb(128, 34, 95)
+}
+
+.enqAction .ddButton .glyph.primary{
+    color: rgb(128, 34, 95);
+}
+
+
+/* Consumer Styles */
+
+.panel.consumerStyle.fieldSet > .header, .panel.consumerStyle.fieldSet > .panelHeader {
+	border-color: #d2203a;
+}
+
+.consumerStyle.tbcStyleContainer .tbcPicker:hover, .consumerStyle.tbcStyleContainer [class*="icklistContextButton"]:hover, .consumerStyle.tbcStyleContainer .dateContextButton:hover {
+	border-left-color: rgb(128, 34, 95);
+	background-color: rgb(128, 34, 95);
+}
+
+.consumerStyle > .checkBoxControl.checked > .cbcEditorField:before {
+background-color: rgb(128, 34, 95);
+border-color: rgb(128, 34, 95);
+}
+
+.consumerStyle > .checkBoxControl.active > .cbcEditorField:before {
+    outline-color: rgb(166, 25, 46);
+}
+
+.consumerStyle > .radioButtonControl.rbcSegmentedControl > .rbcEditorField > .rbcItem.checked, .consumerStyle > .radioButtonControl.rbcSegmentedControl > .rbcEditorField > .rbcItem.checked:hover {
+   background-color:#f7c7ce;
+   border-color:rgb(128, 34, 95);
+}
+
+
+.calendarContainer.consumerStyle > .content > .dayRow > .day.selectedDate,
+.calendarContainer.consumerStyle > .content > .monthRow > .month.selectedDate,
+.calendarContainer.consumerStyle > .content > .yearRow > .year.selectedDate {
+	background-color: #f7c7ce;
+	border-color: rgb(166, 25, 46);
+}
+
+.consumerStyle.attachments #FileDropTargetBorder {
+	border-color: rgb(128, 34, 95);
+}
+
+.consumerStyle.attachments #FileDropTarget {
+	background-color: #f7c7ce;
+}
+
+
+.consumerStyle .fileSelector .inputContainer > button.addFiles {
+	color: rgb(166, 25, 46);
+}
+
+
+
+.consumerStyle.popup > footer button.ok {
+	background-color: rgb(128, 34, 95);
+	color:white;
+}
+
+
+.consumerStyle.tbcStyleContainer > .textBoxControl.pickDate .tbcPicker.date > .glyph,
+.consumerStyle.tbcStyleContainer .dateContextButton > .glyph {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' %3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23667895' stroke-width='2' transform='translate(1 1)'%3E%3Cpath d='M1.2,17 L16.8,17 C16.9047056,17 17,16.9022622 17,16.7692308 L17,3.23076923 C17,3.09773781 16.9047056,3 16.8,3 L1.2,3 C1.09529436,3 1,3.09773781 1,3.23076923 L1,16.7692308 C1,16.9022622 1.09529436,17 1.2,17 Z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M1 7L17 7M5 2.36010674L5 .984619141M13 2.36010674L13 .984619141'/%3E%3C/g%3E%3Cg fill='%23667895'%3E%3Ccircle cx='6' cy='11' r='1' fill-rule='nonzero'/%3E%3Ccircle cx='6' cy='15' r='1' fill-rule='nonzero'/%3E%3Ccircle cx='10' cy='11' r='1' fill-rule='nonzero'/%3E%3Ccircle cx='10' cy='15' r='1' fill-rule='nonzero'/%3E%3Ccircle cx='14' cy='11' r='1' fill-rule='nonzero'/%3E%3Ccircle cx='14' cy='15' r='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+
+
+
+
+
+
+
+/*--Function Search--*/
+
+.functionSearch input::-webkit-input-placeholder { color: rgb(166, 25, 46); }
+.functionSearch input:-moz-placeholder {color: rgb(166, 25, 46); }
+.functionSearch input::-moz-placeholder { color: rgb(166, 25, 46); }
+.functionSearch input:-ms-input-placeholder { color: rgb(166, 25, 46); }
+.functionSearch input::-ms-input-placeholder { color: rgb(166, 25, 46); }
+.functionSearch input:placeholder-shown { color: rgb(166, 25, 46); }
+
+.classicStyle .functionSearch input::-webkit-input-placeholder {color: #ffffff;}
+.classicStyle .functionSearch input:-moz-placeholder { /* Firefox 18- */color: #ffffff;}
+.classicStyle .functionSearch input::-moz-placeholder { /* Firefox 19+ */color: #ffffff;}
+.classicStyle .functionSearch input:-ms-input-placeholder { /* IE 10+ */color: #ffffff;}
+.classicStyle .functionSearch input::-ms-input-placeholder { /* Edge */color: #ffffff;}
+.classicStyle .functionSearch input:placeholder-shown { /* Standard one last! */color: #ffffff;}
+
+@-moz-document url-prefix() {
+	.slideBar,
+	.slideBar.attached {
+		outline: none;
+	}
+
+	.slideBar:hover {
+		background-color:#ededed;
+	}
+
+	.slideBar .pointer {
+		background-color:#d6d6d8;
+		border:solid 1px #959595;
+	}
+
+}
+
+/** Product colour constants **/
+.prCol1 { color: rgb(142, 160, 230); }
+.prBgCol1 { background-color: rgb(142, 160, 230); }
+.prBCol1 { border-color: rgb(142, 160, 230); }
+.prBgGrad1 { background: linear-gradient(to right, rgba(142, 160, 230, 0.5), rgba(142, 160, 230, 0.35), rgba(142, 160, 230, 0.5));}
+.prCol2 { color: rgb(163, 146, 230); }
+.prBgCol2 { background-color: rgb(163, 146, 230); }
+.prBCol2 { border-color: rgb(163, 146, 230); }
+.prBgGrad2 { background: linear-gradient(to right, rgba(163, 146, 230, 0.5), rgba(163, 146, 230, 0.35), rgba(163, 146, 230, 0.5));}
+.prCol3 { color: rgb(198, 146, 230); }
+.prBgCol3 { background-color: rgb(198, 146, 230); }
+.prBCol3 { border-color: rgb(198, 146, 230); }
+.prBgGrad3 { background: linear-gradient(to right, rgba(198, 146, 230, 0.5), rgba(198, 146, 230, 0.35), rgba(198, 146, 230, 0.5));}
+.prCol4 { color: rgb(221, 146, 221); }
+.prBgCol4 { background-color: rgb(221, 146, 221); }
+.prBCol4 { border-color: rgb(221, 146, 221); }
+.prBgGrad4 { background: linear-gradient(to right, rgba(221, 146, 221, 0.5), rgba(221, 146, 221, 0.35), rgba(221, 146, 221, 0.5));}
+.prCol5 { color: rgb(221, 146, 187); }
+.prBgCol5 { background-color: rgb(221, 146, 187); }
+.prBCol5 { border-color: rgb(221, 146, 187); }
+.prBgGrad5 { background: linear-gradient(to right, rgba(221, 146, 187, 0.5), rgba(221, 146, 187, 0.35), rgba(221, 146, 187, 0.5));}
+.prCol6 { color: rgb(221, 146, 150); }
+.prBgCol6 { background-color: rgb(221, 146, 150); }
+.prBCol6 { border-color: rgb(221, 146, 150); }
+.prBgGrad6 { background: linear-gradient(to right, rgba(221, 146, 150, 0.5), rgba(221, 146, 150, 0.35), rgba(221, 146, 150, 0.5));}
+.prCol7 { color: rgb(221, 181, 150); }
+.prBgCol7 { background-color: rgb(221, 181, 150); }
+.prBCol7 { border-color: rgb(221, 181, 150); }
+.prBgGrad7 { background: linear-gradient(to right, rgba(221, 181, 150, 0.5), rgba(221, 181, 150, 0.35), rgba(221, 181, 150, 0.5));}
+.prCol8 { color: rgb(221, 214, 150); }
+.prBgCol8 { background-color: rgb(221, 214, 150); }
+.prBCol8 { border-color: rgb(221, 214, 150); }
+.prBgGrad8 { background: linear-gradient(to right, rgba(221, 214, 150, 0.5), rgba(221, 214, 150, 0.35), rgba(221, 214, 150, 0.5));}
+.prCol9 { color: rgb(200, 226, 150); }
+.prBgCol9 { background-color: rgb(200, 226, 150); }
+.prBCol9 { border-color: rgb(200, 226, 150); }
+.prBgGrad9 { background: linear-gradient(to right, rgba(200, 226, 150, 0.5), rgba(200, 226, 150, 0.35), rgba(200, 226, 150, 0.5));}
+.prCol10 { color: rgb(165, 226, 150); }
+.prBgCol10 { background-color: rgb(165, 226, 150); }
+.prBCol10 { border-color: rgb(165, 226, 150); }
+.prBgGrad10 { background: linear-gradient(to right, rgba(165, 226, 150, 0.5), rgba(165, 226, 150, 0.35), rgba(165, 226, 150, 0.5));}
+.prCol11 { color: rgb(142, 226, 161); }
+.prBgCol11 { background-color: rgb(142, 226, 161); }
+.prBCol11 { border-color: rgb(142, 226, 161); }
+.prBgGrad11 { background: linear-gradient(to right, rgba(142, 226, 161, 0.5), rgba(142, 226, 161, 0.35), rgba(142, 226, 161, 0.5));}
+.prCol12 { color: rgb(142, 226, 196); }
+.prBgCol12 { background-color: rgb(142, 226, 196); }
+.prBCol12 { border-color: rgb(142, 226, 196); }
+.prBgGrad12 { background: linear-gradient(to right, rgba(142, 226, 196, 0.5), rgba(142, 226, 196, 0.35), rgba(142, 226, 196, 0.5));}
+.prCol13 { color: rgb(142, 226, 230); }
+.prBgCol13 { background-color: rgb(142, 226, 230); }
+.prBCol13 { border-color: rgb(142, 226, 230); }
+.prBgGrad13 { background: linear-gradient(to right, rgba(142, 226, 230, 0.5), rgba(142, 226, 230, 0.35), rgba(142, 226, 230, 0.5));}
+.prCol14 { color: rgb(142, 194, 230); }
+.prBgCol14 { background-color: rgb(142, 194, 230); }
+.prBCol14 { border-color: rgb(142, 194, 230); }
+.prBgGrad14 { background: linear-gradient(to right, rgba(142, 194, 230, 0.5), rgba(142, 194, 230, 0.35), rgba(142, 194, 230, 0.5));}
+
+/* default product colour */
+.prCol 		{ color: rgb(142, 194, 230); }
+.prBgCol 	{ background-color: rgb(142, 194, 230); }
+.prBCol 	{ border-color: rgb(142, 194, 230); }
+.prBgGrad 	{ background: linear-gradient(to right, rgba(142, 194, 230, 0.5), rgba(142, 194, 230,0.35), rgba(142, 194, 230, 0.5)); }
+

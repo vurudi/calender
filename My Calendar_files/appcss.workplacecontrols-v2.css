@@ -1,0 +1,5215 @@
+/******************** Flow Popup ************************/
+
+
+.engagingStyle > .flowCheckBox {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 2px;
+    padding-bottom: 10px;
+}
+
+.engagingStyle > .flowCheckBox > .cbcEditorField {
+    float: left;
+    vertical-align: top;
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transition: transform 0.1s ease;
+    -ms-transition: transform 0.1s ease;
+}
+
+
+.engagingStyle > .flowCheckBox.checked > .cbcEditorField {
+    transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.engagingStyle > .flowCheckBox > .cbcEditorField > input {
+    visibility:hidden;
+}
+
+.engagingStyle > .flowCheckBox > .cbcEditorField:before {
+    display: block;
+    content: "\E066";
+    font-family: iconGlyph;
+    font-size: 0;
+    text-align: center;
+    line-height: 16px;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    margin: 8px 8px 8px 4px;
+    box-sizing: border-box;
+    transition: font-size, color, 0.1s ease;
+}
+
+.engagingStyle > .flowCheckBox.checked > .cbcEditorField:before {
+    content: "\E066";
+    font-size: 16px;
+}
+
+.engagingStyle > .flowCheckBox.readonly > .cbcEditorField:before,
+.engagingStyle > .flowCheckBox.disabled > .cbcEditorField:before,
+.engagingStyle > .flowCheckBox.disabled > .cbcEditorLabel {
+    opacity: 0.35;
+}
+
+
+.engagingStyle > .flowCheckBox > .cbcEditorLabel {
+    display: block;
+    padding: 8px 4px;
+}
+
+.flowCheckBox, .flowCheckBox label {
+    cursor: pointer;
+}
+
+.engagingStyle > .flowCheckBox > .cbcEditorLabel > label {
+    display: block;
+    line-height: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+#ShowFlow > .icon16 {
+    background-image: none;
+}
+
+@font-face {
+  font-family: 'iconGlyph';
+  font-style: normal;
+  font-weight:normal;
+  src: url('https://cdn.t1cloud.com/cianywhere/content/base/fonts/cianywhere-regular.woff?v=12.0.62.0') format('woff');
+}
+
+/** end compatibility **/
+
+.glyph, .shareHighPriority label:after {
+    font-family: 'iconGlyph';
+}
+
+.glyph.icon16:before , .shareHighPriority label:after {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.flowWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0;
+    z-index: 9002;
+    background-color: transparent;
+    transition: background 0.5s ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+}
+
+.flowWrapper.active {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flowWrapper.in.active {
+    background-color: transparent;
+}
+
+.flowWrapper > .fixedWidth {
+    height: 100%;
+    min-height: 100%;
+    z-index: 9002;
+}
+
+#flow
+{
+    width: 500px;
+    position: fixed;
+    z-index: 9002;
+    right:-500px;
+    top: 0;
+    bottom: 0;
+    -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transition:0.3s ease-in-out;
+    -moz-transition:0.3s ease-in-out;
+    -ms-transition:0.3s ease-in-out;
+}
+
+/* Used when on IE8, rgba BG color fails*/
+.flowContentBG {
+
+
+}
+
+#FlowContent > .flowContentBG{
+    background-color:rgb(255,255,255) !important;
+}
+
+#FlowContainer > .flowTabsContainer > .flowTabControl{
+    background: white !important;
+}
+
+.flowTabHandlesContainer .flowTabHandle,
+#flow .icon16,
+#FlowContainer .search .editorField:before,
+#FlowContainer .search input,
+#flow a,
+#flow h1,
+#FlowContent,
+#FlowContainer > .flowTabHandlesContainer .flowTabHandleText,
+.flowTabsContainer,
+#flow .checkBoxControl label,
+#ShowFlow,
+#FlowVideos .fieldsContainer,
+.envIdContainer .envId,
+#PriMsgPanel.shown
+{
+    color: #0f3367 !important;
+}
+
+#PriMsgPanel .sharedItemLink,
+#PriMsgPanel .pMsgFooter .pMsgMore,
+#PriMsgPanel .pMsgFooter .pMsgDismiss
+{
+    color: var(--ciaColourThemePrimaryAction);
+}
+
+#flow .primary .icon16{
+    color: white !important;
+}
+
+#flow div::-webkit-scrollbar-thumb:vertical,
+#flow div::-webkit-scrollbar-thumb:horizontal {
+	background-color: rgba(0,0,0, 0.35);
+}
+
+#flow div::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0, 0.5);
+}
+
+#flow div::-webkit-scrollbar-track {
+	background-color: transparent;
+    box-shadow: none;
+}
+
+#flow div:hover::-webkit-scrollbar-track {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#flow #FlowContent {
+    height: 100%;
+}
+
+.flowContentBG {
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    bottom:0;
+    right:0;
+    z-index: -1;
+}
+
+
+#CloseFlow {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: solid 1px transparent;
+    opacity: 0.75;
+    z-index: 10;
+    box-shadow: none;
+}
+
+button#FlowHome {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    display: none;
+}
+
+button#FlowHome:hover {
+    background-image: none;
+}
+
+#FlowContent.selected #FlowHome {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+#FlowHome > .icon16, #CloseFlow > .icon16, .dpJob button.remove > .icon16, #flow .expandable .expando .icon16 {
+    background: none;
+    display: block;
+    font-family: iconGlyph;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-font-smoothing: antialiased;
+    }
+
+.sharedGroup button.remove > .icon16:before {
+    content: "\E057";
+}
+
+#FlowHome > .icon16:before {
+    margin-left: 5px;
+    content: "\E042";
+}
+
+#CloseFlow > .icon16:before, .dpJob button.remove > .icon16:before {
+    content: "\E058";
+}
+
+#flow .expandable .expando .icon16:before {
+    content: "\E063";
+}
+
+
+#flow .expandable.collapsed .expando .icon16:before {
+    content: "\E064";
+}
+
+#CloseFlow:hover, #CloseFlow:active, #FlowContent.selected #FlowHome:hover, #FlowContent.selected #FlowHome:active {
+    opacity: 1;
+}
+
+#FlowContainer {
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#FlowContainer > * {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+#FlowContent.selected #FlowContainer > .flowTabHandlesContainer {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.flowTabHandlesContainer .divider {
+    width: 100%;
+    background: gray;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    height: 1px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.guest .flowTabHandlesContainer .divider {
+    display: none;
+}
+
+#FlowContainer > .flowTabsContainer {
+    position: absolute;
+    left: 500px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    -webkit-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+#FlowContent.selected #FlowContainer > .flowTabsContainer {
+    z-index: 1;
+    left: 30px;
+}
+
+#FlowContainer > .flowTabsContainer > .flowTabControl {
+    width: 460px;
+    top: 0;
+    bottom: 0;
+    left: 460px;
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+
+
+#FlowContainer > .flowTabsContainer > .flowTabControl.toBe,
+#FlowContainer > .flowTabsContainer > .flowTabControl.selected {
+    visibility: visible;
+     -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transition-property: background, left;
+    transition-property: background, left;
+    left: 0;
+    z-index: 2;
+}
+
+#FlowContainer > .flowTabsContainer > .flowTabControl.selected {
+    z-index: 1;
+}
+
+
+#FlowContainer > .flowTabHandlesContainer {
+    border: none;
+    margin-top: 40px;
+    -webkit-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    height: 100%;
+}
+
+#FlowStatusMsg {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: -100px;
+    background: #34761d;
+    color: white;
+    padding: 5px 10px;
+    -webkit-transition: 0.4s top ease-in-out;
+    transition: 0.4s top ease-in-out;
+}
+
+#FlowStatusMsg.show {
+    top: 0;
+}
+
+/******************** Flow Tab Control ************************/
+.flowTabbedControl .flowTabHandlesContainer {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.flowTabbedControl .flowTabHandle {
+    margin-right: 2px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.flowTabHandlesContainer .flowTabHandle
+{
+    padding: 10px 20px;
+    height: auto;
+    border-radius: 0;
+    width: auto;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.flowTabHandlesContainer .flowTabHandle.selected {
+    cursor: default;
+}
+
+#FlowContainer > .flowTabHandlesContainer .flowTabHandleText {
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: top;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 80%;
+}
+
+/*#FlowContainer > .flowTabHandlesContainer .flowTabHandle .imagePlaceHolder:before,
+.flowWrapper .dpJobIcon > .icon24:before {
+    font-family: iconGlyph;
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+}*/
+
+#FlowContainer .flowTabHandle .glyph
+{
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+}
+
+#FlowContent > h1 {
+    opacity: 1;
+    position: absolute;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: left;
+    font-weight: normal;
+    z-index: -1;
+    top: 0;
+    left: 30px;
+    right: 0;
+    height: 40px;
+    color: inherit;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+#FlowContent.selected > h1 {
+    opacity: 0;
+}
+
+.flowTabsContainer {
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.flowTabsContainer > * {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    -webkit-transition: 0.3s ease-in-out;
+    -webkit-transition-property: margin;
+    transition: 0.3s ease-in-out;
+    transition-property: margin;
+    vertical-align: top;
+}
+
+#flow .linksOnly a {
+    padding: 15px;
+    display: block;
+    line-height: 24px;
+    position: relative;
+    transition: background 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+
+    font-weight: 600;
+    font-size: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#flow #PanThemes > .fieldsContainer {
+    overflow: auto;
+}
+
+#flow .linksOnly a:hover, #flow .linksOnly a:focus, #flow .functionLink.selected,
+#GlobalHeader .userNavigation a:hover,
+#FlowContainer > .flowTabHandlesContainer .flowTabHandle:hover,
+#flow #FlowContainer .flowTabHandle:focus,
+#flow .recentsItem:focus {
+    background-color: rgba(0,0,0, 0.05);
+}
+
+#FlowContainer .flowTabHandle.disabled:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+#FlowContainer > .flowTabHandlesContainer .flowTabHandle:hover .imagePlaceHolder {
+    background-position-y: 0;
+}
+#FlowContainer > .flowTabHandlesContainer .flowTabHandle.selected:hover .imagePlaceHolder {
+    background-position-y: 36px;
+}
+
+#flow .linksOnly {
+    padding-left: 0;
+    border: 0;
+}
+
+/* For compatibility */
+/*.userNavigation div > .rolesDelegated { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/role_w.png?v=12.0.62.0'); }
+.userNavigation div > .rolesDelegated { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/rolesdelegated_w.png?v=12.0.62.0'); }
+.userNavigation div > .delegateRole { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/delegatemyrole_w.png?v=12.0.62.0'); }
+.userNavigation div > .changePassword { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/password_w.png?v=12.0.62.0'); }
+.userNavigation div > .mySessions { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/mysessions_w.png?v=12.0.62.0'); }
+.userNavigation div > .logOff { background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/logoff_w.png?v=12.0.62.0'); }*/
+/* End - For compatibility */
+
+/*#flow .linksOnly a:before  {
+    display: block;
+    font-family: iconGlyph;
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+}*/
+
+/*#FlowSettings .about:before,
+#FlowGuidance .about:before { content: "\E06E"; }
+#FlowSettings .diagnostic:before { content: "\E04E"; }
+#FlowSettings .resetWorkplace:before { content: "\E070";}
+#FlowSettings .startupScreen:before { content: "\E071"; }
+#FlowSettings .displayMode.easy:before { content: "\E074"; }
+#FlowSettings .displayMode.hybrid:before {content:"\E073" }
+#FlowSettings .displayMode.standard:before { content: "\E072";}
+#FlowSettings .diagnostic:before { content: "\E04E"; }
+#flow .viewShortcuts:before { content: "\E392";}
+#flow .quickTextMnt:before { content: "\E387";}
+#flow .lnkRegSettings:before { content: "\E081";}*/
+
+#flow a.functionLink:hover {
+    text-decoration: none;
+}
+
+#flow > button.close .buttonLabel
+{
+    display: none;
+}
+
+#flow .lnkRegSettings .next {
+    position: absolute;
+    right: 5px;
+    opacity: 0.6;
+    top: 50%;
+    margin-top: -8px;
+}
+
+#flow .lnkRegSettings > div {
+    text-decoration: none;
+}
+
+/******************** Flow contents ************************/
+
+
+#FlowContainer .flowTabsContainer .flowTabsContainer {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#FlowContainer .expandable {
+    padding: 5px 10px;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/blackopac5.png?v=12.0.62.0');
+}
+
+.flowWrapper.active > .fixedWidth:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 48px;
+    top: 50%;
+    left:50%;
+    margin-left: -50px;
+    margin-top: -24px;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/loaderlrg.gif?v=12.0.62.0');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: none;
+}
+
+.flowWrapper > .fixedWidth.loaded:after {
+    display: none;
+    background: none;
+}
+
+/*--- Search Input--*/
+
+#FlowContainer .search {
+    margin: 10px;
+}
+
+#FlowContainer .search input::-ms-clear {
+    display: none;
+}
+
+#FlowContainer .editorField {
+    border-radius: 4px;
+    position: relative;
+}
+
+.flowUserSearch .editorField, .flowTextBoxControl .editorField
+{
+    border-radius: 3px;
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    background-color: rgba(0,0,0,0.01);
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+}
+
+#FlowContainer .search .editorField:before {
+    content: "\E044";
+    font-family: iconGlyph;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -8px;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+}
+
+#FlowContainer .search .editorField.active {
+    background-color: #fff;
+    -webkit-transition: background-color 0.2s ease-in-out;
+}
+
+#FlowContainer .search .editorField.active:before {
+    color: #000;
+}
+
+
+#FlowContainer .search input {
+    position: relative;
+    padding: 10px;
+    padding-right: 20px;
+    margin: 0;
+    border-radius: 3px;
+    width: 372px;
+}
+
+#FlowContainer input, #FlowContainer textarea {
+    background-color: transparent;
+    border: none;
+}
+
+#FlowContainer .search input:focus, #FlowContainer .search .active input {
+    color: #000;
+}
+
+#FlowContainer .lightSpinner {
+    margin-top: 7px;
+    margin-left: 7px;
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    background:url('https://cdn.t1cloud.com/cianywhere/content/base/images/loaderdarkbg.gif?v=12.0.62.0') no-repeat center center;
+}
+#FlowContainer .lightSpinner:before {
+    display: none;
+}
+
+/*--- Content Tabs--*/
+
+/* Tab header */
+#FlowContainer > .flowTabsContainer .flowTabHandlesContainer
+{
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    border-bottom: solid 1px rgba(0,0,0,0.15);
+}
+
+#FlowContainer > .flowTabsContainer .flowTabHandle
+{
+    float: left;
+    border-radius: 2px;
+    margin-right: 1px;
+    padding: 8px 10px;
+    font-weight: bold;
+    border-color: transparent;
+    border-bottom: none;
+    background-color: transparent;
+    background-image: none;
+    color: inherit;
+}
+
+#FlowContainer > .flowTabsContainer .flowTabHandle:hover {
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac5.png?v=12.0.62.0');
+    background-repeat: repeat;
+}
+
+#FlowContainer > .flowTabsContainer .flowTabHandle.selected {
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/blackopac5.png?v=12.0.62.0');
+    background-repeat: repeat;
+}
+
+#FlowContainer > .flowTabsContainer .flowTabsContainer > *
+{
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+}
+#FlowContainer > .flowTabsContainer .flowTabsContainer > .selected {
+    visibility: inherit;
+}
+
+#FlowContainer > .flowTabsContainer .flowTabHandle:first-child
+{
+    border-right-width: 1px;
+}
+
+#flow .sharingHeaderContainer {
+    margin: 10px;
+}
+
+#flow .sharingHeaderContainer:before {
+    opacity: 0.7;
+    line-height: 12px;
+}
+
+#flow .en .sharingHeaderContainer:before {
+    content: "View all:";
+}
+
+#flow .nl .sharingHeaderContainer:before {
+    content: "Bekijk alles:";
+}
+
+#flow .de .sharingHeaderContainer:before {
+    content: "Alle Ansehen:";
+}
+
+#flow .sharingHeaderContainer .flowEditorLabelAutoWidth {
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+.btnSharePanel
+{
+    float: right;
+    margin: 0 10px;
+}
+
+.btnSharePanel > .buttonLabel {
+    float: right;
+}
+
+.notSharable {
+      cursor: default;
+}
+
+#ShareCurrentFunction {
+    visibility: hidden;
+}
+
+.shareable #ShareCurrentFunction {
+    visibility: visible;
+}
+
+#ShareCurrentFunction .buttonLabel {
+    display: none;
+}
+
+/******************** Notification ************************/
+
+.flowTabHandle.selected .notificationCount {
+    display: none !important;
+}
+.dayPan .header {
+    line-height: 1.5em;
+}
+
+#PanNotifications .dismiss:hover, #PriMsgPanel .dismiss:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.unread .sharedGroupSection {
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+#PanNotifications .panShareBtn {
+    min-height: 40px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.05);
+}
+
+#PanNotifications .notificationItems > .fieldsContainer {
+    overflow: auto;
+    width: 100%;
+}
+
+.panShareBtn .dismiss {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+#PanNotifications .notificationItems.empty > * {
+    display: none;
+}
+
+#PanNotifications .notificationItems.empty::after {
+    content: "No notifications!";
+    opacity: 0.5;
+    padding: 15px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+}
+
+#PanNotifications .notificationItems h1 {
+    font-weight: normal;
+    font-size: 1.2em;
+    opacity: 0.6;
+    display: inline-block;
+}
+
+/******************** Recents ************************/
+#PanRecents, #PanSharing, #PanThemes {
+    padding: 0;
+    border: 0;
+}
+
+#flow .flowSectionHeader h1, #FlowContainer >.flowTabHandlesContainer .flowTabHandleText {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 8px;
+    line-height: 24px;
+}
+
+
+#tabsRecents .flowPanel
+{
+    border: none;
+}
+
+#tabsRecents .fieldsContainer {
+    padding-bottom: 0;
+}
+
+#ByType .expandable h1, #ByDate .expandable h1
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac20.png?v=12.0.62.0');
+    background-repeat: repeat;
+    border-radius: 2px;
+    padding: 0 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+    color: inherit;
+}
+
+.flowPanel .expandable h1
+{
+    font-weight: 600;
+    font-size: larger;
+    color: inherit;
+    line-height: 18px;
+}
+
+/*
+#flow .noResults {
+    color: #fff;
+}
+*/
+
+#tabsRecents .recentsItem
+{
+    clear: both;
+}
+
+.recentsItem:hover, .dpJob:hover {
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac5.png?v=12.0.62.0');
+    background-repeat: repeat;
+}
+
+.recentsItem a {
+    min-height: 24px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24px;
+    position: relative;
+    padding-left: 10px;
+    max-width: 62%;
+}
+
+#tabsRecents .recentsItem .icon24
+{
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/32/phone.png?v=12.0.62.0');
+    background-size: cover;
+}
+
+#tabsRecents .recentsItem.Supplier .icon24
+{
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/32/useravatar.png?v=12.0.62.0');
+    background-size: cover;
+}
+
+#tabsRecents .recentType
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac20.png?v=12.0.62.0');
+    background-repeat: repeat;
+    border-radius: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    float: right;
+    line-height: 16px;
+    text-align: center;
+    margin-top: -26px;
+    margin-right: 70px;
+    max-width: 20%;
+}
+
+#tabsRecents .timeStamp
+{
+    border-radius: 2px;
+    padding: 0 4px;
+    font-size: 0.9em;
+    display: inline-block;
+    float: right;
+    line-height: 24px;
+    max-width: 14%;
+    text-align: center;
+    margin-top: -30px;
+    margin-right: 10px;
+    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+
+/******************** Sharing *************************/
+
+.flowTabControl.hasSideBySide
+{
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.flowTabControl.hasSideBySide > *
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+#tabsShare .flowPanel
+{
+    margin: 0;
+}
+
+
+#flow .linksOnly a, #tabsRecents .recentsItem, #tabsShare .flowPanel {
+    /*border-top: solid 1px rgba(255,255,255,0.05);*/
+    /*border-bottom: solid 1px rgba(0,0,0,0.15);*/
+}
+
+#flow a.disabled {
+    opacity: 0.3;
+    cursor: default;
+    text-decoration: none;
+}
+
+#tabsShare .commentHeader {
+    margin-right: 10px;
+    white-space: pre-wrap;
+}
+
+#flow .sharedHeading
+{
+    height: 32px;
+    line-height: 32px;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+#flow .sharedItem:hover .remove
+{
+    display: block;
+}
+
+#flow .sharedFooter textarea
+{
+    width: 90%;
+    display: none;
+}
+
+#tabsShare .expandable
+{
+    display: block;
+    margin: 5px 0;
+}
+
+.sharedItem {
+    border-width: 1px;
+    border: none;
+}
+
+#tabsShare .sharedLink
+{
+    max-width:70%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:inline-block;
+    float:left;
+    font-weight: bold;
+}
+
+#tabsShare .shareType
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac20.png?v=12.0.62.0');
+    background-repeat: repeat;
+    border-radius: 2px;
+    max-width:24%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:inline-block;
+    float:left;
+    margin-top:6px;
+    margin-left:8px;
+    padding:0 4px;
+    line-height:16px;
+}
+
+#tabsShare .sharedDetails
+{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.sharedDetails span {
+    padding: 2px 0;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.sharedHeading .user, .sharedHeading .shareDate, .sharedHeading .shareTime, .sharedHeading .withOrBy {
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/blackopac15.png?v=12.0.62.0');
+    background-repeat: repeat;
+    border-radius: 2px;
+}
+
+.sharedItem.hBCol {
+    border-left-width: 5px;
+}
+
+.sharingHeaderContainer a {
+    padding: 0 5px;
+    border-left: solid 1px;
+    opacity: 0.7;
+    line-height: 12px;
+    display: inline-block;
+}
+
+.sharingHeaderContainer a:first-child {
+    border: none;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.showSharedByMe {
+
+}
+
+.showSharedWithMe {
+
+}
+
+#flow .sharedItem .remove
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: none;
+    z-index: 100;
+}
+
+#tabsShare .sharedItem:hover .remove
+{
+    display: block;
+}
+
+.flowBubble .sharedItem {
+    background-color: transparent;
+}
+
+#PanSharing > .flowPanel, #PanSharing > .flowPanel > .fieldsContainer, #SharedItemsContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#SharedItemsContent {
+    top: 50px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 46px;
+}
+
+#flow .sharedGroup {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+
+#flow .sharedGroup, #PriMsgPanel .sharedGroup {
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+}
+
+#flow .sharedGroup.dismissed, #PriMsgPanel .sharedGroup.dismissed {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+
+#flow .sharedGroupUser {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+}
+
+#flow .sharedGroupWrapper {
+    margin: 5px;
+    margin-left: 53px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 6px;
+}
+
+.sharedGroupHeader {
+    position: relative;
+    padding: 5px;
+}
+
+.sharedGroupContent .sharedBy{
+    font-size: 0.9em;
+    margin: 5px;
+}
+
+.sharedGroupHeader h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+}
+
+.highPriority .shareAlert {
+    float: left;
+    margin-top: -1px;
+    margin-right: 5px;
+}
+
+.highPriority .shareAlert:before {
+    content: "\E185";
+    opacity: 0.35;
+}
+
+.sharedByUserId {
+    display: inline-block;
+}
+.sharedGroupComment {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.sharedGroupTop {
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.sharedGroupTop .dateTime {
+    float: left;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.sharedGroup button.remove {
+    float: right;
+    padding: 0;
+    background: transparent;
+    border: none;
+    opacity: 0.35;
+    margin-top: -2px;
+}
+
+.sharedGroup button.remove:hover {
+    opacity: 1;
+}
+
+.sharedGroupItem {
+    line-height: 24px;
+    margin-top: 2px;
+    min-height: 2em;
+    border-radius: 5px;
+}
+
+.sharedItemLink {
+    padding-left: initial;
+    display: block;
+    padding: 0 5px;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.sharedGroupItem:hover .icon16 {
+    opacity: 1;
+}
+
+.sharedGroupItem .nolongervalid {
+    display: block;
+    line-height: 8px;
+    font-style: italic;
+}
+
+.sharedItemIcon, .sharedItemIcon2 {
+    margin: 5px;
+    opacity: 0.5;
+}
+
+.sharedItemIcon {
+    float: left;
+}
+
+.sharedItemIcon2 {
+    float: right;
+}
+
+/*--Shared icon glyphs--*/
+.sharedItemIcon:before {
+    content: "\E137";
+}
+
+.sharedItemIcon.report:before {
+    content: "\E200";
+}
+
+.sharedItemIcon2 :before {
+    content: "\E05A"
+}
+
+/* ***************** Comment ********************/
+
+#flow .sharedFooter textarea
+{
+    width: 95%;
+}
+
+#flow .commentText
+{
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#flow .comment
+{
+    position: relative;
+}
+
+#flow .removeComment
+{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 1px;
+}
+
+#flow .comment:hover .removeComment
+{
+    display: block;
+}
+
+
+
+/* Share current function form */
+
+.flowShareContent
+{
+    border: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.flowShareContent.selected {
+    visibility: inherit;
+}
+
+.flowShareContent h1
+{
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+.flowShareContent button.picker {
+    display: none;
+}
+
+.shareItemTemplate {
+    padding: initial;
+}
+
+.sharedItemsContainer {
+    max-height: 300px;
+    overflow: auto;
+    padding-top: 2px;
+}
+
+.selectedUsers {
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+    min-height: 30px;
+    margin: 10px 25px 0 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.selectedUsers.empty {
+    opacity: 0.5;
+}
+
+.selectedUsers .user {
+    margin-top: 1px;
+    position: relative;
+}
+
+.hasNewAni {
+    border-left-style: solid;
+    border-left-width: 0;
+    -webkit-transition: border 0.5s ease-in;
+    transition: border 0.5s ease-in;
+}
+
+.hasNewAni.newAdded {
+    border-left-width: 3px;
+}
+
+.selectedUsers .user > * {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.selectedUsers .user .delete {
+    /*visibility: hidden;*/
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin-top: -15px;
+    background: none;
+    box-shadow: none;
+    border: solid 1px transparent;
+    border-radius: 15px;
+}
+
+.selectedUsers .user .delete:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.selectedUsers .name,
+.selectedUsers .id {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.selectedUsers .name {
+    max-width: 65%;
+}
+.selectedUsers .id {
+    float: right;
+    margin-right: 25px;
+    max-width: 25%;
+    opacity: 0.7;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.selectedUsers .user:hover .delete {
+    visibility: visible;
+}
+
+.shareHighPriority > .editorLabel > label {
+    position: relative;
+}
+
+.shareHighPriority label:after {
+    content: "\E185";
+    opacity: 0.35;
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+
+[data-t1-control-id="AddComments"] .editorField
+{
+    width: 100%;
+}
+
+.selectedUsers {
+    width: 398px;
+}
+
+.flowShareContent .flowTextBoxControlInput
+{
+    width: 390px;
+    margin: 0;
+    padding: 8px;
+}
+
+.flowUserSearchSuggestionPane {
+    width: 398px;
+}
+
+#FlowContainer .txtAddComments textarea {
+    height: 150px;
+}
+
+#flow .selectedUsers {
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+#flow .selectedUsers.empty {
+    border: solid 1px transparent;
+    }
+
+
+.selectedUsers > .user {
+    line-height: 16px;
+    padding: 10px 5px;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac10.png?v=12.0.62.0');
+    background-repeat: repeat;
+}
+
+#BtnSaveSharedFunction, #BtnCancelShareFunction
+{
+    float: left;
+    margin: 10px 5px 0 0;
+}
+
+#BtnSaveSharedFunction {
+    margin-left: 10px;
+}
+
+.themeLink.selected:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.hasSearchResult .noMatch {
+    display: none;
+}
+
+@media only screen and (device-width: 768px) {
+    .selectedUsers .user .delete {
+        visibility: visible;
+    }
+}
+
+#ShowFlow{
+    position: relative;
+}
+
+#flow .notificationCount {
+    right: -4px;
+    top: 4px;
+    padding: 2px;
+    position: absolute;
+}
+
+/* Share current function form */
+
+.flowBubble {
+    width: 400px;
+    position: absolute;
+    right: 2px;
+    border-radius: 15px;
+    bottom: 22px;
+    z-index: 1000;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, .3);
+}
+
+.flowBubble .bubbleArrow {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.flowBubble > .content {
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whitegrad54opac100.png?v=12.0.62.0') repeat-x top;
+    padding-right: 24px;
+}
+
+.flowBubble .bubbleArrow > * {
+    height: 0;
+    position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 25px solid;
+    z-index: 15;
+}
+
+.flowBubble .bgArrow {
+    width: 0;
+}
+
+.flowBubble .borderArrow {
+    width: 2px;
+    margin-left: -1px;
+}
+
+.flowBubble .sharedItem {
+    padding-left: 10px;
+}
+
+.flowBubble .sharedItem,
+.flowBubble .comment {
+    border: none;
+}
+
+.flowBubble .expando,
+.flowBubble .comment .delete {
+    display: none;
+}
+
+.flowBubble > .delete {
+    float: right;
+    margin: 5px 5px 0 0;
+    padding: 0;
+}
+
+.flowUserSearchInput, .flowTextBoxControlInput {
+    display: inline-block;
+    width: 230px;
+    vertical-align: top;
+    min-height: 16px;
+    line-height: 16px;
+}
+
+
+.flowUserSearchSuggestionPane {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    left: 0;
+    max-height: 242px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.flowUserSearchSuggestionPane.shown {
+    display: block;
+}
+
+.flowUserSearchSuggestionPane.shown > .flowItemLink {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top: solid 1px #fff;
+    position: relative;
+    display: block;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.flowUserSearchSuggestionPane.shown > .flowItemLink.selected {
+    z-index: 1;
+}
+
+.flowUserSearchSuggestionPane.shown > .flowItemLink:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.flowFieldSet {
+    padding: 0;
+    position: relative;
+}
+
+.flowFieldSet .expandable > .expando {
+    float: right;
+    margin-right: 5px;
+    border: none;
+    opacity: 0.5;
+}
+
+.flowFieldSet .expandable:hover > .expando {
+    opacity: 1;
+}
+
+.flowFieldSet .expandable:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.flowFieldSet > .expandable > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flowEditorLabel, .flowEdittorLabelAutoWidth {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    padding: 4px 5px 4px 0;
+    border: solid 1px transparent;
+}
+
+.flowEditorLabel {
+    width: 150px;
+}
+
+#PanGuidance .fieldsContainer {
+    overflow-y: auto;
+    padding-left: 12px;
+    padding-top: 10px;
+    min-height: 200px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.envIdWrapper {
+    bottom: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+#FlowContent.selected > .envIdWrapper {
+    opacity: 0;
+}
+
+.envIdContainer {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px;
+    padding-right: 10px;
+}
+
+
+.envIdContainer > * {
+    display: inline-block;
+}
+
+/******************** DP jobs *************************/
+
+#FlowDpJobs {
+    color: white;
+}
+
+#DpJobsTitle {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+#FlowDpJobs > .flowPanel, #FlowDpJobs > .flowPanel > .fieldsContainer, #DpJobsContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#FlowDpJobs > .flowPanel > .fieldsContainer {
+    top: 30px;
+}
+
+ #DpJobsContent {
+     top: 50px;
+     overflow-y: auto;
+     -webkit-overflow-scrolling: touch;
+ }
+
+#DpJobsTitle > * {
+    display: inline-block;
+}
+
+.flowWrapper .dpJob {
+    padding: 5px;
+    margin: 0 10px 10px;
+    color: white;
+}
+
+.flowWrapper .dpJobIcon {
+    float: left;
+    padding: 2px;
+}
+
+.flowWrapper .dpJobIcon > .icon24 {
+    background-position: -294px -6px;
+    display: block;
+}
+
+.dpJobIcon > .icon24:before {
+    content: "\E04C";
+    color: violet;
+}
+
+.flowWrapper .completed .dpJobIcon > .icon24 { background-position-x: -330px; }
+.flowWrapper .failed .dpJobIcon > .icon24 { background-position-x: -366px; }
+
+.flowWrapper .dpJobWrapper {
+    padding-left:40px;
+}
+
+.dpJobHeader {
+    position: relative;
+}
+
+.dpJobHeader h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 1.3em;
+    padding-right: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dpJobHeader .dateTime {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    padding: 3px;
+}
+
+.dpJob button.remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    border: none;
+    opacity: 0.3;
+}
+
+.desktop .dpJob button.remove:hover {
+    opacity: 1;
+}
+
+.jobReportLink {
+    display: none;
+    background: rgba(255,255,255, 0.05);
+    padding: 7px 5px;
+}
+
+.dpJob .shown {
+    display: block;
+}
+
+.complete .jobReportLink {
+    margin-right: 10px;
+    position: relative;
+}
+
+.complete .jobReportLink > .icon16 {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/actions/white/download.png?v=12.0.62.0');
+    opacity: 0.3;
+}
+
+.desktop .complete .jobReportLink:hover > .icon16 {
+    opacity: 1;
+}
+
+#PriMsgPanel {
+    visibility: hidden;
+    position: absolute;
+    top: -300px;
+    right: 50px;
+    z-index: 10000;
+    max-width:  272px;
+    -webkit-transition: 0.5s ease-in-out;
+    -webkit-transition-property: top;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgb(0,0,0,0.04), 0px 8px 16px rgb(0,0,0,0.08);
+}
+
+#PriMsgPanel.shown {
+    visibility: visible;
+    top: 45px;
+}
+
+#PriMsgPanel .pMsgHeader,
+#PriMsgPanel .pMsgContent{
+    padding: 8px 16px;
+}
+
+#PriMsgPanel > * {
+    background: rgba(255, 255, 255, 1);
+}
+
+.pMsgHeader {
+    min-height: 20px;
+}
+
+.pMsgHeader > .pMsgHdIcon:before {
+    content: "\E068";
+    font-size: 18px;
+    color: orange;
+    margin: 12px;
+    line-height: 18px;
+}
+
+.pMsgHeader > .pMsgClose:before {
+    content: "\E058";
+    opacity: 0.7;
+    cursor: pointer;
+}
+.pMsgHeader > .pMsgClose:hover:before {
+    opacity: 1;
+}
+
+.pMsgHdIcon {
+    float: left;
+    display: none;
+}
+
+.pMsgClose {
+    float: right;
+}
+
+.pMsgTitle {
+    display: block;
+    margin-left: 40px;
+    color: white;
+    line-height: 2em;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.pMsgContent {
+    min-height: 100px;
+}
+
+.pMsgFooter {
+    padding: 16px;
+    border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+.pMsgContent .sharedGroupUser {
+    float: left;
+}
+
+.pMsgContent .sharedGroupSection {
+    margin-left: 42px;
+    line-height: 1.5em;
+}
+
+.pMsgContent .sharedGroupHeader h1 {
+    color: inherit;
+}
+
+
+/******************** Other ************************/
+
+.functionInformation #syncKeysHelper, .functionInformation #sectionInfoHelper {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.workplaceForm .functionInformation {
+    display: none !important;
+}
+
+#syncKeysHelper #ContextualKeysCopytoStorageButton{
+    margin: 10px 10px 20px 0;
+}
+
+#syncKeysHelper #sectionInfoHelper, #sectionInfoHelper #sectionInfoHelper {
+    margin: 10px;
+}
+
+#syncKeysHelper table, #sectionInfoHelper table {
+    font-size: 0.9em;
+    border: 1px solid #ebedee;
+}
+
+#syncKeysHelper table thead tr, #sectionInfoHelper table thead tr {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+#syncKeysHelper table td, #sectionInfoHelper table td {
+    padding: 5px;
+}
+
+#syncKeysHelper, #sectionInfoHelper {
+    margin: 10px;
+}
+
+/* ************************************
+*****************IE 8 Support *********
+***************************************/
+
+@media \0screen {
+
+    @font-face {
+      font-family: 'iconGlyph';
+      font-style: normal;
+      font-weight:normal;
+      src: url('https://cdn.t1cloud.com/cianywhere/content/base/fonts/cianywhere-regular.eot?v=12.0.62.0') format('opentype');
+    }
+
+    .flowWrapper > .fixedWidth:after {
+        display: none;
+    }
+
+     #flow .expandable {
+        display: block;
+         cursor: pointer;
+    }
+
+    #FlowContainer > .flowTabHandlesContainer .flowTabHandle.selected:after {
+        display: none;
+    }
+
+    #FlowContainer .flowFieldSet {
+        display: block;
+    }
+
+    #FlowContent.selected > .envIdWrapper {
+        display: none;
+    }
+
+    #flow #PanSettings .displayMode {
+        display: none;
+    }
+
+    #FlowContainer .search .editorField {
+        background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whiteopac20.png?v=12.0.62.0');
+        background-repeat: repeat;
+    }
+}
+
+
+
+/* ************************************
+***************** Mobile Support *********
+***************************************/
+
+@media only screen and (max-width: 700px)
+{
+    #flow.loaded {
+        display: inherit;
+    }
+    #flow .popupClose {
+        border-color: #fff;
+        top: 6px;
+        padding: 2px;
+    }
+
+    #flow .popupClose .buttonLabel {
+        display: none;
+    }
+
+     #flow {
+        min-height: 100%;
+         width: 100%;
+     }
+
+     #FlowRecents {
+         overflow: hidden; /** Fixes ios scroll to left after orientation change */
+     }
+
+     #flow .sharedItem {
+        padding:0 0 0 20px;
+     }
+
+     #flow .sharedItem header {
+         margin-left: -20px;
+     }
+
+     #FlowContainer .search {
+         margin: 0 20px 0 10px;
+     }
+
+    .flowUserSearch .editorField, .flowTextBoxControl .editorField {
+        display: block;
+    }
+
+    .editorField .flowTextBoxControlInput, #FlowContainer .search input{
+        width: 100%;
+        min-height: 25px;
+        padding: 10px;
+    }
+
+    .flowUserSearchSuggestionPane{
+        width: 100%;
+    }
+
+     #flow .imagePlaceHolder {
+         position: inherit;
+         top: auto;
+         right: auto;
+     }
+
+     #PanSharing {
+         -webkit-transition: 0.5s ease-in-out;
+         -webkit-transition-property: margin;
+     }
+
+    #FlowSharing, #FlowRecents {
+         width: 100%;
+
+     }
+
+    #flow .removeComment {
+        display: block;
+        top: 0;
+    }
+
+    #flow div.flowTabHandle {
+        min-height: inherit;
+    }
+
+    /* Tab control style for mobile*/
+
+    #flow .flowTabbedControl  .flowTabHandlesContainer
+    {
+        overflow:hidden;
+        white-space:nowrap;
+    }
+
+
+    /*#flow .flowTabbedControl  .flowTabHandle {*/
+    /*    display: inline-block;*/
+    /*    text-align:center;*/
+    /*}*/
+
+    #FlowContent.selected #FlowContainer > .flowTabsContainer{
+        left:0;
+    }
+
+    #FlowContent.selected #FlowHome{
+        z-index: 2;
+        top: 5px;
+    }
+
+    #FlowContainer .flowSectionHeader{
+        text-align: center;
+    }
+
+    #flow .flowTabbedControl > .flowTabHandlesContainer > .flowTabHandle.selected {
+        z-index: 1;
+        border-bottom: solid 1px white;
+    }
+
+    #tabsRecents .flowPanel {
+        padding: 5px 0;
+    }
+
+    #flow .flowTabsContainer .flowTabControl
+    {
+        display: none;
+        padding-top: 5px;
+        width:100%;
+    }
+
+    #flow .flowTabsContainer .flowTabControl.selected
+    {
+         display: block;
+        z-index: 9000;
+    }
+
+    #PanShareCurrentFunction .editorField {
+        height: auto;
+    }
+
+    #PanShareCurrentFunction .itemLink {
+        width: auto;
+    }
+
+    .recentsItem a {
+        max-width: 55%;
+    }
+}
+
+a.themeLink .ticked{
+    visibility: hidden;
+    border-radius: 50%;
+    border: solid 2px white;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -12px;
+    padding: 0 1px 2px 1px;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+a.themeLink.selected .ticked{
+    visibility: visible;
+    transform: scale(1);
+}
+
+#flow #PanThemes.linksOnly a {
+    padding:0;
+    position: relative;
+    min-height: 85px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+a.themeLink , a.themeLink .bgImg, a.themeLink .fg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+a.themeLink .fg{
+    z-index: -1;
+    right: 50%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+a.themeLink .bgImg{
+    opacity: 0.9;
+    background-size: cover;
+    background-color: rgba(0,0,0, 0.2);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+a.themeLink:hover  .bgImg, a.themeLink.current  .bgImg, a.themeLink.selected .bgImg { opacity: 1; }
+
+/*a.themeLink .bgImg {*/
+    /*transition: transform 0.5s cubic-bezier(.87,-.41,.19,1.44);*/
+    /*-webkit-transition: -webkit-transform opacity 0.5s cubic-bezier(.87,-.41,.19,1.44);*/
+    /*-moz-transition: -moz-transform 0.5s cubic-bezier(.87,-.41,.19,1.44);*/
+/*}*/
+
+/*a.themeLink .bgImg.loading {}*/
+
+a.themeLink .colPalette {
+    position: absolute;
+    left: 20px;
+    right: 0;
+    bottom: 10px;
+}
+
+a.themeLink .colPalette span {
+    display: inline-block;
+    border: solid 2px white;
+    border-radius: 6px;
+}
+
+a.themeLink .thname {
+    color: white !important;
+    font-weight: 600;
+    text-shadow: 0 1px 5px black;
+}
+
+a.themeLink button {
+    opacity: 0;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    padding: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+}
+
+a.themeLink:hover button {
+    opacity: 1;
+}
+
+.tablet a.themeLink button {
+    opacity: 1;
+}
+
+a.themeLink.selected button {
+    display: none !important;
+}
+
+/************* STARRED *************/
+
+#PanFlowStarred {
+    white-space: normal;
+}
+
+.starredItem {
+    margin: 5px 20px;
+    background: rgba(255,255,255,0.05);
+    border: solid 1px transparent;
+}
+
+.starredItem:hover {
+    background: rgba(255,255,255,0.03);
+    border: solid 1px rgba(255,255,255,0.1);
+}
+
+
+.starredItem .fname {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.starredItem > * {
+    vertical-align: top;
+}
+
+.flowDropDown {
+    position: relative;
+    cursor: pointer;
+}
+
+.flowDropDownPanel {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    left: -1px;
+    width: 100%;
+    max-height: 400px;
+    overflow: auto;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.flowDropDown .handle {
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    min-height: 1em;
+    padding: 15px 10px;
+}
+
+.flowDropDown .handle:hover {
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.flowDropDown.block .handle .glyph {
+    float: right;
+}
+
+.flowDropDown.droppedDown .flowDropDownPanel {
+    display: block;
+}
+
+.flowDropDown a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.flowDropDownPanel > * {
+    min-height: 1em;
+    display: block;
+    padding: 15px;
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+
+.starredItem.filtered, .starredItem.hidetype {
+    display: none;
+}
+
+.starredFilter {
+    width: 90%;
+    background: rgba(0,0,0, 0.1);
+    position: relative;
+}
+
+.starredFilter:after {
+    content: "";
+    border: solid 1px rgba(0,0,0, 0.5);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    border-top: 0;
+    left: 0;
+}
+
+.starredFilter input {
+    background: rgba(0,0,0, 0.01);
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.starredFilter input:focus {
+    background: rgba(0,0,0, 0.05);
+}
+
+#FlowStarred .noMatch:after {
+    content: "No results found!";
+    position: absolute;
+    margin-top: 100px;
+    opacity: 0.5;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#FlowContainer .search .editorField:before{
+    color: white !important;
+}
+
+#PanFlowStarred .empty .starredFilter,
+#PanFlowStarred .empty .flowDropDown  {
+    display: none;
+}
+
+#StarredList {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#FlowStarred .flowDropDown {
+    margin-left: 20px;
+}
+
+/** Regional Settings */
+
+#BtnRegSettingsSave {
+    margin-left: 20px;
+}
+
+ #VideosPopupWrapper
+{
+    z-index: 9003;
+    position: absolute;
+    top: 0;
+     left: 0;
+     right: 0;
+    bottom: 0;
+    opacity: 0;
+     overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.5s ease-in-out;
+    -webkit-transition-property: opacity;
+}
+
+
+#VideosPopupWrapper.shown {
+    opacity: 1;
+}
+
+#VideosPopupWrapper > .fixedWidth {
+    height: 100%;
+}
+
+
+#VideosPopup {
+    box-shadow: none;
+    overflow: inherit;
+    left: 20%;
+    right: 20%;
+    top: 10%;
+    bottom: 20%;
+    min-height: 420px;
+
+    position: absolute;
+
+    background: linear-gradient( rgba(127, 200, 243, 0.5), rgba(145, 205, 240, 0.64) ), url('https://cdn.t1cloud.com/cianywhere/content/base/images/discovery/2018a/splashbg.jpg?v=12.0.62.0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -120px;
+    background-position-x: center;
+
+     box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset  0px 10px 20px rgba(0, 0, 0, 0.5);
+
+    -moz-box-shadow: #000 1px 1px 6px;
+    box-shadow: #000 1px 1px 6px;
+
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+
+    -webkit-transition-property: -webkit-transform, top, left;
+    -moz-transition-property: -moz-transform;
+}
+
+.shown #VideosPopup {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+}
+
+#VideosPopupHeader {
+    display: none;
+}
+
+#VideosPopupHeader {
+    font-size: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    display: block;
+}
+
+
+#VideosPopup .subHeader {
+    display: none;
+}
+
+#VideosPopup .subHeader {
+    display: block;
+    font-size: 1.3em;
+}
+
+#StartupContent {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding: 10px;
+    display: none;
+}
+
+.startup #StartupContent {
+    display: block;
+}
+
+#VideosPopup > button {
+    position: absolute;
+    padding: 4px;
+    border-radius: 16px;
+    border: solid 2px white;
+    top: -12px;
+    right: -12px;
+    box-shadow: -1px 1px 1px #000;
+    background-image: none;
+    z-index: 100;
+}
+
+body.desktop #VideosPopup > button:hover {
+    box-shadow: -2px 4px 6px #000;
+}
+
+
+#VideosContent {
+    position: absolute;
+    top: 100px;
+    bottom: 140px;
+    left: 30px;
+    right: 30px;
+    padding: 5px;
+    overflow-x: auto;
+    color: white;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.phone #VideosContent {
+    left: 0;
+    right: 0;
+}
+
+.vdoWrapper {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.vdoLoaded .vdoWrapper {
+    opacity: 1;
+}
+
+#flow .vdoWrapper {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+#flow .seeAllGuidance {
+    float: left;
+    width: 100%;
+}
+
+#flow .seeAllGuidance > a{
+     background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/actions/white/popout.png?v=12.0.62.0') no-repeat left;
+    background-position: 10px !important;
+}
+
+.vdoFooter {
+    color: #fff;
+    width: 100%;
+    text-align: left;
+}
+
+.vdoFooter .title {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color:white;
+}
+
+.vdoFooter .type {
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/actions/white/video.png?v=12.0.62.0') no-repeat left;
+    padding-left: 24px;
+    line-height: 1.2em;
+}
+
+#ChkShowWelcomeVideo {
+    bottom: -32px;
+    position: absolute;
+}
+
+.phone #ChkShowWelcomeVideo {
+    bottom: 0;
+    left:0;
+    right:0;
+    text-align:center;
+}
+
+.workplaceCheckBox .label {
+    line-height:2em;
+    vertical-align:top;
+}
+
+@media \0screen {
+    .vdoWrapper iframe body {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 800px) {
+    #VideosPopup {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #VideosPopup .close {
+        right: 5px;
+        top: 5px;
+    }
+
+    #VideosPopupHeader {
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+
+    .showAgain {
+        bottom: -44px;
+    }
+}
+
+
+@media (max-height: 500px) {
+    #VideosPopup {
+        min-height: 100%;
+    }
+
+    .t1UniLinkWrap > div {
+        line-height: 1.5em;
+    }
+
+    .showAgain {
+        bottom: 0;
+    }
+
+}
+
+#T1UniHelpWrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    opacity: 0;    
+    visibility: hidden;
+    pointer-events: none;
+}
+
+body.t1UniHelpWindow #T1UniHelpWrapper{
+    opacity:1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+#T1UniHelpWrapper.shown {
+    z-index: 9003;
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+#T1UniHelpWrapper .itemSpinner {
+    height: 100%;
+}
+
+#T1UniHelpWrapper.loaded .itemSpinner {
+    display: none;
+}
+
+/* following style for individual help window */
+body.t1UniHelpWindow #GlobalFooter, body.t1UniHelpWindow .usabilla_live_button_container {
+    display: none;
+}
+
+.t1uniPopup {
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    left: 15%;
+    right: 15%;
+    background: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.52);
+}
+
+
+.hasPopup .whatsNewPopup {
+    opacity: 1;
+}
+
+.wnHeader > .margin10 {
+    max-width: 60%;
+}
+
+#t1uni {
+    position: absolute;
+    bottom: 68px;
+    left: 10px;
+    border-radius: 4px;
+    padding: 5px;
+    display: none;
+}
+
+#T1uniPopup .itemSpinner {
+    height: 100%;
+}
+
+#T1uniPopup .loaded .itemSpinner {
+    display: none;
+}
+
+body.t1UniHelpWindow .t1uniPopup {    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+}
+
+
+.tablet.landscapeMode .t1uniPopup {
+    top: 50px;
+    bottom: 50px;
+}
+
+
+.tablet .t1uniPopup {
+   left: 20px;
+   right: 20px;
+}
+
+.wnHeader {
+    position: relative;
+    height: 45px;    
+    overflow: hidden;
+}
+
+.t1uniPopup.hasSearch .wnHeader{
+    height: 82px;
+}
+
+
+.wnHeader .popupIcon {
+    width: 60px;
+    height: 60px;
+    margin: 10px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    /*border: solid 1px rgba(255,255,255,0.5);*/
+    background-color: rgba(255,255,255,0.1);
+}
+
+.wnHeader .popupIcon.icon32 {
+    line-height: 1.7em;
+}
+
+.discoSearch {
+    display: none;
+    min-width: 300px;
+    width: calc(35% + 43px);
+    background: rgba(0,0,0,0.1);
+    position: relative;    
+}
+
+.discoSearch input {
+    width: calc(100% - 85px);
+    padding: 8px;
+    border: none;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-color: rgba(255,255,255,0.1);
+    padding-right: 30px;
+    background: transparent;
+}
+
+.discoSearch input::-webkit-input-placeholder{
+    color:rgba(255,255,255,0.6);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.discoSearch input:focus::-webkit-input-placeholder{
+    color:darkgrey;    
+}
+.discoSearch.active {
+    background: white;
+}
+.discoSearch.active input{
+    border-color: rgba(0,0,0,0.1);
+}
+.discoSearch.active .glyph{
+    color: grey;
+}
+
+.discoSearch .searchBtn, .discoSearch .searchClrBtn {
+    position: absolute;
+    padding: 5px 15px;
+    top: 50%;
+    right: 0;
+    margin-top: -13px;
+    cursor: pointer;
+}
+
+.discoSearch .searchClrBtn {    
+    right: 45px;
+    visibility: hidden;
+}
+.discoSearch.notEmpty .searchClrBtn{
+    visibility: visible;
+}
+
+.discoSearch.notEmpty input { color: white; }
+.discoSearch.notEmpty.active input{ color: black; }
+
+.wnHeader .helpBackBtn {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    display: none;
+}
+.wnHeader .searchTitle{
+    display: none;
+}
+
+.slideLeft .helpBackBtn, .slideLeft .searchTitle{
+    display: block;
+}
+
+.wnHeader .f15em {  
+    font-size: 1.5em;
+}
+
+.functionSearch{
+    
+}
+
+.functionSearch input{
+    width:200px;
+}
+
+.wnHeader .label {
+    max-width: 80%;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    /*line-height: 1.2em;*/
+    white-space: nowrap;
+}
+
+.wnHeader .help {
+    display: none;
+}
+.help .wnHeader .help {
+    vertical-align: top;
+    opacity: 0.5;
+    font-style: italic;
+    display: inline-block;
+    /*line-height: 2.5em;*/
+}
+
+.wnHeader .uppercase {
+    top: 10px;
+    padding: 2px 5px 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;    
+}
+
+.wnHeader .updateStatus {
+    display: none;
+    left: 100px;
+}
+
+.updates .wnHeader .updateStatus {
+    display: block;
+}
+
+.wnHeader .userCount {
+    right: 50px;
+}
+
+body.t1UniHelpWindow .wnHeader .userCount {
+    right: 10px;
+}
+
+body.t1UniHelpWindow .popupClose{
+    display: none;
+}
+
+.t1uniPopup > .content {
+    position: absolute;    
+    top: 45px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.t1uniPopup.hasSearch > .content{
+    top: 82px;
+}
+
+.t1uniPopup.hasSearch .wnHeader .discoSearch {
+    display: block;
+}
+
+
+.t1uniPopup > .content {    
+    transform: translate(0px, 0px);
+}
+
+.t1uniPopup > .content.slideLeft{
+    transform: translate(-100%, 0px);
+}
+
+.t1uniPopup > .content.slideRight{
+    transform: translate(100%, 0px);
+}
+
+#T1uniPopup .tile .iconContainer {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.t1uniPathwayWrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    white-space: normal;
+    height: auto;
+}
+
+.t1uniPathwayWrap .t1UniLogo {
+    width: 182.3px;
+    height: 15.5px;
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/images/branding/techoneunilogo.png?v=12.0.62.0') no-repeat center;
+    background-size: 100%;
+    margin-bottom: 2px;
+    opacity: 0.6;
+}
+.t1uniPathwayWrap .details {
+    padding-left: 30px;     
+    border-top: solid 2px rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.05);
+    padding-bottom: 8px;
+    padding-top: 8px;
+    position: relative;
+}
+
+.t1uniPathwayWrap .details:first-of-type{
+    border-top: none;
+}
+
+.t1uniPathwayWrap .details span{
+    opacity: 0.6;
+    line-height: 1.3em;
+}
+
+.t1uniPathwayWrap .details .glyph {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+
+.t1uniPopup .leftContainer {
+    float: left;
+    width: 35%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.03);
+    white-space: normal;
+    position: relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.t1uniPopup .rightContainer {
+    float: right;
+    height: 100%;
+    width: 65%;
+    white-space: normal;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.t1uniPopup .rightContainer .content .update {
+    padding-top: 10px;
+}
+
+.t1uniPopup .rightContainer .content h2 {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 10px 0;
+    opacity: 0.5;
+    line-height: normal;
+}
+
+.t1uniPopup .rightContainer .content p {
+    margin: 10px 0;
+    line-height: 1.5em;
+}
+
+.subtitle.discoverLabel {
+    color: initial;
+}
+
+/************************************ LEFT CONTAINER ***********************/
+
+.leftContainer .tabsTitle {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    text-align: left;
+    padding:10px 15px;
+    opacity: 0.7;
+}
+
+
+.leftContainer .tab {    
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    min-height: 3em;
+    padding:10px 40px 10px 20px;    
+    margin-left: 10px;
+    padding-left: 10px;
+    line-height: 1.3em;
+}
+
+.leftContainer .tab:after{
+    content: "";
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    left: 0;
+}
+.leftContainer .tab.discover:after {
+    display: none;
+}
+
+.leftContainer .tab:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.leftContainer .tab .next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.leftContainer .tab:hover .next {
+    opacity: 0.7;
+}
+
+.leftContainer .tab.selected .next {
+    display: none;
+}
+
+.leftContainer .tab.selected {
+    opacity: 1;
+    cursor: default;
+}
+
+.leftContainer .tab.pointer:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.leftContainer .tabSecTitle {
+    opacity: 0.5;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab .ptrArwContainer{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    bottom: 0;
+    z-index: 1;
+    width: 0;
+}
+
+.tab.selected .ptrArwContainer{
+    visibility: visible;
+    width: 5px;
+}
+
+.ptrArwContainer .ptrArw {
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    border-right-width: 4px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: -4px;
+    border-right-style: solid;
+}
+
+/************************************ RIGHT CONTAINER ***********************/
+
+.t1uniPopup .leftContainer:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-right: solid 1px rgba(0,0,0,0.15);
+    display: block;
+    width: 1px;
+    right: 0;
+}
+
+.t1uniPopup .rightContainer .title {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    opacity: 0.8;
+}
+
+
+.rightContainer .tabContent {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    padding: 10px 15px;
+}
+
+@media (min-width: 750px) {
+
+    .rightContainer .tabContent {
+        top: 10px;
+        bottom: 10px;
+        left: 15px;
+        right: 15px;
+        padding: 0;
+    }
+}
+
+.rightContainer .backBtn {
+    display: none;
+} 
+
+.rightContainer .tabContent.selected {
+    visibility: visible;
+    opacity: 1;
+}
+
+.rightContainer .tabContent .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.rightContainer .tabContent.hTopic .content {
+    bottom: 65px;
+}
+
+.hTopic section header button{
+    float: left !important;
+}
+
+.hTopic section header{
+    line-height:2em;
+}
+.hTopic section .vdoTranScript{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hTopic .vdoInfo header{
+    padding: 5px;
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+    margin: 5px;
+}
+
+.rightContainer .vdo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rightContainer .vdo iframe{
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.noContent .leftContainer {
+    display: none !important;
+}
+
+.noContent .rightContainer {
+    width: 100%;
+}
+
+.rightContainer .vdo > .notAvailable{
+    background: rgba(0,0,0,0.01);
+    padding: 5% 20%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Topic page  */
+.t1UniPageLink{
+    margin: 10px 40px 0px;
+    border-radius: 30px;
+    padding: 10px 20px 15px;
+    min-width: 35%;
+}
+
+.hTopic.tab .status{
+    position: absolute;
+    font-size: 0.8em;    
+    padding: 0 3px;    
+    right: 30px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+#T1uniPopup .notFound {
+    text-align: left;
+    line-height: 1.5em;
+}
+
+#T1uniPopup .rightContainer .notFound {
+    font-size: 0.9em;
+}
+
+#T1uniPopup .leftContainer .notFound {
+    line-height: 1.3em;
+    margin: 10%;
+}
+
+#T1uniPopup .leftContainer .notFound .title{
+    opacity: 0.4;
+}
+
+#T1uniPopup .rightContainer .notFound {
+    margin: 10%;
+    line-height: 2em;
+}
+
+#T1uniPopup .rightContainer .notFound .details {
+    font-size: 1.3em;
+}
+
+#T1uniPopup .notFound .details > span {   opacity: 0.6; }
+
+#T1uniPopup .rightContainer .notFound .title {
+    font-size: 2em;
+    opacity: 0.3;
+}
+
+#T1uniPopup .notFound a {
+    text-decoration: none;
+}
+
+#T1uniPopup .notFound button {
+    display: none;
+}
+
+#T1uniPopup .rightContainer .notFound button {
+    position: relative;
+    display: block;
+    left: 10px;
+    top: 0;
+    margin-top: 50px;
+    padding: 5px 15px;
+}
+
+.phone .t1UniLinkWrap > div {
+    margin-top: 5px;
+}
+
+.t1UniLinkWrap a {
+    text-decoration: none;
+    display: block;
+    width: auto;
+    height: 30px;
+    margin: 10px auto;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/branding/t1unilogo.png?v=12.0.62.0');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.t1UniLinkWrap {
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(247, 245, 245, 0.9);
+    height:120px;
+}
+
+.easy .wnHeader .popupClose, .phone .wnHeader .popupClose{
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+}
+
+.phone .hideOnPhone{
+    display: none;
+} 
+
+@media (max-width: 750px) {
+
+    /** T1Uni Popup **/
+    .t1uniPopup {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .wnHeader .label {
+        white-space: normal;
+        max-height: 2.5em;
+    }
+
+    .hideOnPhone {
+        display: none;
+    }
+
+    .help .wnHeader .help {
+        display: block;
+        margin-top: -5px;
+    }
+
+    .t1uniPopup .tile > .iconContainer {
+        margin: 10px;
+    }
+
+    .t1uniPopup > .content > * {
+        float: none;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        overflow-y: auto;
+        text-align: justify;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transition: margin 0.3s ease-in-out;
+        transition: margin 0.3s ease-in-out;
+    }
+
+    .leftContainer .tab.selected {
+        cursor: pointer;
+    }
+
+    .t1uniPopup .backBtn{
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 5px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        z-index: 1;
+    }
+
+    .rightContainer .content > .title {
+        margin-left: 20px;
+    }
+
+    .t1uniPopup .tabContent > .title {
+        margin-left: 25px;
+    }
+
+    .t1uniPopup > .content.contentView > .leftContainer {
+        margin-left: -100%;
+    }
+
+    .rightContainer .tabContent .content {
+        position: relative;
+        top: 0 !important;
+        overflow: hidden;
+    }
+
+    .t1uniPathwayWrap {
+        position: relative;
+        margin-top: 20px;
+        left: 0;
+        margin-left: 0;
+        bottom: 0;
+        padding: 10px;
+    }
+    
+    .t1uniPathwayWrap > .details {
+        margin-right: 0;
+    }
+
+    /** NO content styles */
+
+    #T1uniPopup .rightContainer .notFound .title {
+        font-size: 1.6em;
+    }
+
+     .noContent .t1uniPopup .leftContainer {
+        display: none;
+    }
+
+     #T1uniPopup .rightContainer .notFound {
+         margin: 50px 20px;
+     }
+
+     /** Ends T1Uni Popup **/
+
+     /** video popup **/
+    
+    .t1UniLinkWrap > div {
+        font-size: 1.2em;
+        line-height: 2.5em;
+    }
+
+    .t1UniLinkWrap a {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+    
+    /* Search help */
+    
+    .discoSearch {
+        width: 100%;
+    }
+
+    .discoSearch input {
+        width: calc(100% - 50px);
+    }
+
+    .hTopic section header{
+        line-height:2.3em;
+    }
+
+    .discoSearch .searchClrBtn{
+        right: 55px;
+    }
+}
+
+/** Landscape styles */
+@media (max-height: 800px) {
+
+    #T1uniPopup .leftContainer .notFound {
+        margin-top: 0;
+    }
+
+    #WpRelPopupPhone .discoHeader .title {
+        padding-top: 10px;
+    }
+
+}
+
+/** Ends mobile media query **/
+ 
+
+/*** Accessibility mode popup */
+
+.easy.hasPopup #pageLayout {
+    visibility: hidden;
+}
+
+.easy #WpRelPopupPhone .discoHeader .title {
+    padding: 50px 0; 
+}
+
+.easy #WpRelPopupPhone .discoHeader {
+    padding: 0;
+    background-size: 100%; 
+}
+
+.ariaText {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+body.easy #T1uniPopupWrapper *, body.easy #WpRelPopupPhone * {
+    opacity: 1 !important;
+}
+
+
+/**** T1 University Popup content formatting *****/
+
+.t1uniPopup .content ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    line-height: 1.5em;
+}
+
+.t1uniPopup .content ol {
+    list-style-type: decimal;
+}
+
+.t1uniPopup .content ul, .t1uniPopup .content ol {
+    margin-left: 1.5em;
+    line-height: 2em;
+}
+
+.t1uniPopup .content ol > li{
+    padding-left: 10px;
+}
+
+.t1uniPopup .content li ul {
+    list-style-type: circle;
+    margin-left: 3em;    
+}
+
+.t1uniPopup .content li > p {
+    display: inline-block;
+}
+
+/** Global header User navigation link */
+#T1UniHelp {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+
+body.t1UniOpen #T1UniHelp {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+/******** Help popup new window - popupout *******/
+
+.easy .wnHeader .popupOut, .phone .wnHeader .popupOut {
+    display: none;
+}
+
+button.popupOut {
+    right: 40px;
+    padding: 4px;
+}
+
+.noContent button.popupOut {
+    display: none;
+}
+
+.t1UniPopoutWindow .popupClose {
+    display: none;
+}
+
+.t1UniPopoutWindow .t1uniPopup {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/************* Workplace discover popup  ***************/
+
+
+.popup.whatsNew {
+    width: 60%;
+}
+
+.popup.whatsNew.hidden {
+    margin-top: 150% !important;
+}
+
+.popup.whatsNew header {
+    padding: 0 !important;
+}
+
+.popup.whatsNew .shellBG {
+    background-color: rgb(1, 166, 198);
+}
+
+.popup.whatsNew .discoHeader {
+    min-height: 300px;
+    position: relative;
+    background-image: url(https://cdn.t1cloud.com/cianywhere/content/base/images/discovery/splashbg.jpg?v=12.0.62.0);
+    background-size: cover;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: rgba(1, 166, 198, 0.85);
+    background-position: center;
+}
+
+.whatsNew .dhTitle {
+    font-size: 3.5em;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-weight: normal;
+}
+
+.whatsNew .discoHeader p {
+    padding: 10px 5%;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.whatsNew .dhTitle, .discoHeader p {
+    text-shadow: 1px 3px 5px grey;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.popup.whatsNew a .title {
+    font-size: 1.3em;
+    margin: 10px 0 5px;
+}
+
+.whatsNew a.discoLink {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 25%;
+    vertical-align: top;
+    opacity: 0.8;
+    padding: 10px 0;
+}
+
+.whatsNew .discoFooter a {
+    cursor: pointer;
+    line-height: 1.5em;
+    margin-right: 20px;
+    white-space: normal;
+    float: none;
+}
+
+.whatsNew a.discoLink.disabled, .t1UniLinkWrap a.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.whatsNew a.discoLink .ease3ms {
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 8px;
+    display: inline-block;
+}
+
+.whatsNew a.discoLink:hover .ease3ms {
+    transform: scale(1.3);
+}
+
+a.discoLink:hover .ease3ms .glyph {
+    color: white;
+}
+
+.whatsNew a:hover {
+    opacity: 1;
+}
+
+.whatsNew .dfTitle {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.whatsNew .discoFooter {
+    position: relative;
+    text-align: center;
+    background-color: white;
+    white-space: nowrap;
+}
+
+.whatsNew .dfLline2 {
+    color: initial;
+    opacity: 0.5;
+}
+
+.whatsNew .wrapRelNotesLink > a{
+    float: none;
+}
+
+.discoHeader .icon32 {
+    background-size: cover;
+    display: inline-block;
+    min-width: 55px;
+}
+
+.discoveryOn #T1uniPopupWrapper.shown {
+    z-index: 9010;
+    background: rgba(255,255,255, 0.5);
+}
+
+a.discoLink:hover .ease3ms {
+    background-color: #007fe9;
+}
+
+.discoveryOn #BtnCancelDisco{
+    display:block;
+}
+
+.t1UniFooterLink {
+    bottom: 65px;
+    left: 10px;
+    position: absolute;
+    border-radius: 2px;
+    opacity: 0.8;
+    font-size: 0.9em;
+    padding: 4px;
+}
+
+.noRole .t1UniFooterLink {
+    bottom: 10px;
+}
+
+.t1UniFooterLink:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+
+.discoveryOn .relPopupLnkDiscoverWorkplace .hideUpdates {
+    display: inline-block;
+}
+
+.relPopupLnkDiscoverWorkplace .hideUpdates, .discoveryOn .relPopupLnkDiscoverWorkplace .showUpdates {
+    display: none;
+}
+
+.notAvailableContent {
+    display: none;
+}
+
+.notAvailable footer {
+    display: none;
+}
+
+.notAvailable .popupClose {
+    z-index: 1;
+}
+
+.notAvailable .notAvailableContent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background: #fff;
+    background: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.41) 0%,#ffffffb8 50%,#ffffff57 51%,#ffffff 100%);
+    background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.41) 0%,#ffffffb8 50%,#ffffff57 51%,#ffffff 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.41) 0%,#ffffffb8 50%,#ffffff57 51%,#ffffff 100%);
+}
+
+.notAvailableContent > div {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    width: 60%;
+    margin: 14% auto;
+    padding: 20px;
+    box-shadow: 0 0 1px;
+}
+
+@media (max-width: 1024px) {
+    .popup.whatsNew {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .t1UniRelPopupWrapper{
+        overflow-y: auto;
+    }
+
+    .t1UniRelPopupWrapper .popup{
+        margin-top:10px !important;
+        min-width: auto;
+    }
+    .popup.whatsNew .discoHeader{
+        min-height:160px;
+    }
+    .whatsNew a.discoLink{
+        max-width: 100%;
+        display: block;
+    }
+    .whatsNew a.discoLink{
+        opacity:1;
+    }
+}
+
+/*--Header--*/
+
+header .buttonWithLabel {
+    flex-direction: column;
+    padding: 0;
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height:48px;
+}
+
+header .buttonWithLabel .buttonLabel {
+    display: block;
+    text-transform: uppercase;
+    font-size: var(--ciaFontSize-xsmall);
+    opacity: 0.5;
+}
+
+header .buttonWithLabel .icon16{
+    width: 24px;
+}
+header .notificationCount{
+    right: 5px;
+    top: 2px;
+    padding: 2px;
+    position: absolute;
+    border-radius: 12px;
+}
+
+.bannerRight {
+    align-items: center;
+}
+.bannerRight > * {
+    margin: 0 20px;
+}
+
+.bannerMiddle{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5px;
+}
+
+.bannerMiddle .bannerTitle {
+    left: 30%;
+    right: 30%;
+    position: absolute;
+    text-align: center;
+    margin: 0 5px;
+}
+
+#GoBack{
+    margin-left: 10px;
+    margin-right:10px;
+    padding:5px;
+}
+
+.bannerMiddle #PageTitle, #GoBack > h1 {
+    vertical-align: top;
+}
+
+.bannerLeft{
+    padding-left:20px;
+}
+
+/* environment colour */
+
+header .envColor{
+    height:15px;
+    width:auto;
+    max-width: 100px;
+    margin-left:10px;
+    padding:6px 5px 5px 5px;
+    border-radius:3px;
+    display:flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+header .envColor .envName{
+    margin:auto 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* user image */
+
+header .topBar .userDetails .userImage{
+    border-radius: 100%;
+    border: solid 2px rgb(255, 255, 255);
+}
+
+/*--Top bar--*/
+
+#WpContentContainer > #GlobalHeader > .topBar{
+    position: fixed;
+}
+
+header .topBar {
+    width: 100%;
+    transition: background 0.5s ease;
+    z-index: 2; /* Allows user details drop down to appear in front of the enterprise search*/
+    height: var(--ciaHeightHeader);
+    background-color: var(--ciaColourBackgroundHeader);
+}
+
+header .topBar .bannerContainer{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+/******************* ACCESSIBILITY MODE *****************/
+.accessibilityModeContainer{
+    flex-grow: 2; /*make sure takes all the available remaining space to the right*/
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.accessibilityModeContainer .accessibilityMode{
+    padding: 0;
+    overflow: hidden; /* we need this because we manually set the font colour and background (override the theme) */
+}
+
+.accessibilityModeContainer .accessibilityMode .icon24:before{
+    content:"\e373";
+    font-family: 'iconGlyph';
+    color: var(--ciaColourBlack);
+    background-color: var(--ciaColourWhite);
+}
+
+/******************* USER *****************/
+.userNavigation {
+    z-index: 1;
+}
+
+.userNavigation .dropdownPanel.droppedDown{
+    max-height: unset;
+}
+
+#GlobalHeader .buttonOnHover{
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Breadcrumbs dropDown style */
+#PageTitle .breadcrumbsDropdown .dropdownControlButton .icon16:before{
+    content: "\E226";
+    color:var(--ciaColourWhite);
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownControlButton.buttonOnHover{
+    background-color: transparent !important;
+    border:none;
+    display:block;
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownPanel{
+    border:none;
+    border-radius: 12px;
+    overflow-x: hidden;
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownPanel .dropdownPanelListItem{
+    width:200px;
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownPanel .dropdownPanelListItem > *{
+    padding: 18px;
+    display:flex;
+    align-items: center;
+    font-size: var(--ciaFontSizePageTitle);
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownPanel .dropdownPanelListItem .roleLabel,
+#PageTitle .breadcrumbsDropdown .dropdownPanel .dropdownPanelListItem label{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#PageTitle .breadcrumbsDropdown .dropdownPanel .dropdownPanelListItem .roleLabel{
+    font-weight: 600;
+    color: var(--ciaColourTextHeaderDropdown);
+}
+
+.userNavigation > button{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px;
+}
+
+#GlobalHeader .topBar .buttonOnHover:hover, #GlobalHeader .chooser.droppedDown button.handle.buttonOnHover{
+    background: rgba(255, 255, 255, 0.2);
+}
+#GlobalHeader .topBar .buttonOnHover:hover{
+    border-color: transparent;
+}
+
+.userNavigation > button .loggedUser{
+    padding: 0px;
+    margin-right:0px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    max-width: 20vw;
+}
+
+.userNavigation .loggedUser .name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.userNavigation .loggedUser .portal{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+    font-size: var(--ciaFontSize-xsmall);
+}
+
+.userNavigation .dropdownPanel {
+    overflow: hidden;
+    border: none;
+    border-radius: 12px;
+    right:0 !important;
+    left: auto !important;
+}
+
+.userNavigation .userDetails .details{
+background: white;
+color: #0f3367 !important;
+}
+
+.userNavigation .userDetails .details .container {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
+.userNavigation .userDetails .userInfo .imageContainer{
+float: none;
+margin-top: 20px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 20px;
+}
+
+.userNavigation .userDetails .userInfo .preferredName{
+ margin-right: 0;
+}
+.userNavigation .userDetails .userInfo .lnkMyDetails{
+color: black;
+margin-top: 20px;
+padding: 10px 20px;
+border-radius: 10px;
+border: solid 1px grey;
+position: relative;
+top: auto;
+right:auto;
+}
+
+.userNavigation .userDetails .contact.details{
+padding: 5px 10px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.userNavigation .userDetails .contact.details a {
+display: block;
+vertical-align: middle;
+overflow: hidden;
+text-decoration: none;
+opacity: 0.7;
+position: relative;
+padding: 3px 0;
+}
+
+.userNavigation .switchUserContainer{
+    max-height: 361px; /*7 linked items 51.5 px/item */
+    overflow: auto;
+}
+
+@media only screen and (orientation: landscape) {
+    .userNavigation .switchUserContainer{
+        max-height: 103px; /*2 linked items 51.5 px/item */
+    }
+}
+
+.userNavigation .panel.fieldSet {
+padding: 0;
+}
+
+
+#GlobalHeader .dropdownPanelListItem a{
+padding: 18px;
+padding-left: 40px;
+font-size: var(--ciaFontSizeDropDownItem);
+}
+#GlobalHeader .dropdownPanelListItem > .icon16{
+padding: 10px 5px;
+}
+
+.profileWrapper {
+position: relative;
+}
+
+.userNavigation .userInfo .lnkMyDetails {
+position: relative;
+z-index: 1;
+top: 85px;
+right: 15px;
+width: 95px;
+text-align: center;
+line-height: 16px;
+text-transform: uppercase;
+opacity: 0.75;
+padding: 0;
+}
+
+.userNavigation .lnkMyDetails > .icon16 {
+display: none;
+}
+
+.userNavigation .lnkMyDetails:hover {
+opacity: 1;
+}
+
+.profileWrapper.hasEditLink .details.user > .container {
+min-height: 95px;
+}
+
+.userNavigation .logoff .left {
+width: 50%;
+}
+
+.userNavigation .logoff a {
+display: inline-block;
+width: 80%;
+}
+
+#GlobalHeader a:hover {
+text-decoration: none;
+}
+
+.topBar .dropdownPanel ul {
+min-width:150px;
+}
+
+.userNavigation .userDetails .userInfo .contactText{
+position: relative;
+left: 10px;
+}
+
+#UserNavigation a.buttonStyle.primary{
+border-radius: 30px;
+padding: 5px 20px;
+}
+
+/** Regional preference */
+
+#ddHdrRegList li.selected:after {
+    content: "\E066";
+    right: 5px;
+    top: 50%;
+    margin-top: -8px;
+    font-family: iconGlyph;
+    font-size: var(--ciaFontSizeDropDownItem);
+    position: absolute;
+    opacity: 0.5;
+}
+#ddHdrRegList li.selected {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+#ddHdrRegList li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.01) !important;
+}
+
+.userPositions {
+    background-color: white;
+    padding: 5px 10px;
+    padding-left: 32px;
+    position: relative;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.userPositions > .icon16.glyph {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.userPositions .otherPositions, .userPositions .less, .userPositions.more .more {
+    display: none;
+}
+
+.userPositions.more .otherPositions, .userPositions.more .less {
+    display: block;
+}
+
+.otherPositions {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.otherPositions > :last-child {
+    margin-bottom: 0;
+}
+
+.userPosition {
+    text-transform: uppercase;
+    display: block;
+    line-height: 16px;
+}
+
+.userPosition.selected > .icon16.glyph {
+    float: right;
+    color: green;
+    margin:4px 5px 0 2px;
+}
+
+
+#GlobalHeader .userNavigation .userPosition:hover > a {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.userPosition > .label, .userPosition > a {
+    padding: 5px 7px;
+    display: block;
+}
+
+.userPosition.selected > .label {
+    padding-right: 2px;
+}
+
+
+/*--Icons--*/
+
+#GlobalHeader .icon16, #GlobalHeader .icon24,
+.exceptionContent .icon16
+{
+    speak: none;
+}
+
+.userNavigation li > .glyph {
+    left: 10px;
+}
+
+#GoBack.disabled {
+    cursor: default !important;
+    background: transparent !important;
+    opacity: 0.3;
+}
+
+#GlobalHeader .functionLinksIcon {
+    padding-left: 10px;
+}
+
+/* Logging enabled*/
+
+header #LoggingIndicator {
+   display: none;
+}
+
+header.loggingEnabled #LoggingIndicator{
+    display: block;
+}
+
+/* dev mode */
+
+header .devModeIndicator {
+    display: none;
+}
+
+header.devModeEnabled .devModeIndicator{
+    display: inline-block;
+}
+
+
+@-webkit-keyframes changescale {
+    from {
+        -webkit-transform: scale(0.7);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+.themedSmallLogo .logoImage{
+    width:auto;
+    height:24px;
+    padding-top:4px;
+}
+
+.themedSmallLogo{
+    margin-left: 10px;
+}
+
+.compact .themedSmallLogo > .logo {
+    width: 100px;
+}
+
+#PageTitle{
+    display: flex;
+    align-items:center;
+}
+
+#PageTitle.loading{
+    display:none !important;
+}
+
+#PageTitle h1 ,
+#PageTitle .roleLabel,
+.modalLayout .title{
+    font-size: var(--ciaFontSizePageTitle);
+    font-weight: normal;
+}
+
+.separator{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#PageTitle h1:empty{
+    display: none;
+}
+
+/*--Function Search--*/
+#ShowFlow{
+    padding-bottom:15px;
+}
+
+#ShowFlow + .functionSearch {
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.functionSearch input:focus::-webkit-input-placeholder {color: #656565;}
+.functionSearch input:focus:-moz-placeholder { /* Firefox 18- */color: #656565;}
+.functionSearch input:focus::-moz-placeholder { /* Firefox 19+ */color: #656565;}
+.functionSearch input:focus:-ms-input-placeholder { /* IE 10+ */color: #656565;}
+.functionSearch input:focus::-ms-input-placeholder { /* Edge */color: #656565;}
+.functionSearch input:focus:placeholder-shown { /* Standard one last! */color: #656565;}
+
+
+footer .tryNewContainer{
+    display: none;
+}
+.hasUserFeedback button.tryNewContainer{
+    margin-right: 10px;
+}
+footer #FooterRightControls > .tryNewContainer{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    padding: 0;
+    border: none;
+    padding-left: 10px;
+}
+
+.tryNewContainer .chkLbl{
+    padding: 4px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tryNewContainer .chkBall{
+    padding: 8px;
+}
+
+
+/** Footer */
+#GlobalFooter{
+    position: fixed;
+    bottom: 0;
+    z-index: 1001;
+    height: 40px;
+    line-height: 1.5em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    height: 25px;
+    background-color: var(--ciaColourBackgroundFooter);
+}
+#GlobalFooter *{
+    color: var(--ciaColourTextFooter);
+}
+
+#GlobalFooter > .fixedWidth{
+    height: 100%;
+}
+
+#FooterRightControls > button {
+    border-radius: 5px;
+    padding: 3px 10px;
+    background: transparent;
+    border: solid 1px rgba(0,0,0,0.2);
+    border-color: var(--ciaColourTextFooter);
+}
+
+#GlobalFooter .footerItem{
+    opacity: 1;
+}
+
+body.noContent  header > .bottomBar{
+    display: none;
+}
+
+.guest #btnWpRelPopup, .simplified #btnWpRelPopup{
+    display: none;
+}
+
+#GlobalFooter .fixedWidth > div {
+    overflow: hidden;
+}
+
+#GlobalFooter .footLicMsg:hover .footLicMsgTip {
+    padding: 5px 20px;
+    bottom: 40px;
+}
+
+#GlobalFooter [aria-hidden="true"] {
+    display: none;
+}
+
+#GlobalFooter [aria-hidden="false"] {
+    display: block;
+}
+
+/*------------------------------------*/
+/*--Tooltip Style---------------------*/
+#TipHolder{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 300px;
+    white-space: normal;
+}
+
+#TipHolder .tooltip_title {
+    font-size: var(--ciaFontSizePageTitle);
+    font-weight: normal;
+    display: block;
+}
+
+#TipHolder .tooltip_description {
+    padding: 6px 0;
+    line-height: 1.2em;
+}
+
+#TipHolder.shown{
+    opacity: 1;
+    visibility: visible;
+    z-index: 9005;
+}
+
+/*------------------------------------*/
+/*--HEADER Collapsed style------------*/
+
+.collapsedHeader header .bannerRight #T1UniHelp .buttonLabel,
+.collapsedHeader header .bannerRight #ShowFlow .buttonLabel,
+.collapsedHeader header .bannerRight #UserNavigation .loggedUser,
+.collapsedHeader header.modalLayout .functionSearch{
+    display :none;
+}
+
+/* userDelegation icon */
+header .bannerRight #UserNavigation .delegatedUser.glyph{
+    border-radius: 100%;
+    background-color: var(--ciaColourGrayLight);
+    padding: 4px 5px 5px 5px;
+}
+
+.collapsedHeader header .bannerRight #UserNavigation .userDetails{
+    margin:0px;
+}
+
+.collapsedHeader header .bannerRight #ShowFlow {
+    padding-bottom:19px;
+}
+
+.collapsedHeader header .bannerRight #T1UniHelp {
+    padding-bottom:3px;
+}
+
+.collapsedHeader header .buttonOnHover{
+    padding: 0px;
+}
+
+@media (max-width: 600px) {
+    header .topBar {
+        position: relative !important;
+    }
+
+    body.scrolled #GlobalHeader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: var(--ciaHeightHeader);
+    }
+
+    .themeBgBannerImageAfter:after {
+        background-image: none;
+    }
+}
+
+@media only screen and (max-width: 820px) and (orientation: portrait) {
+    #UserNavigation .loggedUser {
+        display:none;
+    }
+
+    #GlobalHeader .buttonOnHover, .bannerRight > *, .bannerMiddle > * {
+        margin: 0 5px;
+    }
+
+    .userNavigation .dropdownPanel{
+        right: 0 !important;
+    }
+
+}
+
+/* common controls */
+.optionMenu {
+    position: relative;
+}
+
+.optionMenu .menu{
+    width: 200px;
+    position: absolute;
+    background: white;
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.49);
+    transition: 0.3s ease;
+    opacity:0;
+    visibility:hidden;
+}
+
+.functionSearch .optionMenu .menu{
+    position: fixed;
+}
+
+.optionMenu .menu.shown {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9001;
+}
+
+.optionMenu .menu .item.disabled{
+    cursor: default;
+    opacity: 0.3;
+}
+
+.optionMenu .menu.bottomUp{
+    bottom:0;
+}
+
+.optionMenu .menu.right{
+    left: auto;
+    right:0;
+}
+.optionMenu .menu.bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.optionMenu > .ddButton{
+    cursor:pointer;
+}
+
+.optionMenu .menu .item{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.functionSearch .optionMenu .menu .item{
+    line-height: 1.5em;
+}
+
+.optionMenu .menu .item.moveTo{
+    margin-left:20px;
+}
+
+.functionSearch .role .optionMenu{
+    display: none;
+}
+
+.simplified .optionMenu, .guest .optionMenu {
+    display: none;
+}
+
+.functionSearch {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    border-radius: 25px;
+    width: 30vw;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+}
+
+.functionSearch.compact{
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid 2px rgba(255, 255, 255, 1);
+    margin-right:0px;
+    height:34px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.phone .functionSearch.compact{
+    display:none;
+    width: auto;
+}
+
+.phone .functionSearch.compact:not(.active) > .glyph{
+    right: 5px;
+}
+
+.functionSearch.compact > .glyph{
+    color: white;
+    opacity: 1;
+    font-size: 1.3em;
+    right: 10px;
+}
+
+.functionSearch:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+ .functionSearch.compact:hover{
+     box-shadow: none;
+     border-width: 3px;
+ }
+
+.functionSearch.active{
+    width:31vw !important;
+    min-width: 400px;
+}
+
+.functionSearch.compact.active{
+    width:30vw !important;
+}
+
+.phone .functionSearch.compact.active{
+    position: fixed;
+}
+
+.phone .functionSearch, .easy .functionSearch {
+    display: block;
+}
+
+.phone .blindOptions .functionSearch, .easy .blindOptions .functionSearch {
+    margin: 5px;
+}
+
+.functionSearch.active {
+    background-color: #fff !important;
+}
+
+.functionSearch input {
+    width: 100%;
+    margin: 0;
+    line-height: 20px;
+    background: none;
+    border: none;
+    position: relative;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    height: 30px;
+    padding: 8px 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.functionSearch.active.compact input:not(.itemEnquiryText) {
+    margin-top:0px; /* when functionSearch is active we remove the 2px border */
+}
+
+.functionSearch.compact input:not(.itemEnquiryText) {
+     padding:0px 10px;
+     font-size: var(--ciaFontSizeFunctionSearch);
+     font-weight: normal;
+     color: white;
+}
+
+.phone .functionSearch.compact {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.functionSearch > .glyph{
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    margin-top: -12px;
+    opacity: 0.6;
+}
+.functionSearch:hover > .glyph{
+    opacity: 0.8;
+}
+
+ .functionSearch.compact.active > .glyph{
+    color: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+
+/* Hide clear buttons */
+.functionSearch input::-ms-clear {  display: none; width : 0; height: 0; }
+.functionSearch input::-webkit-search-cancel-button { display: none; }
+
+.phone .functionSearch input, .easy .functionSearch input {
+    width: calc(100% - 70px);
+}
+
+.phone .functionSearch.shown input{
+    width:90%;
+}
+
+.functionSearch input:not(.itemEnquiryText):focus,
+.functionSearch.shown input:not(.itemEnquiryText){
+    color: rgba(0,0,0,0.5);
+    outline: none;
+}
+
+
+.functionSearch.shown{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.functionSearch.shown > .glyph{
+    display: none;
+}
+
+.functionSearch .suggestionPane {
+    display:none;
+    z-index:1001;
+    width:100%;
+    min-width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    -moz-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    position: absolute;
+    max-height: 300px;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align:left;
+    margin-top:-3px;
+}
+
+
+.functionSearch.shown .suggestionPane
+{
+    display: block;
+}
+
+
+.functionSearch.enqInput .suggestionPane, .functionSearch .suggestionPane.empty {
+    display: none;
+}
+
+.phone  .functionSearch .suggestionPane,  .easy  .functionSearch .suggestionPane {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    right: 0;
+    left: 0;
+    min-width: initial;
+    max-height: initial;
+}
+
+ .entSearchItem  a.disabled{
+     cursor: default;
+ }
+
+
+ .functionSearch  span.altLabel:empty{
+     display: none;
+ }
+
+.functionSearch mark {
+    background-color: transparent;
+}
+
+.functionSearch .suggestionPane > .funcs, .functionSearch .suggestionPane > .roles {
+    overflow: auto;
+    padding: 5px 10px;
+    min-height: 5em;
+}
+
+.singleRole .functionSearch .roles{
+    display: none;
+}
+
+.functionSearch .suggestionPane > .roles {
+    border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+ .functionSearch .entSearchItem {
+     text-decoration: none;
+     font-size: 1.2em;
+     display: flex;
+     align-items: center;
+     position: relative;
+ }
+
+
+.functionSearch .roles .entSearchItem {
+    cursor: pointer;
+}
+
+/*  Options menu item */
+ .functionSearch .menu .pinRole{
+     display: none;
+ }
+
+ .functionSearch .roles .menu .help{
+     display: none;
+ }
+
+ .functionSearch .roles .menu .pinRole{
+     display: block;
+ }
+
+/* Phone menu */
+.blindOptions .functionSearch .suggestionPane .entSearchItem, .blindOptions .functionSearch {
+    color: initial;
+}
+
+.functionSearch a.selected {
+    background-color: white;
+}
+
+.functionSearch a:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.functionSearch .disabled:hover .itemLabel {
+    text-decoration: none;
+}
+
+
+.functionSearch .entSearchItem.disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.functionSearch .entSearchItem.disabled .iconContainer {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
+.functionSearch .funcLink .iconContainer {
+     padding:0;
+     border-radius:50%;
+     background-color: rgba(0,0,0,0.5);
+}
+
+.functionSearch .role .iconContainer {
+    top: 5px;
+}
+
+.functionSearch .iconContainer > span {
+    padding:0;
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    border-radius:50%;
+}
+
+.functionSearch .suggestionPane .iconContainer:after {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    border-radius: 4px 4px 0 0;
+}
+
+.functionSearch .suggestionPane .iconContainer:after {
+    height:8px;
+}
+
+.functionSearch .iconContainer > span
+{
+    background-size: 100% 100%;
+}
+
+.functionSearch > .iconContainer {
+    left: 3px;
+    top: 3px;
+}
+
+.functionSearch.enqInput input {
+    border-color: transparent !important;
+    outline: none;
+    padding-left: 30px;
+    box-shadow: none;
+}
+.functionSearch.enqInput input:focus {
+    border-radius: 0;
+}
+
+.functionSearch .suggestionPane .glyph:before
+{
+    margin: 3px 0;
+}
+
+.functionSearch input.placeholderVisible
+{
+    color: white !important;
+}
+
+ .functionSearch .noResultsContent
+{
+    display: none;
+    text-align: center;
+    margin: 20px 10px;
+    padding: 10px;
+    opacity: 0.3;
+}
+
+ .functionSearch .noResults > * {
+     display: none;
+ }
+
+ .functionSearch .noResults > .noResultsContent{
+     display: block;
+ }
+
+.functionSearch .enqSearch {
+    display: block;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 0;
+    width: 40px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+.functionSearch .enqSearch > .icon16 {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 10px;
+}
+
+.functionSearch .funcLink.cifunction .iconContainer > span {
+    background-image:url('https://cdn.t1cloud.com/cianywhere/content/base/icons/64/cidefault.png?v=12.0.62.0');
+}
+
+.functionSearch .funcLink .iconContainer > span {
+    background-image:url('https://cdn.t1cloud.com/cianywhere/content/base/icons/64/c2default.png?v=12.0.62.0');
+}
+
+
+/** Search bar sizing and positioning for iPad and iPad Pro */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    body.scrolled.searchActive .themedSmallLogo{
+        display: none !important;
+    }
+
+    body.scrolled.searchActive .bannerMiddle {
+        justify-content: center;
+    }
+
+    .bannerMiddle .bannerTitle {
+        left:200px;
+        right:200px;
+    }
+
+    .functionSearch.active {
+        z-index:3;
+    }
+
+    .functionSearch.compact, .functionSearch.compact.active{
+        width: 30vw !important;
+        min-width: auto;
+    }
+
+    body.scrolled .functionSearch{
+        width: 25vw !important;
+    }
+}
+
+
+/** Phone stuff */
+
+.functionSearchButton {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.functionSearch.active .functionSearchButton {
+    display: block;
+}
+
+
+.hasSearchResult > .pageContent > *:not(.functionSearch){
+    display: none !important;
+}
+
+.functionSearch .fsClearButton {
+    display: none;
+    border-radius: 12px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 55px;
+    top: 4px;
+    padding: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body.easy .functionSearch .fsClearButton {
+    color: black;
+}
+
+.functionSearch.hasClear.active .fsClearButton {
+    display: block;
+}
+
+.functionSearch.hasClear.active > input {
+    padding-right: 85px;
+}
+
+
+/* Scroll bar style */
+
+.functionSearch ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.functionSearch *, body.easy input::-moz-placeholder {
+    opacity: 1;
+}
+
+.phone .entSearchItem.ciworkplace {
+    display: none;
+}
+
+.functionSearch.compact input::-webkit-input-placeholder { color: white; }
+.functionSearch.compact.active input::-webkit-input-placeholder { color: rgba(0,0,0,0.4); }
+
+body.searchActive #WpContentContainer, .phone .functionSearch .suggestionPane {
+    overflow: hidden;
+}
+
+/* Enquiry Search styles */
+.itemEnqContainer .itemLabel i{
+    font-size: 13px;
+}
+
+.itemEnqContainer input{
+    height:8px;
+    font-size: 13px;
+}
+
+.enqSearchV2 , .enqAction{
+    cursor:pointer;
+}
+
+.enqAction .ddButton .glyph{
+    color: lightgray;
+    padding-bottom: 2px;
+}
+
+.enqAction .ddButton .glyph.loading{
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(359deg);
+    }
+}
+
+.itemEnqContainer .itemLabel{
+    font-size: 12px;
+}
+
+.itemEnqContainer .itemEnquiryText{
+    padding-left: 0px;
+    font-size: 14px;
+}
+
+/* ROLE MENU STYLES STARTs */
+
+.roleHoverMenu .roleLabel {
+    border-radius: 4px;
+}
+
+.roleHoverMenu  .roleLabel:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.roleHoverMenuPanel {
+    position: fixed;
+    width:100%;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: calc(var(--ciaHeightHeader) - 10px) ;
+    margin: 0;
+    display: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.roleHoverMenuPanel > .tabHandles{
+    padding: 10px 20px;
+    filter:drop-shadow(1px 1px 2px lightgray);
+}
+
+.roleHoverMenuPanel > .tabContents
+{
+    padding-left:20px;
+    width: auto;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+}
+.roleHoverMenuPanel .tabContents > div {
+    width: auto;
+    overflow-y: auto;
+    max-height: 300px;
+    min-height: 230px;
+}
+
+.roleHoverMenuPanel:hover{
+    background-color: transparent;
+}
+
+.roleHoverMenuPanel .funcs > div{
+    display: none;
+}
+
+.roleHoverMenuPanel .entSearchItem {
+    width: 22%;
+    background: none;
+    text-align: left;
+    border: none;
+    align-items: baseline;
+    justify-content: center;
+    padding: 0 0 0 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    float:left;
+    font-weight: 600;
+    position:relative;
+}
+
+.roleHoverMenuPanel .entSearchItem:hover {
+    text-decoration: underline !important;
+}
+
+.roleHoverMenuPanel .entSearchItem .altLabel, .roleHoverMenuPanel .enqSearch, .functionSearch.roleHoverMenuPanel .roles {
+    display: none;
+}
+
+.roleHoverMenuPanel.shown{
+    display: block;
+    width:100%;
+}
+
+.roleHoverMenuPanel  .tabHandle{
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    margin-right:40px;
+}
+.roleHoverMenuPanel  .tabHandle.pointer{
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.roleHoverMenuPanel .entSearchItem span {
+    vertical-align: middle;
+    line-height: 1.4em;
+}
+
+.roleHoverMenuPanel .funcLink .iconContainer {
+    top: 8px;
+    padding:0;
+    border-radius:50%;
+    background-image:url('https://cdn.t1cloud.com/cianywhere/content/base/images/whitegrad54opac100.png?v=12.0.62.0');
+    background-repeat:repeat-x;
+    background-position:0 -25px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+
+.roleHoverMenuPanel .iconContainer {
+    position:absolute;
+    left: 8px;
+}
+
+.roleHoverMenuPanel .iconContainer > span {
+    padding:0;
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    border-radius:50%;
+    background-size: 100% 100%;
+    background-image:url('https://cdn.t1cloud.com/cianywhere/content/base/icons/64/c2default.png?v=12.0.62.0'); /*default image when no icon exists*/
+}
+
+/* ROLE MENU STYLES ENDs */
+
+/* For iPad */
+@media (max-width: 1024px) and (min-width: 601px) {
+    .functionSearch .suggestionPane > .roles {
+        overflow: scroll;
+        max-height: 160px !important;
+    }
+}
+
+@media (max-height: 820px) and (min-width: 601px) {
+    .phone .functionSearch .suggestionPane  {
+        max-height: 110vw !important;
+    }
+}
+

@@ -1,0 +1,28 @@
+/* popup-fix.css - Additional styles for class popup fix */
+#customClassPopup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#customClassPopup .popup-header {
+    background: linear-gradient(135deg, #1F497D, #2c5fa3) !important;
+}
+
+.class-highlight {
+    animation: pulseHighlight 2s ease-in-out;
+}
+
+@keyframes pulseHighlight {
+    0% { box-shadow: 0 0 0 0 rgba(31, 73, 125, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(31, 73, 125, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(31, 73, 125, 0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #customClassPopup {
+        width: 90% !important;
+        left: 5% !important;
+        right: 5% !important;
+        top: 80px !important;
+    }
+}

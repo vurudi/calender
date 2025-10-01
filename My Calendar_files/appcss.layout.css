@@ -1,0 +1,3179 @@
+.checkboxGroup {
+    margin-left: 20px !important;
+}
+
+.checkboxGroup > * {
+    display: inline-block;
+}
+
+.popupContainer .checkboxGroup .editorLabel {
+    min-width: 130px !important;
+}
+.checkboxGroup .editorLabel 
+{
+    min-width: 200px !important;
+    max-width: 200px;
+}
+
+.checkboxGroup .stackedContainer .checkBoxControl {
+    margin-bottom: 0 !important;
+}
+
+.checkboxGroup .stackedContainer {
+    vertical-align: top;
+}
+#DataEntryFormMainContent section.MultiColumnPanel
+{
+    white-space: normal;
+}
+
+#DataEntryFormMainContent > .CourseAvailabilitiesMyEnquiry, #DataEntryFormMainContent > .ScholarshipMyEnquiry
+{
+    margin-top: 60px;
+    display: none;
+}
+
+#DataEntryFormMainContent > .CourseAvailabilitiesMyEnquiry iframe
+{
+    width: 100%;
+}
+#DataEntryFormMainContent > .CourseAvailabilitiesMyEnquiry iframe .mainHeader
+{
+    display: none;
+}
+#DataEntryForm {
+    background-color: transparent !important;
+}
+#DataEntryForm #MyMaintenanceForm {
+    margin: 0 auto;
+    min-height: 100%;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+#EditModeDataEntrySearchPanel #DataEntrySearchSimpleSearchPart .thumbnailViewer, #EditModeDataEntrySearchPanel #DataEntrySearchSimpleSearchPart .thumbnailViewControl, #EditModeDataEntrySearchPanel #DataEntrySearchSimpleSearchPart .thumbnailViewContainer
+{
+    max-height: 433px;
+}
+
+#DataEntryForm .tabbedControl.vertical > .tabsContainer > .tabControl {
+    height: 100%;
+}
+
+#DataEntryForm .enhancedPreviewSectionTopActions .dropdownPanelListItem .dropdownItem {
+    border: none;
+}
+
+#DataEntryForm .enhancedPreviewSectionTopActions .dropdownPanel.ieStyling {
+    border: none !important;
+}
+#DataEntryForm .enhancedPreviewSectionTopActions .dropdownPanel.ieStyling .dropdownPanelListItem {
+    border-left: 1px solid rgb(119, 134, 140) !important;
+    border-right: 1px solid rgb(119, 134, 140) !important;
+}
+#DataEntryForm .enhancedPreviewSectionTopActions .dropdownPanel.ieStyling .dropdownPanelListItem:first-child {
+    border-top: 1px solid rgb(119, 134, 140) !important;
+}
+#DataEntryForm .enhancedPreviewSectionTopActions .dropdownPanel.ieStyling .dropdownPanelListItem:last-child {
+    border-bottom: 1px solid rgb(119, 134, 140) !important; 
+}
+.dataEntryFormFileUploader {
+    position: absolute !important;
+    top: -100px;
+}
+.dataEntryFormFileUploader .fileInput {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    z-index: 1000;
+}
+
+#DataEntryForm div[id^="SideBySide"] .stackedContainer input {
+    width: auto !important;
+}
+
+#DataEntryForm div[id^="SideBySide"] .stackedContainer .twoColumnSideBySideField input {
+    width: 294px !Important;
+}
+
+#DataEntryForm iframe {
+    border-top: 1px solid rgb(234,234,234);
+}
+
+#DataEntryForm .summaryLine .summaryLineIcon.E060:before {
+    content:"\E060"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E202:before {
+    content:"\E202"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E203:before {
+    content:"\E203"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E051:before {
+    content:"\E051"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E182:before {
+    content:"\E182"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E172:before {
+    content:"\E172"
+}
+#DataEntryForm .summaryLine .summaryLineIcon.E174:before {
+    content:"\E174"
+}
+#DataEntryForm .summaryLine .summaryLineIcon {
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#DataEntryForm .iconSpecified:not(:first-child) {
+    margin-top: 4px;
+}
+.readonlyPanel .dataEntryPanel.fixedWidthFields .editorField > .readonlyTextBoxSpan {
+    width: 156px !important;
+}
+.dataEntryPanel.hidden {
+    display: none !important;
+}
+.dataEntryPanel > header {
+    height: auto!important;
+}
+.dataEntryPanel > header:hover {
+    background-position: 0 0 !important;
+}
+.dataEntryPanel > header > a { 
+    display: inline-block;
+}
+.dataEntryPanel > header > a[type="link"] {
+    margin-left :15px;
+}
+.dataEntryPanel > header.collapsed > .topActionPane {
+    display: none;
+}
+.dataEntryPanel.requirementsPanelCollapsed > header > h1 {
+    display: block;
+    margin-right: 340px;
+}
+.dataEntryPanel.requirementsPanelCollapsed > header.collapsed > .topActionPane {
+    display: block !important;
+}
+.dataEntryPanel.requirementsPanelCollapsed > header.collapsed > .topActionPane > button,
+.dataEntryPanel.requirementsPanelCollapsed > header.collapsed > .topActionPane .requirementVerificationStatusInline.readonly  {
+    display: none !important;
+}
+.dataEntryPanel.requirementsPanelCollapsed > header > .topActionPane > button 
+{
+    display: block !important;
+    float: right;
+    margin: 4px 4px 5px 0;
+}
+.dataEntryPanel .topActionPane {
+    margin-top: -5px;
+    border-radius: 2px;
+    float: right;
+}
+.dataEntryPanel > header .topActionPane {
+    margin-right: 10px;
+}
+.dataEntryPanel .topActionPane li.dropdownControl .defaultAction .icon16 {
+    display: none;
+}
+.dataEntryPanel .topActionPane li.dropdownControl .defaultAction.iconSpecified .icon16{
+    display: inline-block;
+}
+/*
+.dataEntryPanel .topActionPane li.dropdownControl > .dataEntryPanelActionButton .buttonLabel{
+    float: right;
+}
+*/
+.dataEntryPanel .topActionPane li.dropdownControl > .dropdownControlButton.handle{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.dataEntryPanel .topActionPane li.dropdownControl > .defaultAction.dataEntryPanelActionButton .icon16{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/plus-green.png?v=12.0.399.0');
+}
+.dataEntryPanel .topActionPane li.dropdownControl .dropdownPanel li:first-child{
+    display: none !important;
+}
+.dataEntryPanel .topActionPane li.dropdownControl .dropdownPanel li button {
+    width: 100%;
+    border: none;
+}
+.dataEntryPanel .topActionPane li.dropdownControl .dropdownPanel li a {
+    border: none;
+}
+.dataEntryPanel .topActionPane li.dropdownControl .dropdownPanel li a{
+    padding: 7px !important;
+    margin: 0 !important;
+}
+.dataEntryPanel .topActionPane .requirementVerificationStatus {
+    display: block;
+    margin-top: -5px;
+    margin-left: 3px;
+}
+.dataEntryPanel .topActionPane .requirementVerificationStatus .readonlyTextBoxSpan {
+    width: auto !important;
+    min-width: 0;
+    font-size: 10.8px;
+    padding-left: 4px;
+    font-weight: 600;
+}
+.dataEntryPanel .topActionPane .requirementVerificationStatus .editorLabel {
+    max-width: 98px;
+    min-width: 93px;
+    padding-right: 0;
+    white-space: nowrap;
+}
+.dataEntryPanel .topActionPane .requirementVerificationStatus .editorLabel label{
+    float: right;
+}
+.dataEntryPanel .topActionPane .requirementVerificationStatus .editorField input {
+    width: auto !important;
+}
+.dataEntryPanel .topActionPane .completionRequirement {
+    display: block;
+    margin-top: -5px;
+    margin-left: 5px;
+}
+.dataEntryPanel .topActionPane .completionRequirement .readonlyTextBoxSpan {
+    width: auto !important;
+    min-width: 0;
+    font-family: Osans, Arial, Verdana, sans-serif;
+}
+.dataEntryPanel .requirementHasSupportingDocumentation {
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/24/sm/paper-clip.png?v=12.0.399.0') no-repeat 0 5px !important;
+    padding-left: 24px !important;
+    font-weight: bold;
+}
+.dataEntryPanel .requirementHasSupportingDocumentation .editorField {
+    display: none;
+}
+.dataEntryPanel .verificationStatusGuidanceMessage {
+    width: 206px;
+    margin-left: 107px;
+    color: gray;
+    font-size: 11px;
+    padding-top: 0;
+    padding-left: 2px;
+}
+.dataEntryPanel footer {
+    text-align: initial;
+}
+
+/* for the TopAction Dropdown */
+.dataEntryPanel .dropdownPanelListItem > a {
+    border: none;
+}
+
+.dataEntryPanel.singleColumnPanel .fieldsContainer {
+    padding-bottom: 1px;
+    padding-top: 0 !important;
+}
+.dataEntryPanel.singleColumnPanel .dataEntryPanelSubPanel{
+    margin-bottom: 0;
+}
+.dataEntryPanel #HistoryCardViewListCardViewList {
+    margin-bottom: 10px;
+}
+
+/* START - Requirement styling with new renderer */
+.dataEntryPanel > .header > .headerTextContainer > .headerText {
+    white-space: pre-wrap;
+}
+.content  > .dataEntryPanel[data-t1-category-id="Requirement"] {
+    border-left: 0 !important;
+}
+.dataEntryPanel[data-t1-category-id="Requirement"] {
+    background: white !important;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.2) !important;
+    margin: 0;
+}
+.childItems .dataEntryPanel[data-t1-category-id="Requirement"] .fieldsContainer {
+    padding: 0;
+}
+.dataEntryPanel[data-t1-category-id="Requirement"] > header > h1 {
+    font-size: 16px !important;
+}
+.childItems .dataEntryPanel[data-t1-category-id="Requirement"] {
+    margin-top: 10px;
+}
+.dataEntryPanel[data-t1-category-id="RequirementResponse"] > header {
+    margin-bottom: 5px;
+}
+.dataEntryPanel[data-t1-category-id="RequirementResponse"] > header > h1,
+.dataEntryPanel[data-t1-category-id="RequirementDocumentDetails"] > header > h1 {
+    font-size: 13px !important;
+}
+.dataEntryPanel[data-t1-category-id="RequirementResponseQuestion"] {
+    padding: 0;
+}
+.dataEntryPanel[data-t1-category-id="RequirementResponseQuestion"] .fieldsContainer {
+    padding: 0;
+}
+.dataEntryPanel[data-t1-category-id="RequirementDocumentDetails"] > .categoryPanels {
+    padding: 0;
+    margin-bottom: 10px;
+}
+.tagsPanel[data-t1-control-id*="Requirement"] {
+    position: unset !important;
+    margin-top: -10px !important;
+    line-height: 38px !important;
+    float: right;
+}
+.dataEntryPanel[data-t1-category-id*="Requirement"] > header > .headerTextContainer > .headerText,
+.dataEntryPanelSubPanel[data-t1-category-id*="Requirement"] > header > h1
+{
+    display: flex !important;
+}
+.dataEntryPanel[data-t1-category-id="RequirementResponseQuestion"] {
+    padding: 0 !important;
+}
+/* END - Requirement styling with new renderer */
+
+/* START - Status Fields Styling with new renderer */
+.dataEntryPanel > header > .tagsPanel
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FFF;
+    font-size: 0.8em !important;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 16px;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem    
+{
+    color: #FFF;
+    text-align: center;
+    padding: 2px 5px;
+    background-color: #a5a5a5;
+    background-color: rgba(0, 0, 0, 0.35);
+    border:1px solid white;
+    display: inline;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusSuccess,
+.dataEntryPanel > header > .tagsPanel .tagItem.statusApproved,
+.dataEntryPanel > header > .tagsPanel .tagItem.statusNotImportant
+ {
+    color: #394a1e;
+    background-color: #e2ead1;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusSuccess.lightOnDark,
+.dataEntryPanel > header > .tagsPanel .tagItem.statusApprovedDrk.lightOnDark,
+.dataEntryPanel > header > .tagsPanel .tagItem.statusNotImportantDrk.lightOnDark {
+    color: #fff;
+    background-color: #74bd00; 
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusUrgent, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusError, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusRejected {
+    color: #961a12;
+    background-color: #eccdca;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusUrgent.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusError.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusRejected.lightOnDark {
+    color: #fff;
+    background-color: #E53327;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusImportant, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusWarning, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusInProgress {
+    color: #744f00;
+    background-color: #ffe398;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusImportant.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusWarning.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusInProgress.lightOnDark {
+    color: #fff;
+    background-color: #ffc853;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusProcessing {
+    color: #e05007;
+    background-color: #fce2ce;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusProcessing.lightOnDark {
+    color: #fff;
+    background-color: #f2661f;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusPartialSuccess, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusSubmitted {
+    color: #325ea1;
+    background-color: #c6dae8;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusPartialSuccess.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusSubmitted.lightOnDark {
+    color: #fff;
+    background-color: #325ea1;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusDisabled, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusOnHold, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusInactive {
+    color: #4b4b4b;
+    background-color: #c7c7c7;
+}
+
+.dataEntryPanel > header > .tagsPanel .tagItem.statusDisabled.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusOnHold.lightOnDark, 
+.dataEntryPanel > header > .tagsPanel .tagItem.statusInactive.lightOnDark {
+    color: #fff;
+    background-color: #c7c7c7;
+}
+/* END - Status Fields Styling with new renderer */
+.dataEntryPanelSubPanel {
+    margin:0;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 !important;
+    border: none !important;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-right: 18px;
+}
+.repeatingCombinedCategoryWrapper {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+}
+ 
+.repeatingCombinedCategoryWrapper .combinedDataEntryPanelSubPanel {
+        display: block !important;
+}
+
+.repeatingCombinedCategoryWrapper > .header {
+    display: none;
+}
+
+.dataEntryPanelSubPanel.hidden {
+    display: none;
+}
+
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer > .controlContainer.readonly,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer > .controlContainer.readonly {
+    min-width: 328px;
+}
+.dataEntryPanelSubPanel .horizLayout .stackedContainer > .controlContainer.readonly {
+    min-width: 150px;
+}
+.dataEntryPanelSubPanel .textboxWithCheckbox .stackedContainer > .controlContainer.readonly {
+    width: 295px;
+    min-height: 36px;
+}
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel > .fieldsContainer > .stackedContainer > .controlContainer textarea {
+    max-width: 298px;
+}
+.dataEntryPanelSubPanel .textboxWithCheckbox .checkBoxContainer .stackedContainer > .controlContainer.readonly {
+    width: auto;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 10px;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel div[data-t1-control-type="CardViewList"] {
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewListContent {
+    width: 100% !important;
+    margin: 0;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewTopPane 
+{
+    margin: 2px 0 0 0;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewTopPane > div:first-child:not(.cardViewDescriptions) {
+    width: 115px;
+    right: 10px;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewListHeader {
+    padding: 0;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewCategoryItem {
+    min-width: 120px !important;
+    margin: 0 !important;
+    padding-top: 0;
+    padding-bottom: 1px;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardView 
+{
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color : rgba(0,0,0,0);
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewDescriptions {
+    margin-top: 0;
+    width: auto;
+    padding-right: 105px;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewDescriptions > *{
+    display: inline-block;
+    vertical-align: top;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewDescription {
+    width: auto;
+    padding-right: 3px;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewDescription h3,
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewStatusItemTotal label {
+    font-size: 11px;
+    padding-right: 0;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewStatusItemTotal {
+    line-height: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 0;
+}
+
+.dataEntryPanelSubPanel.historyCardView .cardViewSubDescription{
+    display: inline-table;
+}
+
+/* Start Grading Summary */
+#GradingHistoryDetailsCardViewList .cardViewTopPane > div:first-child:not(.cardViewDescriptions) {
+    width: 150px;
+}
+#GradingHistoryDetailsCardViewList .cardViewDescription {
+    width: 130px;
+}
+/* End Grading Summary */
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewContent 
+{
+    margin: 0;
+    width: 74%;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewSubDescription {
+    width: auto;
+    padding: 0!important;
+    font-style: italic;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 5px;
+    max-width: 77%;
+}
+.detailsPanelVisible .dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardViewSubDescription {
+    max-width: 60%;
+}
+.dataEntryPanelSubPanel.nonSideBySideDataEntryPanelSubPanel .cardView:last-child {
+    border-bottom: none;
+}
+#AttendanceStatusDetailsCardViewList .cardViewDescription {
+    width: auto;
+}
+.dataEntryPanelSubPanel .readonlyTextBoxSpan {
+    width: auto !important;
+    white-space: normal;
+}
+
+.MultiColumnPanel .dataEntryPanelSubPanel,
+.hasDataEntryPanelActions .dataEntryPanelSubPanel {
+    margin-bottom: 20px;
+}
+.dataEntryPanelSubPanel.dataEntryPanelSubPanelCompact {
+    margin-bottom: 0;
+}
+.dataEntryPanelSubPanel > header:after{clear:both;}
+.dataEntryPanelSubPanel > header:before,
+.dataEntryPanelSubPanel > header:after {
+    content:" ";
+    display:table;
+}
+.dataEntryPanelSubPanel > header 
+{
+    margin: 0 0 8px 0;
+    padding: 0;
+    padding-top: 2px;
+}
+
+.dataEntryPanelSubPanel > header.expandable {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;
+}
+.dataEntryPanelSubPanel > header:hover {
+    background-position: 0 0 !important;
+}
+.dataEntryPanelSubPanel.deleteButtonRequired > header 
+{
+    background: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/backgroundline.png?v=12.0.399.0') repeat-x scroll 0 10px !important;
+}
+.dataEntryPanelSubPanel > header h1 
+{
+    padding-right: 7px;
+    padding-top: 2px;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.6);
+}
+.dataEntryPanelSubPanel > header .topActionPane {
+    padding-left: 7px;
+    background-color: rgb(255, 255, 255);
+}
+
+.dataEntryPanelSubPanel > header .topActionPane button {
+    width: 19px;
+    height: 19px;
+    margin-top: 4px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+.dataEntryPanelSubPanel > header .topActionPane button.picklist 
+{
+    width: auto;
+    height: auto !important;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 6px 6px 6px 5px !important;
+}
+.dataEntryPanelSubPanel > header .topActionPane button img{
+    margin: -2px 0 0 -2px;
+    width: 13px;
+}
+.dataEntryPanelSubPanel > h1{
+    margin: 11px 0 7px 0;
+    color: rgba(0,0,0,0.7);
+}
+.dataEntryPanelSubPanel > header > h1 {
+    font-size: 1.1em !important; 
+    font-weight: bold !important;
+    background-color: rgb(255, 255, 255);
+}
+
+.dataEntryPanelSubPanel > header.expandable > h1 {
+    background-color: transparent;
+}
+
+.dataEntryPanelSubPanel.repeatablePanelItemWithoutContainerLabel > header > h1{
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+.dataEntryPanelSubPanel .editorLabel
+{
+    min-width: 130px;    
+    width: auto !important;
+}
+
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .editorField > input[type="text"]{
+    width: 298px !important;
+    margin-bottom: 1px;
+}
+.readonlyPanel .dataEntryPanelSubPanel .stackedContainer .editorField > .readonlyTextBoxSpan {
+    width: 318px !important;
+}
+.readonlyPanel .dataEntryPanelSubPanel .stackedContainer .sideBySide .editorField > .readonlyTextBoxSpan {
+    width: auto!important;
+}
+
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .editorField > input[type="text"],
+.multiColumnPanel > .categoryPanels > .readonlyPanel .dataEntryPanelSubPanel .editorField > .readonlyTextBoxSpan,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .readonlyPanel .dataEntryPanelSubPanel .editorField > .readonlyTextBoxSpan{
+    width: 156px !important;
+}
+.detailsPanel .readonlyPanel .dataEntryPanelSubPanel .editorField > .readonlyTextBoxSpan {
+    width: auto !important;
+}
+.dataEntryPanelSubPanel .editorField > input[type="text"] {
+    margin-right: 0;
+}
+.dataEntryPanelSubPanel > div > .editorField > button,
+.dataEntryPanelSubPanel > div > .editorField > select {
+    width: 180px !important;
+}
+.dataEntryPanelSubPanel > div > .editorField > button,
+.dataEntryPanelSubPanel > div > .editorField > input[type="text"] {
+    vertical-align: middle;
+}
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .pickDate > .editorField > input[type="text"] ,
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .pickTime > .editorField > input[type="text"] ,
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .picklistControl > .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .pickDate > .editorField > input[type="text"] ,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .pickTime > .editorField > input[type="text"] ,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .picklistControl > .editorField > input[type="text"] {
+    width: 268px !important;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickDate > .editorField > input[type="text"] ,
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickTime > .editorField > input[type="text"] ,
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .picklistControl > .editorField > input[type="text"] ,
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickDate > .editorField > input[type="text"] ,
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickTime > .editorField > input[type="text"] ,
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .picklistControl > .editorField > input[type="text"] {
+        width: 288px !important;
+    }
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .editorField > input[type="text"],
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickDate input,
+    .multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer > .textBoxControl > .editorField > .long ,
+    .multiColumnPanel > .categoryPanels .stackedContainer > .textBoxControl > .editorField > .decimal,
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .editorField > input[type="text"],
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer .pickDate input,
+    .hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer > .textBoxControl > .editorField > .long ,
+    .hasDataEntryPanelActions > .categoryPanels .stackedContainer > .textBoxControl > .editorField > .decimal {
+        width: 318px !important;
+    }
+}
+.dataEntryPanelSubPanel .fieldsContainer > .stackedContainer .pickDate > .editorField > input[type="text"].datetime {
+    width: 239px !important;
+}
+.popupContainer .dataEntryPanelSubPanel .stackedContainer .superComboControl > .editorField > input[type="text"] {
+    width: 140px !important
+}
+.dataEntryPanelSubPanel .stackedContainer .superComboControl > .editorField > input[type="text"] {
+    width: 272px !important;
+}
+
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .superComboControl > .editorField > input[type="text"],
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .pickDate > .editorField > input[type="text"] ,
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .pickTime > .editorField > input[type="text"] ,
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .picklistControl > .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .superComboControl > .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .pickDate > .editorField > input[type="text"] ,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .pickTime > .editorField > input[type="text"] ,
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .picklistControl > .editorField > input[type="text"]
+{
+    width: 128px !important;
+}
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer div[data-t1-control-type="Calculator"] > .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels > .dataEntryPanelSubPanel .stackedContainer div[data-t1-control-type="Calculator"] > .editorField > input[type="text"] {
+    width: 293px !important;
+}
+.multiColumnPanel > .categoryPanels .dataEntryPanelSubPanel div[data-t1-control-type="Calculator"] > .editorField > input[type="text"],
+.hasDataEntryPanelActions > .categoryPanels .dataEntryPanelSubPanel div[data-t1-control-type="Calculator"] > .editorField > input[type="text"] {
+    width: 174px !important;
+}
+.dataEntryPanelSubPanel.hiddenDataEntryPanelSubPanel {
+    display: none;
+}
+
+/* Attachments overrides*/
+.dataEntryPanelSubPanelWithAttachments {
+    width: 100%;
+}
+.dataEntryPanelSubPanelWithAttachments .attachments {
+    margin-top: 20px;
+}
+.dataEntryPanelSubPanel .textBoxControl input{
+    text-align: left;
+}
+.dataEntryPanelSubPanel > *[id^="SideBySidePanel"] > div:first-child {
+    margin-right: 22px;
+}
+
+/* Requirements styling */
+.dataEntryPanelRequirementResponse {
+    display: block;
+    float: left;
+}
+.dataEntryPanelRequirementResponse > .dataEntryPanel 
+{
+    margin-top: 10px;
+    margin-right: -20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.dataEntryPanelRequirementResponse > .dataEntryPanel > header {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.dataEntryPanelSubPanel .textBoxControl {
+    max-width: 100%;
+}
+.dataEntryPanel.requirementsPanelCollapsed .dataEntryPanelSubPanel {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.dataEntryPanel.requirementsPanelCollapsed .dataEntryPanelSubPanel.deleteButtonRequired {
+    margin-top: 10px;
+}
+.dataEntryPanel.requirementsPanelCollapsed .dataEntryPanel {
+    padding-right: 0;
+    margin-left: 10px;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="Requirement"] > .expandable > .expando {
+    float: left;
+}
+/* End of Requirements styling */
+.dataEntryPanelSubPanel .stackedContainer div[data-t1-control-type="Calculator"].subsequentControl input[type="text"]{
+    width: auto !important;
+}
+.dataEntryPanelSubPanel div[data-t1-control-id="TODAYSDATE"].textBoxControl {
+    background-color: rgba(110,110,110,0.1);
+}
+.childItems .dataEntryPanelSubPanel{
+    width: 100%;
+}
+.dataEntryPanelSubPanel .attachmentsContainer {
+    padding: 0;
+}
+.dataEntryPanelSubPanel .attachmentsContainer header {
+    display: none;
+}
+
+.dataEntryPanelSubPanel[id^="Requirement_Item_"] {
+    box-sizing: border-box;
+    margin: 0;
+}
+.dataEntryPanelSubPanel[id^="Requirement_Item_"] > header {
+    margin: 0;
+}
+.dataEntryPanelSubPanel[id^="Requirement_Item_"] > .fieldsContainer {
+    margin-top: 10px;
+}
+
+
+/* START - Requirement styling with new renderer */
+.dataEntryPanelSubPanel[data-t1-category-id="Requirement"]{
+    margin: 0;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"],
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px 17px 9px 17px !important;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 0 0 0 10px;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"] > .fieldsContainer {
+    padding-bottom: 0;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"] > header {
+    background: none !important;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"] > header > h1,
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"] > header > .topActionPane,
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] > header > h1,
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] > header > .topActionPane {
+    background-color: transparent;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementResponse"] > header > .topActionPane > button,
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] > header > .topActionPane > button {
+    margin-right: 0;
+    margin-top: 7px;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] > .fieldsContainer {
+    padding:0
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"]:last-child {
+    margin-bottom: 0;
+}
+.dataEntryPanelSubPanel[data-t1-category-id="RequirementDocumentDetails"] .attachmentsActionsContainer {
+    margin-top: 10px;
+}
+.dataEntryPanelSubPanel .requirementVerificationStatus .readonlyTextBoxSpan {
+    min-width: 300px;
+    font-size: 10.8px !important;
+    font-weight: 600;
+    padding: 0 !important;
+    font-style: italic;
+    margin-top: -10px !important;
+}
+.dataEntryPanelSubPanel[id^="Requirement_RequirementResponseItems_"] .editorLabel > label,
+.dataEntryPanelSubPanel[id^="Requirement_RequirementDocuments_"] .editorLabel > label {
+    max-width: 318px;
+    white-space: normal !important;
+    height: auto !important;
+}
+
+/* END - Requirement styling with new renderer */
+
+/* START - Status Fields Styling with new renderer */
+.dataEntryPanelSubPanel > header > .tagsPanel
+{
+    position: absolute;
+    right: 0;
+    color: #FFF;
+    font-size: 0.8em !important;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 16px;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel.tagsPanelExpandable
+{
+    margin-right: 20px;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem    
+{
+    color: #FFF;
+    text-align: center;
+    padding: 2px 5px;
+    background-color: #a5a5a5;
+    background-color: rgba(0, 0, 0, 0.35);
+    border:1px solid white;
+    display: inline;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusSuccess,
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusApproved,
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusNotImportant
+ {
+    color: #394a1e;
+    background-color: #e2ead1;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusSuccess.lightOnDark,
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusApprovedDrk.lightOnDark,
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusNotImportantDrk.lightOnDark {
+    color: #fff;
+    background-color: #74bd00; 
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusUrgent, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusError, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusRejected {
+    color: #961a12;
+    background-color: #eccdca;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusUrgent.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusError.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusRejected.lightOnDark {
+    color: #fff;
+    background-color: #E53327;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusImportant, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusWarning, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusInProgress {
+    color: #744f00;
+    background-color: #ffe398;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusImportant.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusWarning.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusInProgress.lightOnDark {
+    color: #fff;
+    background-color: #ffc853;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusProcessing {
+    color: #e05007;
+    background-color: #fce2ce;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusProcessing.lightOnDark {
+    color: #fff;
+    background-color: #f2661f;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusPartialSuccess, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusSubmitted {
+    color: #325ea1;
+    background-color: #c6dae8;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusPartialSuccess.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusSubmitted.lightOnDark {
+    color: #fff;
+    background-color: #325ea1;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusDisabled, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusOnHold, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusInactive {
+    color: #4b4b4b;
+    background-color: #c7c7c7;
+}
+
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusDisabled.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusOnHold.lightOnDark, 
+.dataEntryPanelSubPanel > header > .tagsPanel .tagItem.statusInactive.lightOnDark {
+    color: #fff;
+    background-color: #c7c7c7;
+}
+
+.dataEntryPanelSubPanel  .panel.fieldSet.standardStyle.dataEntryPanel.noHeader {
+padding-left: 5px;
+}
+
+/* END - Status Fields Styling with new renderer */
+
+.popup .notificationHeader {
+    float: right;
+    margin-top: -4px;
+    margin-right: 19px;
+}
+
+.popup .notificationHeaderButton {
+    padding: 4px;
+    color: rgb(255, 255, 255);
+    background-position: 0 -1px;
+    margin-top: 1px;
+}
+
+.popup .notificationHeaderButton:hover{
+    border: solid 1px rgba(255,255,255,0.6);
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/whitegrad50opac.png?v=12.0.399.0');
+    background-position: 0 -60px;
+}
+
+#DataEntryPopupContent{
+    overflow: visible;
+    min-width: 510px;
+    max-width: 800px;
+}
+#DataEntryPopupContent > .editablePanel > .header {
+    display: none;
+}
+#DataEntryPopupContent > .editablePanel, #DataEntryPopupContent > .editablePanel .header {
+    padding: 0;
+}
+#DataEntryPopupContent .content > .dataEntryPanel {
+    border: none;
+    margin-top: 0;
+}
+
+#DataEntryPopupContent .content > .dataEntryPanel > header {
+    display: none;
+}
+#DataEntryPopupContent .content .dataEntryPanelSubPanel {
+    width: 240px;
+    margin-bottom: 0;
+}
+#DataEntryPopupContent .content .dataEntryPanelSubPanel h1 {
+    margin: 5px 0 7px 0;
+}
+#DataEntryPopupContent .checkboxGroup {
+    margin-left: 0 !important;
+    width: 225px;
+    padding: 0;
+}
+#DataEntryPopupContent .ok {
+    float: right;
+}
+#DataEntryPopupContent .content .dataEntryPanelSubPanel {
+    margin-right:0;
+}
+#DataEntryPopupContent .fieldsContainer {
+    margin-top: 0;
+    padding: 0;
+}
+
+#DataEntryPopupContent .dataEntryPanelSubPanel .stackedContainer .editorField input {
+    width: 140px !important;
+}
+
+#DataEntryPopupContent .checkboxGroup .checkBoxGroupItem {
+    background-color: rgba(0, 0, 0, 0.04);
+    width: 100%;
+}
+
+#DataEntryPopupContent .checkboxGroup .checkBoxGroupItem:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#DataEntryPopupContent .checkboxGroup .checkBoxGroupItem .checkBoxGroupItemLinkedPanel {
+    margin-left: 11px;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    display: block;
+}
+
+#DataEntryPopupContent .checkboxGroup .checkBoxGroupItem > .stackedContainer .controlContainer,
+#DataEntryPopupContent .checkboxGroup .checkBoxGroupItem > .stackedContainer .controlContainer > .editorLabel {
+    width: 100% !important;
+}
+
+#DataEntryPopupContent #CalendarWidgetContainer {
+    position: relative;
+    left: 0px;
+    top: 200px;
+}
+#DataEntryPopupContent .calendarContainer {
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+
+#DataEntryPopupContent .calendarContainer .navHeader > button {
+    padding: 10px;
+    margin-right: -1px;
+}
+#DataEntryPopupContent .calendarContainer .dayHeader,
+#DataEntryPopupContent .calendarContainer .cellAction.day 
+{
+    width: 32px;
+    padding: 11px 0;
+}
+
+#TemporaryBlind
+{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    background-color: transparent;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel
+{
+    overflow: hidden;
+    position: relative;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel .clearAdvancedSearchFieldsButton {
+    position: absolute;
+    right: 6px;
+    bottom: 11px;
+    cursor: pointer;
+    color: rgba(0,0,0,0.8);
+}
+
+#DataEntrySearchSimpleSearchPart > .searchPart > .advancedSearchPanel table
+{
+    table-layout: fixed;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchTableHeaderRow td.selected
+{
+    background-color: #fceed8;
+    text-shadow: none;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchTableHeaderRow td
+{
+    padding: 4px 0;
+    background-repeat: repeat-x, repeat-y;
+    background-position: top left, -19px 0;
+    vertical-align: middle;
+    text-align: center;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchTableHeaderRow, #DataEntrySearchSimpleSearchPart .advancedSearchTableSearchFieldsRow
+{
+    background-color: #e7e7ef;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchTableSearchFieldsRow td
+{
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid #bbc3c6;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchTableSearchFieldsRow .rowAction {
+    width: 12px;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn input
+{
+    text-align: center;
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 3px;
+    background-color: white;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn input[type="checkbox"] {
+    -webkit-appearance: none;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn input:focus
+{
+    /*background-color: #fceed8;*/
+    background-color: #e59559;
+    color: black;
+}
+
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn .controlContainer
+{
+    padding: 0;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn .editorField, #DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn .editorField select
+{
+    width: 100%;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn .editorField select:focus
+{
+    background-color: #e59559;
+    color: black;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchRowSearchFieldColumn .editorLabel
+{
+    display: none;
+}
+
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel .advancedSearchTableSearchFieldsRow td:last-child,
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel .advancedSearchTableHeaderRow td:last-child
+{
+    width: 31px;
+    padding: 0;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel .advancedSearchTableHeaderRow td
+{
+    border-bottom: none;
+}
+#DataEntrySearchSimpleSearchPart .advancedSearchPanel .advancedSearchTableHeaderRow .rowAction
+{
+    width: 25px;
+}
+
+#DataEntrySearchSimpleSearchPart .thumbnailAction .defaultAction.primary:before
+{
+    background: none;
+}
+
+#DataEntrySearchSimpleSearchPart .thumbnailAction .defaultAction
+{
+    width:  auto;
+    max-width: none;
+}
+
+#DataEntrySearchSimpleSearchPart .thumbnailAction .dropdownControl .handle.primary
+{
+    display: none;
+}
+#DataEntrySearchSimpleSearchPart > .searchPart > .searchResultTable
+{
+    overflow-y: hidden;
+    margin: 0;
+    border: none;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.searchResultTable .noSearchView, .searchResultTable .noResultsView {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.searchResultTable .noSearchView > .noSearchPerformedContainer, .searchResultTable .noResultsView > .noResultsContainer {
+    top: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 94px;
+    margin-top: -54px;
+}
+
+.searchResultTable .noSearchView > .noSearchPerformedContainer > .noSearchPerformedIcon, .searchResultTable .noResultsView > .noResultsContainer > .noResultsIcon {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.searchResultTable .noSearchView > .noSearchPerformedContainer > .defaultMessage, .searchResultTable .noResultsView > .noResultsContainer > .defaultMessage {
+    margin-top: 14px;
+    font-size: 1.4em;
+}
+
+#DataEntrySearch
+{
+    height: 100% !important;
+}
+#DataEntrySearch .searchPanel .rowNumberText
+{
+    margin-top: 6px;
+    margin-left: 7px;
+    font-size: 12px;
+    padding-right: 8px;
+    width: auto;
+    float: right;
+    min-height: 1em;
+    line-height: 16px;
+    visibility: hidden;
+    text-shadow: 1px 1px 0 #f8f8f8;
+}
+
+#DataEntrySearch .formFooter .middleButton
+{
+    margin-left: -67px;
+}
+#DataEntrySearchSelectedApplicationsPart
+{
+    -webkit-transition: all 0.3s ease !important;
+    transition: all 0.3s ease !important;
+}
+#DataEntrySearch header > button, #DataEntrySearch header > h1
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+#DataEntrySearch header > h1
+{
+    font-size: 1.2em;
+    font-weight: normal;
+}
+#DataEntrySearch header
+{
+    margin: 0;
+}
+#DataEntrySearch header > p
+{
+    margin: 5px 0 10px 23px;
+}
+#DataEntrySearch #HeaderPanel
+{
+    padding: 1px 0;
+}
+#DataEntrySearch #HeaderPanel > .textBoxControl
+{
+    padding: 0;
+}
+
+#DataEntrySearch .thumbnailItem{
+    border:1px solid transparent;
+}
+#DataEntrySearch .thumbnailItem.highlighted
+{
+    background-color: #fceed8;
+    border: 1px solid rgb(223, 108, 0) !important;
+}
+#EditModeDataEntrySearchPanel .leftSection {
+    width: 50%;
+    margin-top: 5px;
+}
+
+#EditModeDataEntrySearchPanel.searchWithoutSelectedItems .rightSection ,
+#EditModeDataEntrySearchPanel.searchWithoutSelectedItems .leftSection > .descriptionSection {
+    display: inline-block;
+}
+#EditModeDataEntrySearchPanel.searchWithoutSelectedItems .leftSection {
+    margin-top: 1px;
+}
+
+#EditModeDataEntrySearchPanel #DataEntrySearch {
+    border-left: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+#EditModeDataEntrySearchPanel #DataEntrySearch .searchResultTable .thumbnailViewContainer {
+    margin-bottom: 0;
+}
+
+#DataEntrySearch .thumbnailViewContainer
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+}
+#DataEntrySearch #SearchPanel {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    border-top: none;
+    padding: 5px 0;
+    vertical-align: top;
+}
+
+#DataEntrySearch #SearchPanel .naturalLanguageSearch {
+    padding: 0;
+    float: left;
+    height: 30px;
+}
+
+.portraitMode #DataEntrySearch .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem .thumbnailSection.mainSection.stacked .dataFieldContainer .editorLabel {
+    max-width: 95px;
+}
+
+.portraitMode .naturalLanguageSearch textarea{
+    max-width: 285px;
+}
+#DataEntrySearch .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem .thumbnailSection.imageSection {
+    width: 53px !important;
+}
+#DataEntrySearch .thumbnailViewControl.dynamicLayout.compact .thumbnailItem.hasImage:before, 
+#DataEntrySearch .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem.hasImage:before {
+    min-width: 51px !important;
+}
+#DataEntrySearch .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem.hasImage .thumbnailSection.mainSection, 
+#DataEntrySearch .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem.hasImage .tagActionsSection {
+    margin-left: 53px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#DataEntryForm .repeatablePanel .header .stackedContainer {
+    position: absolute;
+    font-size: 12px !important;
+    padding-top: 0;
+    padding-left: 10px;
+    display: inline-block;
+}
+#DataEntryForm .repeatablePanel .header .textBoxControl input {
+    width: auto;
+    margin-top: 6px;
+}
+#DataEntryForm .repeatablePanel .header .textBoxControl .picker {
+    padding-top: 4px;
+}
+#DataEntryForm .repeatablePanel .header .textBoxControl .inputClearButton {
+    margin-top: 6px;
+}
+.enhancedThumbnailViewer .thumbnailAction
+{
+    margin-top: 7px;
+}
+.enhancedThumbnailViewer .itemsStatus
+{
+    padding: 5px 5px 1px 5px;
+    background-color: #e7e7ef;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.enhancedThumbnailViewer .itemsStatus > *
+{
+    display: inline-block;
+}
+.enhancedThumbnailViewer .itemsStatus > .itemsCount
+{
+    border: 1px solid transparent;
+    margin-top: -2px;
+    padding-top: 2px;
+    padding-right: 3px;
+    width: auto;
+    height: 18px;
+    text-align: center;
+    border-radius: 15px;
+}
+.enhancedThumbnailViewer .thumbnailViewControl
+{
+    display: block;
+    height: auto;
+    min-height: 115px;
+}
+
+.enhancedThumbnailViewer .thumbnailItem .defaultAction.selected {
+    background-position: bottom left;
+}
+:root {
+    --htmlContentPaddingLeft: 22px;
+}
+
+.furtherInformation {
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 7px !important;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 0 !important;
+    margin-bottom: 10px;
+    position: relative;
+}
+.furtherInformation.noAction {
+
+}
+.furtherInformation .expandoText {
+    margin-left: 7px;
+    cursor: pointer;
+    margin-top: 2px;
+    position: absolute;
+    bottom: 7px;
+}
+.furtherInformation .expandoText > span {
+    color: #007fe9;
+    font-size: 11px;
+}
+.furtherInformation .expandoText > span.showMore {
+    display: none;
+}
+.furtherInformation .expandoText > span.showLess {
+    display: block;
+}
+.furtherInformation.collapsed .expandoText {
+    margin-left: 0;
+    margin-right: 10px;
+    float: right;
+    position: relative;
+    margin-top: 10px;
+}
+.furtherInformation.collapsed .expandoText > span.showMore {
+    display: block;
+}
+.furtherInformation.collapsed .expandoText > span.showLess {
+    display: none;
+}
+.furtherInformation.collapsed .furtherInformationMessage .htmlText{
+    height: 16px;
+    overflow: hidden;
+    padding-left: 7px;
+    padding-bottom: 0;
+}
+.furtherInformation .furtherInformationMessage {
+    display: block;
+}
+.furtherInformation .furtherInformationMessage .literalText.controlContainer > .editorField{
+    padding: 0;
+    display: block;
+}
+.furtherInformation.isCollapsible .furtherInformationMessage {
+    margin-bottom: 14px;
+}
+.furtherInformation.isCollapsible.collapsed .furtherInformationMessage{
+    height: 17px;
+    overflow: hidden;
+    margin-bottom: 0;
+    display: block;
+}
+.furtherInformation .furtherInformationMessage .htmlText {
+    padding: 0 0 0 7px;
+    font-size: 12px;
+    line-height: 15px;
+    white-space: normal;
+}
+.furtherInformation .furtherInformationMessage .htmlText p:first-child,
+.furtherInformation .furtherInformationMessage .htmlText ul:first-child,
+.furtherInformation .furtherInformationMessage .htmlText ol:first-child {
+    margin-top: 0;
+}
+.furtherInformation .furtherInformationMessage .htmlText p:last-child,
+.furtherInformation .furtherInformationMessage .htmlText ul:last-child,
+.furtherInformation .furtherInformationMessage .htmlText ol:last-child {
+    margin-bottom: 0;
+}
+.furtherInformation .furtherInformationMessage .icon16 {
+    float: left;
+}
+.furtherInformation .furtherInformationActionButtonContainer{
+    float: right;
+    display: inline-block;
+}
+.furtherInformation.collapsed .furtherInformationActionButtonContainer {
+    display: none;
+}
+.furtherInformation .furtherInformationActionButtonContainer .icon24{
+    display: none;
+}
+.furtherInformation.E289 .furtherInformationMessage .htmlText {
+    padding-left: 7px;
+}
+.furtherInformation .htmlText .content ul{
+    margin-top: 0;
+}
+.furtherInformation .htmlText .content span.icon16 {
+    margin-right: 7px
+}
+.furtherInformation .htmlText .content p{
+    margin: 0.2em 0;
+    padding-left: var(--htmlContentPaddingLeft);
+}
+
+.furtherInformation .furtherInformationMessage div.scrollContent{
+    padding-left: calc(var(--htmlContentPaddingLeft) - 7px);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.purple {
+    background-color: #1E0F2D !important;
+    color: #FFF;
+}
+
+.darkPink {
+    background-color: #C2456D !important;
+    color: #FFF;
+}
+
+.darkBlue {
+    background-color: #006FB3 !important;
+    color: #FFF;
+}
+    
+.yellow {
+    background-color: #F6CB00 !important;
+    color: #FFF;
+}
+
+.fontOrange {
+    color: #FF6600;
+}
+
+.orange {
+    background-color: #FF6600 !important;
+    color: #FFF;
+}
+
+.red {
+    background-color: #DC143C !important;
+    color: #FFF;
+}
+
+.darkGreen {
+    background-color: #003333 !important;
+    color: #FFF;
+}
+
+.fontGreen {
+    color: #339966;
+}
+
+.green {
+    background-color: #339966 !important;
+    color: #FFF;
+}
+
+.pink {
+    background-color: #FF8080 !important;
+    color: #FFF;
+}
+
+.grey {
+    background-color: #969696 !important;
+    color: #FFF;
+}
+
+.convertedHtmlTextToPlainTextControl.node .details div[class='title'],
+.convertedHtmlTextToPlainTextControl.node .details div[class='text'],
+.convertedHtmlTextToPlainTextControl > .editorField > .plainText,
+.convertedHtmlTextToPlainTextControl > .tbcEditorField > .readonlyTextBoxSpan {
+    white-space: pre-wrap !important;
+}
+
+.fitContentWidth {
+    max-width: fit-content;
+}
+
+#SanctionDetailsCardViewList .cardViewCategoryItem {
+    white-space: normal;
+}
+
+.identificationPanel {
+    padding: 0 0 10px 0;
+}
+.identificationPanelWrapper .fieldsContainer {
+    margin: 0 !important;
+    min-height: 155px;
+}
+.identificationPanel .leftSection .mainHeader{
+    font-size: 25px;
+}
+.identificationPanel .leftSection .mainHeader.identified {
+    color: blue;
+}
+
+.identificationPanel .leftSection .mainHeader.unidentified {
+    color: red;
+}
+
+.identificationPanel .leftSection .subHeader 
+{
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.identificationPanel .leftSection .fieldsList {
+    margin-top: 20px;
+}
+
+.identificationPanel .rightSection {
+    position: absolute;
+    right: 47px;
+    top: -14px;
+}
+
+.identificationPanel .idPhotoHeader {
+    text-align: right;
+    margin: 5px 0;
+    margin-top: 130px;
+}
+
+.identificationPanel .idPhotoSubheader {
+    text-align: right;
+    
+}
+
+.identificationPanel .topRightCorner {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 117px;
+    height: 117px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    margin-top: -39px;
+    margin-right: 47px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    background-size: 110px 110px;
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/sm/scanready.png?v=12.0.399.0');
+}
+.identificationPanel .topRightCorner.ready {
+    background-color: white;
+}
+
+.identificationPanel .topRightCorner.identified {
+    background-image: none;
+}
+
+.identificationPanel .topRightCorner.unidentified {
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/images/sm/scanerror.png?v=12.0.399.0');
+    background-position: 6px 5px;
+    background-color: white;
+}
+
+.identificationPanel .idPhotoUrl {
+    right: 0;
+    position: absolute;
+}
+
+.identificationPanel .idPhotoUrl img {
+    width: 119px;
+    height: 119px;
+}
+
+#audiotag1 {
+    display: none;
+}
+
+#audioPlayer {
+    display: none;
+}
+.notification-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    line-height: 18px;
+}
+
+.notification-box .htmlText {
+    display: inline-block;
+    line-height: 18px;
+    width: auto;
+   /* margin-right: 215px; */
+}
+
+.notification-box .icon24{
+    display: none;
+}
+
+.notification-box a {
+    position: absolute;
+    right: 20px;
+}
+
+.notification-box-info {
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    color: #31708f; 
+}
+
+.notification-box-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.notification-box-success {
+    color: #3c763d;  
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.notification-box-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+#QuickEnquiryPopupForm {
+    position: fixed !important;
+    top: 43px;
+    bottom: 26px !important;
+    left: 0;
+    right: 0;
+    min-height: auto !important;
+}
+
+#QuickEnquiryPopup {
+    height: 100%;
+}
+
+#QuickEnquiryPopup .guidanceMessage {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+#QuickEnquiryPopup .dataEntryPanelSubPanel {
+    margin: 0;
+    display: block;
+}
+#QuickEnquiryPopup .thumbnailViewControl.dynamicLayout.horizontal .thumbnailItem .tagActionsSection:before {
+    clear: inherit;
+}
+
+#QuickEnquiryPopup > header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+
+#QuickEnquiryPopup > header > h1 {
+    margin-left: 60px;
+}
+
+#QuickEnquiryPopup .searchResultSection > button.New {
+    float: right;
+}
+
+#QuickEnquiryPopup .fieldsSection {
+    padding: 0;
+}
+
+#QuickEnquiryPopup .fieldsSection .content {
+    border: none;
+}
+
+#QuickEnquiryPopup .fieldsSection > section.dataEntryPanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+#QuickEnquiryPopup .fieldsSection > section.dataEntryPanel > .categoryPanels {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    padding: 0 10px 0 0;
+}
+
+#QuickEnquiryPopup .fieldsSection > section.dataEntryPanel > .categoryPanels #QuickEnquiryPopup .content .dataEntryPanel {
+    border-top: none;
+    margin: 0;
+    background-color: transparent;
+}
+
+#QuickEnquiryPopup .content .dataEntryPanelSubPanel:last-child {
+    margin-bottom: 0;
+}
+
+#QuickEnquiryPopup > .content {
+    margin: 10px 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#QuickEnquiryPopup > .content > .fieldsSection {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+}
+
+#QuickEnquiryPopup > .content > .searchResultSection {
+    position: absolute;
+    bottom: 0;
+    top: 30px;
+    right: 0;
+    width: 70%;
+}
+
+@media only screen and (min-width : 1435px)  {
+    #QuickEnquiryPopup > .content > .searchResultSection {
+        left: 420px;
+        width: calc(100% - 420px);
+    }
+}
+
+#QuickEnquiryPopup h1.mainTitle {
+    font-size: 17px;
+    margin-bottom: 14px; /*text-shadow: 2px 2px 2px rgba(170, 170, 190, 1);*/
+}
+
+#QuickEnquiryPopup .searchResultTitle {
+    font-weight: normal;
+    display: inline-block;
+    color: rgba(110,110,110,1);
+}
+
+#QuickEnquiryPopup .searchResultCount {
+    margin-left: 25px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+#QuickEnquiryPopup .searchResultCount > div {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#QuickEnquiryPopup .searchResultCount, #QuickEnquiryPopup .searchResultCount > .countBeingShown {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#QuickEnquiryPopup .searchResultCount.updated, #QuickEnquiryPopup .searchResultCount > .countBeingShown.updated {
+    -webkit-transform: scale(1.3, 1.3);
+    font-weight: bold;
+}
+
+#QuickEnquiryPopup .searchResultHeader {
+    height: 20px;
+}
+
+    #QuickEnquiryPopup .searchResultHeader > * {
+        vertical-align: top;
+    }
+
+    #QuickEnquiryPopup .searchResultHeader > .searchResultCount {
+        margin-top: -6px;
+    }
+
+#QuickEnquiryPopup .searchResultContainer {
+    background-color: white;
+    padding: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+}
+
+#QuickEnquiryPopup.createNewSupported .searchResultContainer {
+    bottom: 38px;
+}
+
+#QuickEnquiryPopup .fieldsSection {
+    max-width: 420px;
+}
+
+#QuickEnquiryPopup .fieldsSection header {
+    padding: 0 !important;
+}
+
+#QuickEnquiryPopup .fieldsSection .fieldsContainer {
+    padding-bottom: 0 !important;
+}
+
+#QuickEnquiryPopup .uniqueValueFieldsContainer {
+    vertical-align: top;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions {
+    position: absolute;
+    right: 1px;
+    top: 9px;
+    z-index: 2;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    #QuickEnquiryPopup {
+        left: 0;
+        margin-left: 0;
+    }
+
+    #QuickEnquiryPopup .popupMultiFieldsActions {
+        right: 0;
+        top: 4px;
+    }
+
+    #QuickEnquiryPopup > .content > .fieldsSection {
+        width: 276px;
+    }
+    
+    #QuickEnquiryPopup > .content > .searchResultSection {
+        left: 276px;
+        width: auto;
+    }
+
+    #QuickEnquiryPopup .fieldsSeperator {
+        width: 261px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .stackedContainer .superComboControl > .editorField > input[type="text"],
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .stackedContainer .pickDate > .editorField > input[type="text"] {
+        width: 300px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .stackedContainer .textBoxControl input {
+        width: 250px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .stackedContainer .textBoxControl.picklistControl input {
+        width: 220px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .superComboControl > .editorField > input[type="text"],
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .pickDate > .editorField > input[type="text"] {
+        width: 200px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .textBoxControl input {
+        width: 223px !important;
+    }
+
+    #QuickEnquiryPopup .dataEntryPanelSubPanel .stackedContainer .pickDate > .editorField > input[type="text"] {
+        width: 220px !important;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #QuickEnquiryPopup > .content > .searchResultSection {
+        left: 362px;
+        width: auto;
+    }
+
+    #QuickEnquiryPopup > .content > .fieldsSection {
+        width: 345px;
+    }
+
+    #QuickEnquiryPopup .fieldsSeperator {
+        width: 340px !important;
+    }
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions img {
+    width: 16px;
+    height: 16px;
+}
+
+#QuickEnquiryPopup .fieldsSeperator {
+    width: 364px;
+    border-top: 1px solid rgba(110, 110, 110, 0.5);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    color: rgba(110,110,110,1);
+    font-size: 12px;
+    margin-top: 13px;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownPanel .dropdownPanelListItem:first-child {
+    display: none !important;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownPanel .dropdownPanelListItem a {
+    border: 0;
+    background-color: transparent;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl .defaultAction:before {
+    background: none !important;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl .handle .icon16 {
+    display: inline-block;
+    margin: 0 5px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+    #QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl .handle .icon16:before {
+        content: "\E002";
+    }
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl .buttonLabel {
+    float: right;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl .handle {
+    margin-left: 5px;
+}
+
+#QuickEnquiryPopup .popupMultiFieldsActions .dropdownControl button {
+    border-radius: 3px;
+}
+
+#QuickEnquiryPopup .createNewButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+    #QuickEnquiryPopup .createNewButton span {
+        background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/plus-green.png?v=12.0.399.0');
+    }
+
+#QuickEnquiryPopupForm + #GlobalFooter {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+#QuickEnquiryPopup .thumbnailItem .imageSection .thumbnailImg {
+    height: 64px;
+}
+
+#QuickEnquiryPopup .shadowForScroll {
+    display: none;
+}
+
+#QuickEnquiryPopup .topShadow {
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 7px;
+}
+
+#QuickEnquiryPopup .topShadow .line {
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    right: 0;
+    height: 3px;
+    box-shadow: 0 2px 6px 0px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+#QuickEnquiryPopup .bottomShadow {
+    overflow: hidden;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+
+#QuickEnquiryPopup .bottomShadow .line {
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    right: 0;
+    height: 3px;
+    box-shadow: 0 -1px 6px 0px rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.quickReportWrapper {
+    padding: 0 !important;
+    border: 0 !important;
+}
+.quickReport > .quickReportHeading {
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+    white-space: normal;
+}
+.quickReport > .quickReportHeading .heading {
+    font-size: 28px;
+}
+.quickReport > .quickReportHeading .subHeadingItem {
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 5px;
+}
+.quickReport .quickReportGroup {
+    margin: 10px;
+    background-color: rgba(0,0,0,0.02);
+    margin: 10px 10px 15px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.03);
+    border-right: 1px solid rgba(0, 0, 0, 0.03);
+}
+.quickReport .quickReportGroup .quickReportGroupHeading > .glyph{
+    float: left;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+.quickReport .quickReportGroup.success .quickReportGroupHeading {
+    background-color: rgb(200,230,201);
+    border: 1px solid transparent;
+}
+.quickReport .quickReportGroup.success .quickReportGroupHeading .glyph,
+.quickReport .quickReportGroup.success .quickReportGroupHeading .heading{
+    color: rgb(50,100,50);
+}
+.quickReport .quickReportGroup.failure .quickReportGroupHeading {
+    background-color: rgb(224,224,224);
+    border: 1px solid transparent;
+}
+.quickReport .quickReportGroup.failure .quickReportGroupHeading .glyph,
+.quickReport .quickReportGroup.failure .quickReportGroupHeading .heading {
+    color: rgb(70,70,70);
+}
+.quickReport .quickReportGroup.failure .quickReportGroupHeading .subHeadingsContainer {
+    background-color: rgba(255,255,255,0.5);
+    font-weight: normal;
+    font-size: 12px;
+    white-space: normal;
+    padding: 7px;
+    margin-top: 5px;
+    color: rgba(0,0,0,0.8);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+.quickReport .quickReportGroup.failure.resolvable .quickReportGroupHeading {
+    background-color: rgb(255,205,210);
+    border: 1px solid transparent;
+}
+.quickReport .quickReportGroup.failure.resolvable .quickReportGroupHeading .glyph,
+.quickReport .quickReportGroup.failure.resolvable .quickReportGroupHeading .heading {
+    color: rgb(115, 30, 30);
+}
+
+.quickReport .quickReportGroup .quickReportGroupHeading {
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    padding: 5px;
+}
+.quickReport .quickReportGroup .quickReportGroupHeading .heading {
+    line-height: 20px;
+    padding-left: 3px;
+}
+.quickReport .quickReportGroup .quickReportGroupHeading .headingActions {
+    float: right;
+    margin-top: -4px;
+    margin-right: -4px;
+}
+.quickReport .quickReportGroup .quickReportGroupHeading .headingActions > * {
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+}
+.quickReport .quickReportGroupItem {
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.quickReport .quickReportGroupItem:last-child {
+    margin-bottom: 7px;
+    border-bottom: none;
+}
+
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading .heading {
+    white-space: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: normal;
+    display: inline-block;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading .headingActionsDropDownControl {
+    display: inline-block;
+    margin-left: 5px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading .headingActionsDropDownControl button {
+    padding: 1px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading .headingActionsDropDownControl button .icon16 {
+    display: none;
+}
+
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading .subHeadingItem{
+    color: rgb(101, 101, 101);
+    font-size: 10.8px;
+    line-height: normal;
+}
+
+.quickReport .quickReportGroupItem .quickReportGroupItemHeading{
+    overflow: hidden;
+}
+.quickReport .quickReportGroupItem .status{
+    font-size: 12px;
+    float: right;
+    margin-top: -5px;
+}
+.quickReport .quickReportGroupItem:last-child .status {
+    margin-top: -3px;
+    top: 2px;
+}
+.quickReport .quickReportGroupItem .status .editorLabel {
+    width: auto;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer {
+    padding-top: 5px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer .collapseButton {
+    position: relative;
+    cursor: pointer;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer .collapseButton > span {
+    position: absolute;
+    left: 6px;
+    top: 0;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer .collapseButton > div {
+    font-weight: bold;
+    margin-left: 17px;
+    color: rgba(0,0,0,0.6);
+    white-space: normal;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer .collapseButton > .glyph {
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    color: rgba(0,0,0,0.5);
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer > .collapseButton > span:before {
+    content: "\F046";
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer.expanded > .collapseButton > span:before {
+    content: "\E045";
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer.expanded .messages {
+    height: auto;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessageContainer .messages {
+    height: 0;
+    overflow: hidden;
+}
+.quickReport .quickReportGroupItem .messages {
+    margin-top: 3px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 5px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .icon16 {
+    position: absolute;
+    left: 12px;
+    top: -1px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .icon16:before {
+    font-size: 13px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .message,
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .messageActionsDropDownControl {
+    display: inline-block;
+}
+    
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .message {
+    color: rgba(0,0,0,0.8);
+    padding-left: 11px;
+    line-height: normal;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .message .htmlText {
+    padding: 0;
+    margin: -4px 0;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .extraLines {
+    color: rgba(0,0,0,0.7);
+    padding-left: 11px;
+    font-size: 11px;
+    line-height: 15px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .extraLine {
+    position: relative;
+    padding-left: 18px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .extraLine .icon16 {
+    left: 0;
+    top: -2px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .extraLine .icon16:before {
+    font-size: 8px;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .messageActionsDropDownControl button {
+    padding: 1px;
+}
+
+.quickReport .quickReportSummary {
+    overflow: hidden;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(0,0,0,0.07);
+    padding: 10px;
+    width: 100%;
+    margin-bottom: -10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.quickReport .quickReportSummary .heading {
+    font-weight: bold;
+}
+.quickReport .quickReportSummary .quickReportSummaryFieldContainer{
+    float: right;
+}
+.quickReport .quickReportSummary .summaryField .editorLabel {
+    width: 75px;
+    text-align: right;
+}
+.quickReport .quickReportSummary .summaryField .readonlyTextBoxSpan {
+    width: 100px !important;
+}
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .message .htmlText p {
+    margin: 0;
+}
+
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .messageActionsDropDownControl {
+    margin-left: 5px;
+}
+
+.quickReport .quickReportGroupItem .quickReportGroupItemMessage .messageActionsDropDownControl button .glyph {
+    display: none;
+}
+
+.studentHierarchyViewer .nodeSource {
+    display: none;
+}
+.studentHierarchyViewer .toolbar {
+    padding: 10px;
+    background-color: rgba(0,0,150,0.05);
+    overflow: hidden;
+    height: 51px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.studentHierarchyViewer .toolbar.showConfirmMode {
+    background: rgba(0,255,0,0.05);
+}
+.studentHierarchyViewer .toolbar .slider,
+.studentHierarchyViewer .toolbar .normalMode,
+.studentHierarchyViewer .toolbar .confirmMode {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.studentHierarchyViewer .toolbar .slider {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.studentHierarchyViewer .toolbar.showConfirmMode .slider {
+    -webkit-transform: translate3d(0, -62px, 0);
+    -moz-transform: translate3d(0, -62px, 0);
+    -ms-transform: translate3d(0, -62px, 0);
+    -o-transform: translate3d(0, -62px, 0);
+    transform: translate3d(0, -62px, 0);
+}
+.studentHierarchyViewer .toolbar.showConfirmMode .slider .normalMode {
+    opacity: 0;
+}
+.studentHierarchyViewer .toolbar.showConfirmMode .slider .confirmMode {
+    opacity: 1;
+}
+.studentHierarchyViewer .toolbar .labelText {
+    font-size: 11px;
+    margin: 0 0 10px 0;
+}
+.studentHierarchyViewer .toolbar .confirmMode {
+    margin-top: 10px;
+    opacity: 0;
+    position: relative;
+}
+.studentHierarchyViewer .toolbar .confirmMode .labelText {
+    margin-left: 21px;
+}
+.studentHierarchyViewer .toolbar .confirmMode .icon16{
+    position: absolute;
+    top: -2px;
+    color: rgba(0,0,0,0.7);
+}
+.studentHierarchyViewer .toolbar .confirmMode .labelText > *{
+    display: inline-block;
+}
+.studentHierarchyViewer .childItems {
+    padding-left: 13px;
+}
+
+.studentHierarchyViewer > ul {
+    padding: 0;
+}
+
+.studentHierarchyViewer .genericHierarchyNodeText {
+    margin: 10px 8px 0 8px;
+    color: rgba(0,0,0,0.7);
+    float: left;
+}
+.studentHierarchyViewer .node.notActive .contents .iconContainer,
+.studentHierarchyViewer .node.notActive .contents .details .title{
+    opacity: 0.4;
+}
+.studentHierarchyViewer .node .nodeLeftBar{
+    position: absolute;
+    left: 0;
+    top: -1px;
+    bottom: 0;
+    width: 5px;
+}
+.studentHierarchyViewer .node.hovered .nodeLeftBar {
+    top: 0;
+}
+.studentHierarchyViewer.orderedList .node {
+    padding-left: 0;
+}
+.studentHierarchyViewer.orderedList .genericHierarchyNodeText {
+    font-size: 13px;
+}
+.studentHierarchyViewer.orderedList .genericHierarchyNodeIcon{
+    margin-top: -2px;
+}
+.studentHierarchyViewer.editMode .genericHierarchyNodeIcon {
+    background-color: transparent;
+    display:block !important;
+}
+.studentHierarchyViewer.editMode .genericHierarchyNodeIcon:before {
+    content: "\e321" !important;
+}
+.studentHierarchyViewer.orderedList .nodeSpecificIcon,
+.studentHierarchyViewer.editMode .nodeSpecificIcon,
+.studentHierarchyViewer.editMode .genericHierarchyNodeText {
+    display: none;
+}
+
+.studentHierarchyViewer .node {
+    position: relative;
+    min-height: 33px;
+    padding: 4px 0 4px 20px;
+    white-space: nowrap;
+}
+.studentHierarchyViewer .node.hasChildren > .childItems > ul > .node:first-child {
+    margin-top: 5px;
+}
+.studentHierarchyViewer .node.hasSelectionButton > .contents{
+    padding-left: 7px;
+}
+.studentHierarchyViewer .node.hasSelectionButton > .selectionModeIcon {
+    position: absolute;
+    top: 15px;
+    left: 28px;
+}
+.studentHierarchyViewer .node.hasSelectionButton > .selectionModeIcon:before {
+    font-size: 27px;
+    color: rgba(150,150,150,1);
+    content: "\E145";
+}
+.studentHierarchyViewer .node.selectionDisabled > .selectionModeIcon:before {
+    color: rgba(150,150,150,0.6);
+}
+.studentHierarchyViewer .node.hasSelectionButton.selected > .selectionModeIcon:before {
+    content: "\E140";
+}
+.studentHierarchyViewer .node.nodeDisabled > .contents > .iconContainer,
+.studentHierarchyViewer .node.nodeDisabled > .contents > .statusIconContainer,
+.studentHierarchyViewer .node.nodeDisabled > .contents > .details {
+    opacity: 0.8;
+}
+
+.studentHierarchyViewer .node.nodeDisabled > .contents > .iconContainer,
+.studentHierarchyViewer .node.nodeDisabled > .contents > .statusIconContainer {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.studentHierarchyViewer .node.selectable {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+.studentHierarchyViewer .node .iconContainer {
+    margin: 4px 7px 0 3px;
+    float: left;
+    vertical-align: top;
+}
+.studentHierarchyViewer .node .statusIconContainer {
+    float: right;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.studentHierarchyViewer .node .statusIconContainer .glyph:before {
+    font-size: 24px;
+}
+.studentHierarchyViewer > ul > .node.hasChildren > .contents > .nodeConnector {
+    display: none;
+}
+.studentHierarchyViewer .node.hasChildren .nodeConnector,
+.studentHierarchyViewer .node.hasNextSibling > .nextSiblingConnector {
+    left: 5px;
+}
+.studentHierarchyViewer .node.hasChildren .nodeConnector {
+    position: absolute;
+    height: 100%;
+    bottom: 50%;
+    left: -16px;
+    width: 14px;
+    border-left: 1px solid rgba(220,220,220,1);
+    border-bottom: 1px solid rgba(220,220,220,1);
+    z-index: 1000;
+}
+.studentHierarchyViewer .childItems > ul > .node:first-child > .contents > .nodeConnector {
+    top: -10px;
+    bottom: 50%;
+    height: auto;
+}
+
+.studentHierarchyViewer .node.hasNextSibling > .nextSiblingConnector {
+    position: absolute;
+    width: 20px;
+    top: 22px;
+    bottom: 0;
+    border-left: 1px solid rgba(220,220,220,1);
+}
+.studentHierarchyViewer .node.hasChildren > .nodeConnector {
+    height: 50px;
+}
+
+.studentHierarchyViewer .node.hasChildren > .contents > .childItems > ul > .node:first-child > .nodeConnector {
+    height: 27px;
+    top: -8px;
+}
+.studentHierarchyViewer .node.hasChildren.hasNextSibling > .nodeConnector {
+    height: 47px;
+}
+.studentHierarchyViewer .node.hasChildren > .childItems > ul > li:first-child > .nodeConnector {
+    height: 30px;
+    top: -6px;
+}
+.studentHierarchyViewer .node > .contents > .iconContainer > .genericHierarchyNodeIcon {
+    display: none;
+    padding: 2px 0 2px 12px;
+    margin-right: 0;
+}
+.studentHierarchyViewer.editMode .node > .contents > .iconContainer > .genericHierarchyNodeIcon {
+    padding-left:0;
+}
+.studentHierarchyViewer .node.hasChildren > .contents > .iconContainer > .genericHierarchyNodeIcon {
+    display: block;
+    cursor: pointer;
+}
+
+.studentHierarchyViewer .node.hasChildren > .contents > .iconContainer > .icon16.genericHierarchyNodeIcon:before {
+    content: "\E045";
+}
+.studentHierarchyViewer .node.hasChildren.collapsed > .contents > .iconContainer > .icon16.genericHierarchyNodeIcon:before {
+    content: "\F047";
+}
+.studentHierarchyViewer .node .fakeExpandButton {
+    display: none;
+}
+
+.studentHierarchyViewer > ul > li:first-child > .nodeConnector{
+    display: none;
+}
+.studentHierarchyViewer.editMode .node {
+    border: 1px solid #bdbdbd;
+}
+.studentHierarchyViewer.editMode .node:not(:last-child) {
+    border-bottom-color: transparent;
+}
+.studentHierarchyViewer .node.hovered > .contents{
+    border-color: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
+}
+.studentHierarchyViewer .node.highlight > .contents{
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+.studentHierarchyViewer .node.highlight {
+    font-weight: bold;
+}
+
+.studentHierarchyViewer.selection .node.hovered {
+    background: none;
+}
+.studentHierarchyViewer.selection .node.hovered.hasSelectionButton >.contents{
+    background-color: rgba(155, 155, 155, 0.2);
+}
+
+.studentHierarchyViewer.draggerActivated .node.hovered {
+    background-color: transparent;
+}
+.studentHierarchyViewer .node .icon16 {
+    float: left;
+}
+.studentHierarchyViewer .node.hasChildren > .contents > .icon16 {
+    display: block;
+}
+.studentHierarchyViewer .node.hasChildren > .contents > .contentsContainer .details {
+    padding-left: 80px;
+}
+.studentHierarchyViewer .node.hasChildren {
+    padding-left: 20px;
+}
+.studentHierarchyViewer > ul > .node.hasChildren {
+    padding-left: 0;
+    padding-top: 9px;
+}
+.studentHierarchyViewer .node .nodeSpecificIcon {
+    float: left;
+    margin-top: -1px;
+}
+.studentHierarchyViewer .node.hasChildren > .contents > .nodeSpecificIcon {
+    margin-left: 4px;
+}
+.studentHierarchyViewer .node > .contents{
+    padding: 3px;
+}
+.studentHierarchyViewer .node.hasActions > .contents {
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid rgba(230,230,230,1);
+    border-bottom: 1px solid rgba(230,230,230,1);
+    display: inline-block;
+    width: 100%;
+}
+
+.studentHierarchyViewer .node.hasChildren:not(.hasActions) > .contents,
+.studentHierarchyViewer .node.hasChildren:not(.hasActions) > .actions {
+    background: none;
+    border-color: transparent;
+}
+.studentHierarchyViewer .node > .contents > .details {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.7);
+    min-height: 32px;
+    padding-top: 6px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.studentHierarchyViewer .node:not(.hasActions) .contents > .details{
+    display: inline-block;
+    width: inherit;
+}
+
+.studentHierarchyViewer .node.hasActions > .contents > .details {
+    display: inline-block;
+    width: 66%;
+}
+
+.studentHierarchyViewer .node.hasTextLines > .contents > .details {
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.studentHierarchyViewer .node .textLines {
+    margin-top: 3px;
+    display: inline-block;
+    white-space: break-spaces;
+}
+.studentHierarchyViewer .node .textLines .textLine {
+    line-height: 16px;
+}
+.studentHierarchyViewer .node .textLines .hyperlinkStyle {
+    cursor: pointer;
+}
+.studentHierarchyViewer .node .textLines .hyperlinkStyle .text:hover,
+.studentHierarchyViewer .node .textLines .hyperlinkStyle .text:active,
+.studentHierarchyViewer .node .textLines .hyperlinkStyle.text:hover,
+.studentHierarchyViewer .node .textLines .hyperlinkStyle.text:active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.studentHierarchyViewer .node .textLines .textLine .icon16:before {
+    font-size: 14px;
+}
+.studentHierarchyViewer .node .textLines .textLine.lineIconSpecified div.text {
+    padding-left: 20px;
+}
+
+.studentHierarchyViewer .node .contents {
+    position: relative;
+    border: 1px solid transparent;
+}
+.studentHierarchyViewer .node.hasTextLines .contents {
+    padding-top: 0;
+}
+
+.studentHierarchyViewer .node.hasSelectionButton > .contents .actions {
+    float: right;
+    margin-right: 35px;
+}
+
+.studentHierarchyViewer.selection .node.hasSelectionButton .contents {
+    -webkit-transition: padding-left 0.2s ease-out;
+    -moz-transition: padding-left 0.2s ease-out;
+    -ms-transition: padding-left 0.2s ease-out;
+    -o-transition: padding-left 0.2s ease-out;
+    transition: padding-left 0.2s ease-out;
+}
+.studentHierarchyViewer.selection .node.hasSelectionButton.selectionEnabled .contents{
+    padding-left: 38px;
+    cursor: pointer;
+}
+
+.studentHierarchyViewer.orderedList .node .contents {
+    padding: 1px 7px 1px 0;
+}
+.studentHierarchyViewer.selection .node:not(.nodeDisabled):last-child {
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.studentHierarchyViewer.selection .node:not(.nodeDisabled).selected > .contents,
+.studentHierarchyViewer.selection .node:not(.nodeDisabled).selected > .actions{
+    background: rgba(0,255,0,0.06);
+    border-color: rgba(0,255,0,0.2);
+}
+.studentHierarchyViewer.selection .node:not(.nodeDisabled).selected .details {
+    font-weight: bold;
+}
+.studentHierarchyViewer.selection .node:not(.nodeDisabled).selected .selectionModeIcon:before {
+    color: rgba(0,140,0,1);
+}
+.studentHierarchyViewer.selection .node:not(.nodeDisabled).selected.selectionDisabled .selectionModeIcon:before {
+    color: rgba(100,140,100,0.8);
+}
+
+.studentHierarchyViewer .node .title {
+    text-overflow: ellipsis;
+    line-height: initial;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: normal;
+    color: rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+.studentHierarchyViewer .node.highlight .title {
+    font-weight: bold;
+}
+.studentHierarchyViewer .node.highlight > .contents {
+    background-color: rgba(230, 230, 230, 1);
+}
+
+.studentHierarchyViewer .node .colorIndicator {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    border-radius: 13px;
+}
+.studentHierarchyViewer.orderedList .node .title {
+    font-size: 14px;
+}
+
+.studentHierarchyViewer .node .dataEntryPanelSubPanel {
+    margin: 5px 0 0 30px;
+}
+.studentHierarchyViewer .node .fieldsContainer {
+    padding-bottom: 0;
+}
+.studentHierarchyViewer .node.placeHolderNode {
+    min-height: 0;
+    height: 9px;
+    overflow: hidden;
+    border: 1px dotted white !important;
+    background: rgba(0,0,0,0.13);
+    box-shadow: inset 0 0 7px 1px rgba(0,0,0,0.7);
+}
+.studentHierarchyViewer .node.originalNodeBeingDragged:not(.indicateTheSameLocationForDrop) {
+    background: rgba(0,0,0,0.2);
+    border: 1px dashed white !important;
+}
+.studentHierarchyViewer .node.originalNodeBeingDragged:not(.indicateTheSameLocationForDrop) .icon16.glyph,
+.studentHierarchyViewer .node.originalNodeBeingDragged:not(.indicateTheSameLocationForDrop) .details .title {
+    color: white !important;
+}
+.studentHierarchyViewer .node.originalNodeBeingDragged.indicateTheSameLocationForDrop {
+    background-color: #d3d3d3;
+}
+.studentHierarchyViewer .node.originalNodeBeingDragged.indicateTheSameLocationForDrop .contents {
+    display: block;
+}
+
+.studentHierarchyViewer .node .actions {
+    float: right;
+}
+.studentHierarchyViewer .node.hasActions > .actions {
+    display: block;
+}
+.studentHierarchyViewer .node .actions > ul {
+    border: 1px solid transparent;
+}
+.studentHierarchyViewer .node .actions ul .dropdownPanelListItem:first-child {
+    display: none;
+}
+
+.studentHierarchyViewer .node .actions ul.defaultActionDisabled .dropdownPanelListItem:first-child {
+    display: inherit;
+}
+.studentHierarchyViewer .node .actions .defaultAction {
+    border-radius: 3px;
+}
+.studentHierarchyViewer .node .actions .defaultAction:before,
+.studentHierarchyViewer .node .actions .handle:before {
+    display: none !important;
+}
+.studentHierarchyViewer .node .actions .handle {
+    margin-left: 5px;
+}
+
+.studentHierarchyViewer .node .actions .handle:focus {
+    outline-color: transparent;
+}
+.studentHierarchyViewer .node .actions .dropdownPanel {
+    top: 30px !important;
+    z-index: 1;
+    right: 0!important;
+    left: auto !important;
+}
+.studentHierarchyViewer .node .actions .handle .icon16:before {
+    content: "\E002";
+}
+#CustomPopup_HierarchyViewerWrapper {
+    max-width: 1024px;
+}
+#CustomPopup_HierarchyViewerWrapper .studentHierarchyViewer .node .title {
+    white-space: pre-wrap;
+}
+
+.gridContainer .slick-row.isDataRow.isLockedRow .gridColumnEditable.overrideLockedColumn  {
+    background-color: #fff;
+}
+.textboxWithCheckbox > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.textboxWithCheckbox > .checkBoxContainer .editorLabel{
+    display: none !important;
+}
+.textboxWithCheckbox input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    margin-top: 1px;
+}
+.textboxWithCheckbox .editorLabel {
+    min-width: 100px !important;
+}
+.multiColumnPanel > .categoryPanels > .dataEntryPanelSubPanel .textboxWithCheckbox .stackedContainer .editorField > input[type="text"],
+.multiColumnPanel > .categoryPanels > .readonlyPanel .dataEntryPanelSubPanel .textboxWithCheckbox .stackedContainer .editorField > .readonlyTextBoxSpan {
+    width: 275px !important;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) 
+{
+    .dataEntryPanelSubPanel .textboxWithCheckbox .stackedContainer .editorField > input[type="text"],
+    .readonlyPanel .dataEntryPanelSubPanel .textboxWithCheckbox .stackedContainer .editorField > .readonlyTextBoxSpan {
+        width: 294px !important;
+    }
+}
+/* This is a style sheet to apply some custom styling to the thumbnails 
+ * Please make sure you segment the contents of this file per thumbnail */
+ 
+ /* Common Styling */
+ .thumbnailViewControl .thumbnailItem .thumbnailImg {
+     height: auto !important;
+     width: auto !important;
+ }
+ .thumbnailViewControl.dynamicLayout .thumbnailItem .twoColumnSection .thumbnailSection
+{
+    width: 47%;
+    margin-top: 3px !important;
+}
+
+.detailsPanelVisible .thumbnailViewControl.dynamicLayout .thumbnailItem .twoColumnSection .thumbnailSection{
+    width: 400px;
+    max-width: 100%;
+}
+
+/* START: Styles for AssessmentAndOutcomesRdpSection*/
+.assessmentLineIconsContainer .icon16 {
+    opacity: 0.8;
+    filter: alpha(opacity=80);/* IE 9*/
+}
+.assessmentLineIconsContainer .numSuccessfulOutcomes .icon16:before {
+    content: none !important;
+}
+.assessmentLineIconsContainer .numSuccessfulOutcomes .icon16
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/tick.png?v=12.0.399.0');
+}
+
+.assessmentLineIconsContainer .numUnsuccessfulOutcomes .icon16:before {
+    content: none !important;
+}
+.assessmentLineIconsContainer .numUnsuccessfulOutcomes .icon16
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/cross.png?v=12.0.399.0');
+}
+
+.assessmentLineIconsContainer .numStudentComments .icon16:before {
+    content: none !important;
+}
+.assessmentLineIconsContainer .numStudentComments .icon16
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/comment.png?v=12.0.399.0');
+}
+
+.assessmentLineIconsContainer .numReferrals .icon16:before {
+    content: none !important;
+}
+.assessmentLineIconsContainer .numReferrals .icon16
+{
+    background-image: url('https://cdn.t1cloud.com/cianywhere/content/base/icons/16/sm/forward.png?v=12.0.399.0');
+}
+
+.assessmentLineIconsContainer {
+    border-radius: 3px !important;
+    padding: 3px 10px 3px 1px !important;
+    width: 280px !important;
+}
+.assessmentLineIconsContainer > * {
+    width: 58px !important;
+}
+.assessmentLineIconsContainer > * > .iconLabel{
+    margin-right: 10px;
+}
+.assessmentLineIconsContainer > *:not(:last-child) > .editorField {
+    border-right: 1px solid rgb(180,180,180) !important;
+    margin-right: 5px !important;
+    box-shadow: 1px 0px white;
+}
+.assessmentLineIconsContainer > * > .editorField > span {
+    color: black !important;
+}
+/* END: Styles for AssessmentAndOutcomesRdpSection*/
+:root {
+    --htmlContentPaddingLeft: 22px;
+}
+
+.WarningInformation {
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 7px !important;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 0 !important;
+    margin-bottom: 10px;
+    position: relative;
+}
+.WarningInformation.noAction {
+
+}
+.WarningInformation .expandoText {
+    margin-left: 22px;
+    cursor: pointer;
+    margin-top: 2px;
+    position: absolute;
+    bottom: 7px;
+}
+.WarningInformation .expandoText > span {
+    color: #007fe9;
+    font-size: 11px;
+}
+.WarningInformation .expandoText > span.showMore {
+    display: none;
+}
+.WarningInformation .expandoText > span.showLess {
+    display: block;
+}
+.WarningInformation.collapsed .expandoText {
+    margin-left: 0;
+    margin-right: 10px;
+    float: right;
+    position: relative;
+    margin-top: 10px;
+}
+.WarningInformation.collapsed .expandoText > span.showMore {
+    display: block;
+}
+.WarningInformation.collapsed .expandoText > span.showLess {
+    display: none;
+}
+.WarningInformation.collapsed .WarningInformationMessage .htmlText{
+    height: 16px;
+    overflow: hidden;
+    padding-left: 6px;
+    padding-bottom: 0;
+}
+.WarningInformation .WarningInformationMessage {
+    display: block;
+}
+.WarningInformation .WarningInformationMessage .literalText.controlContainer > .editorField{
+    padding: 0;
+    display: block;
+}
+.WarningInformation.isCollapsible .WarningInformationMessage {
+    margin-bottom: 14px;
+}
+.WarningInformation.isCollapsible.collapsed .WarningInformationMessage{
+    height: 17px;
+    overflow: hidden;
+    margin-bottom: 0;
+    display: block;
+}
+.WarningInformation .WarningInformationMessage .htmlText {
+    padding: 0 0 0 22px;
+    font-size: 12px;
+    line-height: 15px;
+    white-space: normal;
+}
+.WarningInformation .WarningInformationMessage .htmlText p:first-child,
+.WarningInformation .WarningInformationMessage .htmlText ul:first-child,
+.WarningInformation .WarningInformationMessage .htmlText ol:first-child {
+    margin-top: 0;
+}
+.WarningInformation .WarningInformationMessage .htmlText p:last-child,
+.WarningInformation .WarningInformationMessage .htmlText ul:last-child,
+.WarningInformation .WarningInformationMessage .htmlText ol:last-child {
+    margin-bottom: 0;
+}
+.WarningInformation .WarningInformationMessage .icon16 {
+    float: left;
+}
+.WarningInformation .WarningInformationActionButtonContainer{
+    float: right;
+    display: inline-block;
+}
+.WarningInformation.collapsed .WarningInformationActionButtonContainer {
+    display: none;
+}
+.WarningInformation .WarningInformationActionButtonContainer .icon24{
+    display: none;
+}
+.WarningInformation.E289 .WarningInformationMessage .htmlText {
+    padding-left: 22px;
+}
+.WarningInformation .htmlText .content ul{
+    margin-top: 0;
+}
+.WarningInformation .htmlText .content span.icon16 {
+    margin-right: 5px
+}
+.WarningInformation .htmlText .content p{
+    margin: 0.2em 0;
+    padding-left: var(--htmlContentPaddingLeft);
+}
+
+.WarningInformation .WarningInformationMessage div.scrollContent{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.WarningInformation{
+    background-color: #fceed8;
+}
+
