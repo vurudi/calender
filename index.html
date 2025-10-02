@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Calendar</title>
-  <!-- Add favicon -->
-  <link rel="icon" type="image/png" href="https://mq-edu.t1cloud.com/T1Default/CiAnywhere/Web/MQ-EDU/Workplace/v-12.0.235.0/t/MQ_STU_THEME/timages/logo-favicon.png?ts=-1811665815"> 
-
-
   <style>
     /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -329,7 +325,7 @@
 
     /* Popup styling */
     .popup {
-      position: top-right;
+      position: absolute;
       top: 50px;
       right: 20px;
       background: white;
@@ -467,7 +463,6 @@
         <!-- Friday column -->
         <div class="day-column">
           <div class="event lecture" style="top: 210px; height: 90px;" data-event="finance-friday">
-            
             <div class="event-title">ACST1001 Lecture_1-1</div>
             <div class="event-time">11:30 AM - 1:00 PM</div>
           </div>
@@ -548,7 +543,7 @@
         const eventTime = event.querySelector('.event-time').textContent;
         document.getElementById('modal-event-name').textContent = eventName;
         document.getElementById('modal-event-time').textContent = eventTime;
-        document.getElementById('modal-event-location').textContent = "4 western Rd 335 Tutorial Rm 04WRNorth Ryde";
+        document.getElementById('modal-event-location').textContent = "Room A123, Main Building";
         document.getElementById('modal-event-details').textContent = "Detailed description for " + eventName;
         modalOverlay.classList.add('active');
       });
